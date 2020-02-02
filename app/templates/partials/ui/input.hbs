@@ -16,7 +16,7 @@
                 {{#if disabled}}disabled{{/if}}></textarea>
 
         {{else}}
-            <input type="text"
+            <input type={{type}} name={{name}}
                    class="form-input {{input-class}}"
                 {{#if placeholder}}placeholder="{{placeholder}}" {{/if}}
                 {{#if value}}value="{{value}}" {{/if}}

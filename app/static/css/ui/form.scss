@@ -88,3 +88,61 @@ color: #C4C4C4;
     }
   }
 }
+.header-form {
+  .form {
+    &__title {
+      @include arial-bold;
+      font-size: 35px;
+      line-height: 40px;
+      color: #003A78;
+      margin-bottom: 50px;
+      padding-right: 30px;
+    }
+    &__elems {
+      margin-bottom: 48px;
+    }
+    &__elem {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.subform {
+    .form {
+      &__title {
+        margin-bottom: 7px;
+      }
+      &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        @include arial-regular;
+        color: #3C454E;
+        margin-bottom: 54px;
+      }
+      &__inputs {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .form {
+          &-field {
+            width: 50%;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-bottom: 53px;
+         
+          }
+          &-input {
+            border: none;
+            border-bottom: 1px solid #7B7B7B;
+            outline: none;
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+  }
+}

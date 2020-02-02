@@ -34,14 +34,27 @@
            </div>
            <div class="header__top-item tel">
              <div class="tel">
-               <a href="tel:+375297771318" class="tel-link">+375 29 777 73 18 <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <span class="tel-list header">+375 29 777 73 18 <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0.881958L9 9.88196L18 0.881958H0Z" fill="#FDC600"/>
 </svg>
-</a>
+</span>
+<div class="tel-list body">
+  <ul class="tel-list">
+    <li class="list-item">
+      <a href="tel:+375296263680" class="list-link"><span class="operator">A1</span><span class="number">+375 29 626 36 80</span></a>
+    </li>
+      <li class="list-item">
+      <a href="tel:375296263680" class="list-link"><span class="operator">A1</span><span class="number">375 29 626 36 80</span></a>
+    </li>
+      <li class="list-item">
+      <a href="tel:+375297777318" class="list-link"><span class="operator">МТС</span><span class="number">+375 29 777 73 18</span></a>
+    </li>
+  </ul>
+</div>
              </div>
            </div>
            <div class="header__top-item actions">
-             <button class="btn header-btn">Записаться</button>
+             <button class="btn header-btn" data-popup='header-popup'>Записаться</button>
            </div>
          </div>
           </div>
@@ -169,6 +182,45 @@
          </div>
        </div>
      </div>
+        <div class="popup__box header-popup" id="header-popup">
+    <button class="popup__close js-close-wnd">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 2.82811L21.1719 0L12 9.17186L2.82811 0L0 2.82811L9.17186 12L0 21.1719L2.82811 24L12 14.8281L21.1718 24L23.9999 21.1719L14.8281 12L24 2.82811Z" fill="#650549"/>
+</svg>
+
+    </button>
+  <form action=""  class="header-form" id="header-form">
+   <div class="form__title">Сделай свой выбор</div>
+ <div class="form__elems">
+      <div class="form__elem">
+      {{> ui/radio id=1 name='radio1' data-radio='error'  checked=1 label='Я не изучал(а) английский ранее'}}
+    </div>
+  <div class="form__elem">
+       {{> ui/radio id=2 name='radio1' data-radio='succes'  label='Я изучал(а) английский ранее'}}
+  </div>
+ </div>
+ <a href="#" class="btn primary-btn" id="header-form-button">Отправить</a>
+  </form>
+</div>
+
+      <div class="popup__box header-popup subpopup" id="header-subpopup">
+    <button class="popup__close js-close-wnd">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 2.82811L21.1719 0L12 9.17186L2.82811 0L0 2.82811L9.17186 12L0 21.1719L2.82811 24L12 14.8281L21.1718 24L23.9999 21.1719L14.8281 12L24 2.82811Z" fill="#650549"/>
+</svg>
+
+    </button>
+  <form action="" method="POST" class="header-form subform" id="header-subform">
+   <div class="form__title">Обратный звонок</div>
+   <div class="form__subtitle">Мы обязательно перезвоним вам в течении 24 часов</div>
+  <div class="form__inputs">
+     {{> ui/input type='text' name='name' placeholder='Имя*'}}
+     {{> ui/input type='tel' name='phone' placeholder='Телефон*'}}
+     {{> ui/input type='email' name='email' placeholder='Email'}}
+  </div>
+ <button type="submit" class="btn primary-btn">Отправить</button>
+  </form>
+</div>
     </header>
 
     <div class="wrapper__inner">

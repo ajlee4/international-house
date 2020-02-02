@@ -1,4 +1,6 @@
 <div class="radio-box">
-    <input class="radio-input" type="radio" name="{{name}}" id="{{id}}" {{#if checked}}checked{{/if}}>
-    <label class="radio-label" for="{{id}}">{{label}}</label>
+    <input class="radio-input" type="radio" data-radio='{{data-radio}}' name="{{name}}" id="{{id}}" {{#if checked}}checked{{/if}}>
+    <label class="radio-label" for="{{id}}"><div class="radio-elem"></div><div class="radio-text">
+        {{label}}
+    </div></label>
 </div>

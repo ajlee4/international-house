@@ -29,4 +29,16 @@
      background-color: #FEE58B;
     }
   }
+  &.primary-btn {
+    font-size: 18px;
+    line-height: 24px;
+    color: #003A78;
+    @include arial-bold;
+    padding: 12px 32px;
+    background: #FDC600;
+border-radius: 10px;
+&:hover {
+  background-color: #FEE58B;
+}
+  }
 }
