@@ -41,4 +41,16 @@ border-radius: 10px;
   background-color: #FEE58B;
 }
   }
+  &.secondary-btn {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    @include arial-bold;
+    padding: 12px 32px;
+    background: #003A78;
+border-radius: 10px;
+&:hover {
+  background-color: #4286CF;
+}
+  }
 }

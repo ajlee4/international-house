@@ -1,6 +1,21 @@
 .header {
   @include arial-regular;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  &-fixed {
+  
+    z-index: 9999;
+    .header__top {
+    
+     
+    }
+  }
   &__top {
+    
     height: 56px;
     background-color: #003a78;
     &-inner {
@@ -127,10 +142,11 @@ box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
                 &:hover {
                   background-color: #0356af;
                   .tel-list {
-                    &.body {
+                    &.body-tel-list {
                       opacity: 1;
                       visibility: visible;
                       transition: 0.3s;
+                      z-index: 9999;
                     }
                   }
                   
@@ -154,12 +170,12 @@ box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
                   color: rgba(255, 255, 255, 0.5);
                 }
                }
-                &.header {
+                &.header-tel-list {
                   svg {
                     margin-left: 5px;
                   }
                 }
-                &.body {
+                &.body-tel-list {
                   opacity: 0;
                   visibility: hidden;
                   position: absolute;
@@ -187,6 +203,8 @@ box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     height: 104px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
     background-color: #fff;
+    position: relative;
+    z-index: 2000;
     &-inner {
       height: 104px;
       display: flex;

@@ -1,0 +1,168 @@
+.slider {
+  &.main-slider {
+      &.created {
+          .slider__item {
+              opacity: 1;
+          }
+      }
+    .slider {
+      &__item {
+          max-width: 100%;
+          max-height: 500px;
+          height: 500px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+         opacity: 0;
+        &-info {
+            
+            .info__inner {
+                position: relative;
+                z-index: 1000;
+                padding-top: 70px;
+                width: 40%;
+                .title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    @include arial-bold;
+                                    
+                    color: #003A78;
+                    margin-bottom: 18px;
+                }
+                .subtitle {
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #8E8E8E;
+                    margin-bottom: 44px;
+                }
+                .btn {
+                    margin-bottom: 66px;
+                    color: #fff;
+                    &:hover {
+                        color: #003A78;
+                    }
+                }
+            }
+        }
+      }
+    }
+    .slick {
+        &-prev,&-next {
+            display: none !important;
+            position: absolute;
+            z-index: 1000;
+            bottom: 32px;
+            font-size: 0;
+            @include sprite('left-arrow');
+            top: 50%;
+            margin-top: -18px;
+        }
+        &-next {
+            transform: rotate(180deg);
+            right: 30px;
+        }
+        &-prev {
+            left: 30px;
+        }
+        &-dots {
+            display: flex !important;
+            width: 100%;
+            justify-content: center;
+        
+            margin-top: 20px;
+      
+            li {
+              width: 10px;
+              height: 10px;
+              background: rgba(12, 77, 162, 0.4);
+              border-radius: 50%;
+              margin-right: 14px;
+      
+              &:last-child {
+                margin-right: 0;
+              }
+      
+              &.slick-active {
+                background: #0c4da2;
+              }
+            }
+      
+            button {
+              font-size: 0;
+            }
+          }
+    }
+  }
+  &.reviews-slider {
+      &.created {
+          .slider__item {
+              opacity: 1;
+          }
+      }
+      .slider {
+        &__item {
+            opacity: 0;
+            display: flex;
+            
+            &-left {
+                
+                padding-right: 30px;
+                img {
+                   max-width: 443px;
+                   max-height:296px ;
+                }
+            }
+            &-right {
+                padding-left: 30px;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                .section__item {
+                    &-text {
+                        font-size: 18px;
+                        line-height: 24px;
+                        @include arial-regular;
+                        color: #3C454E;
+                        margin-bottom: 45px;
+                        position: relative;
+                        .reviews-icon {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin-top: -30px;
+                            margin-left: -35px;
+                        }
+                    }
+                    &-name {
+                        font-size: 18px;
+                        line-height: 24px;
+                        @include arial-regular;
+                        color: #737B82;
+                    }
+                }
+            }
+        }
+      }
+      .slick {
+        &-prev,&-next {
+            display: none !important;
+            position: absolute;
+            z-index: 1000;
+            bottom: 32px;
+            font-size: 0;
+            @include sprite('left-arrow');
+            top: 50%;
+            margin-top: -18px;
+        }
+        &-next {
+            transform: rotate(180deg);
+            right: 30px;
+        }
+        &-prev {
+            left: 30px;
+        }
+    
+    }
+  }
+}

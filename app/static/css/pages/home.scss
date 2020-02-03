@@ -1,0 +1,330 @@
+.section {
+  &.card-section {
+    .section {
+      &__inner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      &__title {
+        font-size: 35px;
+        line-height: 40px;
+        color: #003a78;
+        width: 50%;
+        @include arial-bold;
+        margin-bottom: 42px;
+      }
+    }
+    .card-field {
+      .card-row {
+      }
+      .card-col {
+        display: block;
+
+        .col {
+          &__inner {
+            &:hover {
+              box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+              transition: 0.3s;
+              transform: scale(1.02);
+            }
+            transition: 0.3s;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            height: calc(100% - 50px);
+            position: relative;
+            background: #fbfbfb;
+            overflow: hidden;
+            .card-elem {
+              display: inline-block;
+              height: 77px;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+            .years {
+              position: absolute;
+              z-index: 1000;
+              color: #fff;
+              bottom: 5px;
+              right: 5px;
+              font-size: 18px;
+              line-height: 24px;
+              @include arial-bold;
+              backface-visibility: hidden;
+            }
+          }
+          &-img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 230px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            &:before {
+              position: absolute;
+              content: '';
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: block;
+              background: rgba(0, 58, 120, 0.2);
+            }
+          }
+          &-info {
+            backface-visibility: hidden;
+            position: relative;
+            width: 90%;
+
+            top: -50px;
+
+            padding: 16px 19px 34px 18px;
+            background: #fbfbfb;
+            border-radius: 0px 10px 10px 0px;
+
+            &__title {
+              font-size: 20px;
+              line-height: 24px;
+              @include arial-bold;
+              margin-bottom: 9px;
+              color: #003a78;
+              text-transform: uppercase;
+            }
+            &__text {
+              font-size: 16px;
+              line-height: 24px;
+              color: #7b7b7b;
+              @include arial-bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.advantages-section {
+    height: 272px;
+    background-image: url($images_dir+'advantages.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(0, 58, 120, 0.9);
+    }
+    .section {
+      &__inner {
+        display: flex;
+        align-items: center;
+        height: 272px;
+        .advantages {
+          &-row {
+            width: 100%;
+          }
+          &-col {
+            .col {
+              &__inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+              &__img {
+                margin-bottom: 22px;
+              }
+              &__text {
+                font-size: 18px;
+                line-height: 24px;
+                color: #fff;
+                @include arial-bold;
+                text-align: center;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.course-selection-section {
+    .section {
+      &__inner {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      }
+      &__title {
+        font-size: 35px;
+        line-height: 40px;
+        color: #003a78;
+
+        @include arial-bold;
+        margin-bottom: 42px;
+      }
+      &__card {
+        .course-col {
+          .col {
+            &__inner {
+              background: #ffffff;
+              box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+              border-radius: 10px;
+              padding: 20px 40px 22px 22px;
+              position: relative;
+              transition: 0.3s;
+              &:hover {
+                box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+                transition: 0.3s;
+                transform: scale(1.02);
+                .elem-before {
+                  position: absolute;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: 0.3s;
+                }
+                .elem-after {
+                  transition: 0.3s;
+                  position: static;
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+            &__title {
+              font-size: 18px;
+              line-height: 24px;
+              margin-bottom: 10px;
+              color: #01548a;
+              @include arial-bold;
+              backface-visibility: hidden;
+            }
+            &__subtitle {
+              font-size: 14px;
+              line-height: 20px;
+              @include arial-regular;
+              color: #7b7b7b;
+              margin-bottom: 15px;
+            }
+            &__details {
+              font-size: 14px;
+              line-height: 24px;
+              color: #fdc600;
+              display: flex;
+              align-items: center;
+              svg {
+                margin-left: 10px;
+              }
+            }
+            &__elem {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              height: 40px;
+              .elem-before {
+                transition: 0.3s;
+                position: static;
+                opacity: 1;
+                visibility: visible;
+              }
+              .elem-after {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.steps-section {
+    background: linear-gradient(180deg, #d5e9fe 0%, rgba(199, 226, 255, 0) 100%);
+    .section {
+      &__inner {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      }
+      &__title {
+        font-size: 35px;
+        line-height: 40px;
+        color: #003a78;
+
+        @include arial-bold;
+        margin-bottom: 10px;
+        width: 50%;
+      }
+      &__subtitle {
+        color: #686868;
+        font-size: 18px;
+        line-height: 24px;
+        @include arial-bold;
+        margin-bottom: 45px;
+      }
+      &__stepbar {
+          display: flex;
+          margin-bottom: 45px;
+          .stepbar-elem {
+           &:last-child {
+               position: relative;
+               top: 25px;
+           }
+              .elem {
+                  &-title {
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #565758;
+                    margin-bottom: 12px;
+                    @include arial-bold;
+                  }
+                  &-fragment {
+                      margin-bottom: 15px;
+                      .line1 {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: -10px;
+                    }
+                  }
+                  &-desc {
+                    font-size: 18px;
+                    line-height: 24px;
+                    @include arial-regular;
+                    color: #3C454E;
+                    width: 150px;
+                   
+                  }
+              }
+          }
+      }
+    }
+  }
+  &.reviews-section {
+      .section {
+          &__inner {
+              padding-top: 62px;
+              padding-bottom: 62px;
+          }
+          &__title {
+            font-size: 35px;
+            line-height: 40px;
+            color: #003a78;
+    
+            @include arial-bold;
+            margin-bottom: 14px;
+           
+          }
+          &__subtitle {
+            font-size: 24px;
+            line-height: 24px;
+            color: #01548A;
+            @include arial-regular;
+            margin-bottom: 44px;
+          }
+      }
+  }
+}
