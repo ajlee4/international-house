@@ -146,21 +146,85 @@
       }
       .slick {
         &-prev,&-next {
-            display: none !important;
+           
             position: absolute;
             z-index: 1000;
-            bottom: 32px;
+            bottom: 0;
+            right: 0;
             font-size: 0;
             @include sprite('left-arrow');
-            top: 50%;
-            margin-top: -18px;
+            &:hover {
+                @include sprite('left-arrow-hover')
+            }
+           
         }
         &-next {
             transform: rotate(180deg);
-            right: 30px;
+           
         }
         &-prev {
-            left: 30px;
+           right: 60px;
+        }
+    
+    }
+  }
+  &.teachers-slider {
+      display: flex;
+      justify-content: space-between;
+      margin-left: -10px;
+      margin-right: -10px;
+      position: relative;
+      padding-left: 70px;
+      padding-right: 70px;
+      &.created {
+          .slider__item {
+              opacity: 1;
+          }
+      }
+      .slider {
+          &__item {
+              opacity: 0;
+              width: 25%;
+              padding-left: 10px;
+              padding-right: 10px;
+              &-img {
+                  margin-bottom: 15px;
+              }
+              &-title {
+                font-size: 18px;
+                line-height: 24px;
+                color: #003A78;
+                margin-bottom: 7px;
+                @include arial-bold;
+              }
+              &-text {
+                @include arial-regular;
+                font-size: 16px;
+                line-height: 24px;
+                color: #3C454E;
+              }
+          }
+      }
+      .slick {
+        &-prev,&-next {
+           
+            position: absolute;
+            z-index: 1000;
+            top: 30%;
+           
+            font-size: 0;
+            @include sprite('left-arrow');
+            &:hover {
+                @include sprite('left-arrow-hover')
+            }
+           
+        }
+        &-next {
+            transform: rotate(180deg);
+           right: 10px;
+        }
+        &-prev {
+         left: 10px;
         }
     
     }

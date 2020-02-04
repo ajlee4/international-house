@@ -1,0 +1,30 @@
+.breadcrumbs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    &__item {
+        margin-right: 28px;
+        &:last-child {
+            margin-right: 0;
+            .breadcrumbs__link {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 14px;
+        color: #7B7B7B;
+        @include arial-regular;
+        &:after {
+            @include sprite('breadcrumbs-arrow');
+            content: '';
+            display: inline-block;
+            margin-left: 14px;
+        }
+    }
+}

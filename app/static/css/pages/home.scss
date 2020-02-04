@@ -1,4 +1,10 @@
 .section {
+  &__title {
+    font-size: 35px;
+    line-height: 40px;
+    color: #003a78;
+    @include arial-bold;
+  }
   &.card-section {
     .section {
       &__inner {
@@ -6,11 +12,9 @@
         padding-bottom: 60px;
       }
       &__title {
-        font-size: 35px;
-        line-height: 40px;
-        color: #003a78;
+       
         width: 50%;
-        @include arial-bold;
+      
         margin-bottom: 42px;
       }
     }
@@ -284,8 +288,7 @@
                   &-fragment {
                       margin-bottom: 15px;
                       .line1 {
-                        margin-left: 5px;
-                        margin-right: 5px;
+                        
                         position: relative;
                         top: -10px;
                     }
@@ -326,5 +329,39 @@
             margin-bottom: 44px;
           }
       }
+  }
+  &.teachers-section {
+    .section {
+      &__inner {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      }
+      &__title {
+        margin-bottom: 42px;
+      }
+    }
+  }
+  &.question-section {
+    .section {
+      &__inner {
+        padding-top: 62px;
+        padding-bottom: 62px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__title {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      &__subtitle {
+        @include arial-regular;
+        font-size: 20px;
+        line-height: 24px;
+        color: #003A78;
+        margin-bottom: 35px;
+      }
+      
+    }
   }
 }

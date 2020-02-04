@@ -4,6 +4,8 @@ $(document).ready(function() {
       infinite: true,
       slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay:true,
+    autoplaySpeed:4000,
     
     },
     $('.main-slider').addClass('created')
@@ -20,4 +22,13 @@ $(document).ready(function() {
       );
 
     
+      $('.teachers-slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+      slidesToScroll: 1,
+      
+      },
+      $('.teachers-slider').addClass('created')
+      );
   });

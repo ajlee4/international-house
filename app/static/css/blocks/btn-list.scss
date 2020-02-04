@@ -40,6 +40,12 @@ border-radius: 10px;
 &:hover {
   background-color: #FEE58B;
 }
+&.white-color {
+  color: #fff;
+  &:hover {
+      color: #003A78;
+  }
+}
   }
   &.secondary-btn {
     font-size: 18px;
