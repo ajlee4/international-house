@@ -1,0 +1,41 @@
+.pagination {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: flex-end;
+    .page-item {
+        margin-right: 5px;
+     
+        display: flex;
+        align-items: center;
+        svg {
+            width: 35px;
+            height: 35px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &.prev {
+            margin-right: 25px;
+
+        }
+        &.next {
+            margin-left: 25px;
+        }
+    }
+    .page-link {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 24px;
+        color: #3C454E;
+        @include arial-regular;
+        &.active {
+            background-color: #003A78;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 50%;
+        }
+    }
+}

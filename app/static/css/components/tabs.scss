@@ -1,0 +1,102 @@
+.tabs {
+    &.catalog-course-tabs {
+        background: #FFFFFF;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+overflow: hidden;
+        .tabs {
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                .tab {
+                    padding: 18px 18px 27px 18px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    cursor: pointer;
+                    &.active {
+                        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+                        .tab__bottom {
+                            color: #003A78;
+                        }
+                    }
+                    &__top {
+                        margin-bottom: 16px;
+                    }
+                    &__bottom {
+                        font-size: 20px;
+                        line-height: 24px;
+                        @include arial-bold;
+                        color: #7EA6C0;
+                     
+                    }
+                }
+            }
+           
+        }
+        .tab {
+            &-content {
+                padding: 30px 34px 30px 18px;
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+    &.question-tabs {
+        .tabs {
+            &__header {
+                display: flex;
+                padding-top: 18px;
+                padding-bottom: 18px;
+                background: #EFEFEF;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    background: #EFEFEF;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                }
+                &::before {
+                    right: 100%;
+                    position: absolute;
+                    top: 0;
+                 
+                    background: #EFEFEF;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                }
+                .tab {
+                    margin-right: 35px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #919191;
+                    cursor: pointer;
+                    @include arial-bold;
+                    &.active {
+                        color: #003A78;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+
+                    }
+                }
+            }
+           
+        }
+        .tab {
+            &-content {
+                padding-top: 38px;
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}

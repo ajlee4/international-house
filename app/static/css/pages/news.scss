@@ -1,0 +1,145 @@
+.content {
+    &.news-page {
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+        .section {
+           &.news-section {
+               .section__inner {
+                   padding-bottom: 65px;
+               }
+            .news-col {
+                display: block;
+        
+                .col {
+                  &__inner {
+                    &:hover {
+                      box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+                      transition: 0.3s;
+                      transform: scale(1.02);
+                    }
+                    transition: 0.3s;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    height: calc(100% - 50px);
+                    position: relative;
+                    background: #fbfbfb;
+                    overflow: hidden;
+                    .card-elem {
+                      display: inline-block;
+                      height: 40px;
+                      position: absolute;
+                      right: 0;
+                      bottom: 0;
+                    }
+                
+                  }
+                  &-img {
+                    position: relative;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    height: 230px;
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                    &:before {
+                      position: absolute;
+                      content: '';
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      display: block;
+                      background: rgba(0, 58, 120, 0.2);
+                    }
+                  }
+                  &-info {
+                    backface-visibility: hidden;
+                    position: relative;
+                    width: 90%;
+        
+                    top: -50px;
+        
+                    padding: 16px 19px 34px 18px;
+                    background: #fbfbfb;
+                    border-radius: 0px 10px 10px 0px;
+                    &__date {
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        line-height: 24px;
+                        @include arial-regular;
+                        color: #7B7B7B;
+                      
+                    }
+                    &__title {
+                      font-size: 20px;
+                      line-height: 24px;
+                      @include arial-bold;
+                      margin-bottom: 9px;
+                      color: #003a78;
+                      text-transform: uppercase;
+                    }
+                    &__text {
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: #7b7b7b;
+                      @include arial-bold;
+                      margin-bottom: 24px;
+                    }
+                    &__action {
+                        .yellow-text {
+                            @include arial-bold;
+                            color: #FDC600;
+                            font-size: 12px;
+                            line-height: 24px;
+                            display: flex;
+                            align-items: center;
+                            svg {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                  }
+                }
+              }
+           }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.content {
+    &.question-page {
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+        .section {
+            &.question-section {
+                .section {
+                    &__inner {
+                        padding-bottom: 64px;
+                        padding-top: 0;
+                    }
+                    &__tabs {
+                        width: 100%;
+                        margin-bottom: 46px;
+                        .question-list {
+                            .list-item {
+                                padding-left: 15px;
+                                padding-right: 20px;
+                               
+                                border: 1px solid #C4C4C4;
+                                border-radius: 10px;
+                                width: 732px;
+                                margin-bottom: 24px;
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                                &.open {
+                                   .list-item__top {
+                                    .title {
+                                        color: #003A78;
+                                      
+                                    }
+                                    svg {
+                                        transform: rotate(180deg);
+                                        transition: 0.3s;
+                                    }
+                                   }
+                                    
+                                }
+                                &__top {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                    cursor: pointer;
+                                    .title {
+                                        width: 90%;
+                                        color: #3C454E;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        @include arial-bold;
+                                       
+                                    }
+                                    svg {
+                                        transition: 0.3s;
+                                    }
+                                  
+                                }
+                                &__bottom {
+                                    display: none;
+                                  padding-bottom: 20px;
+                                   width: 90%;
+                                   font-size: 16px;
+                                   line-height: 24px;
+                                   color: #7B7B7B;
+                                }
+                            }
+                        }
+                    }
+                    &__actions {
+                        width: 100%;
+                        .btn {
+                            margin-right: 28px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                        .secondary-btn {
+                            height: 42px;
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            &.white {
+                                background-color: #fff;
+                                color: #003A78;
+                                border: 2px solid #003A78;
+
+border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

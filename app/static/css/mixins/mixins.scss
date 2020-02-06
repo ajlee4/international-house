@@ -163,6 +163,8 @@
   }
 }
 
+
+
 @mixin tablet-and-phone() {
   @media (max-width: $tabletMedia) {
     @content;

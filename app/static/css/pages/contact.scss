@@ -1,0 +1,43 @@
+.content {
+    &.contact-page {
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+    }
+}
