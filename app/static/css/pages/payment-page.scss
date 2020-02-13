@@ -1,0 +1,139 @@
+.content {
+    &.payment-page {
+      
+         .page {
+            &__title {
+                margin-bottom: 65px;
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 44px;
+                color: #003A78;
+                width: 70%;
+                }
+                .subtitle {
+                    color: #7B7B7B;
+                    @include arial-bold;
+                    font-size: 20px;
+                    line-height: 24px;
+
+                }
+            }
+         
+        }
+        .section {
+            &.payment-section {
+                .section {
+                    &__list {
+                        margin-bottom: 77px;
+                        .course-col {
+                            margin-bottom: 30px;
+                            .col {
+                              &__inner {
+                                background: #ffffff;
+                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                                border-radius: 10px;
+                                padding: 20px 40px 22px 22px;
+                                position: relative;
+                                transition: 0.3s;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                &:hover {
+                                  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+                                  transition: 0.3s;
+                                 
+                                  .elem-before {
+                                    position: absolute;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: 0.3s;
+                                  }
+                                  .elem-after {
+                                    transition: 0.3s;
+                                    position: static;
+                                    opacity: 1;
+                                    visibility: visible;
+                                  }
+                                }
+                              }
+                              &__title {
+                                font-size: 18px;
+                                line-height: 24px;
+                                margin-bottom: 10px;
+                                color: #01548a;
+                                @include arial-bold;
+                                backface-visibility: hidden;
+                              }
+                              &__top {
+                                .price {
+                                    @include arial-bold;
+                                }
+                              }
+                              &__bottom {
+                                  .primary-btn {
+                                      font-size: 16px;
+                                      line-height: 16px;
+                                      padding-top: 7px;
+                                      padding-bottom: 7px;
+                                  }
+                              }
+                              &__subtitle {
+                                font-size: 14px;
+                                line-height: 20px;
+                                @include arial-regular;
+                                color: #7b7b7b;
+                                margin-bottom: 15px;
+                              }
+                              
+                              &__details {
+                            
+                              }
+                            
+                              &__elem {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                height: 40px;
+                                .elem-before {
+                                  transition: 0.3s;
+                                  position: static;
+                                  opacity: 1;
+                                  visibility: visible;
+                                }
+                                .elem-after {
+                                  position: absolute;
+                                  opacity: 0;
+                                  visibility: hidden;
+                                }
+                              }
+                            }
+                          }
+                    }
+                    &__info {
+                        font-size: 20px;
+                        line-height: 24px;  
+                        @include arial-regular;
+                        color: #7B7B7B;
+                        b {
+                            @include arial-bold;
+                        }
+                        .blue-text {
+                            color: #003A78;
+                            @include arial-bold;
+                        }
+                        .black-text {
+                            color: #3C454E;;
+                        }
+                        .link {
+                            color: #003A78;
+                        }
+                    }
+                }
+            }
+       
+        }
+    }
+}

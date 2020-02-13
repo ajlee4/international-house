@@ -1,0 +1,179 @@
+.content {
+    &.reviews-page {
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+        .section {
+         &.reviews-list-section {
+             .section {
+                 &__inner {
+                    padding-bottom: 68px;
+                 }
+                 &__info {
+                     margin-bottom: 70px;
+                     .reviews-list {
+                         margin-left: -15px;
+                         margin-right: -15px;
+                         display:flex;
+                  
+                         flex-wrap: wrap;
+                         margin-bottom: 40px;
+                         .list-item {
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            width: 25%;
+                        
+                            margin-bottom: 33px;
+                            align-self: baseline;
+                            &__inner {
+                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                                border-radius: 10px;
+                                padding: 25px 20px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                background: #FBFBFB;
+                                position: relative;
+                                overflow: hidden;
+                                &:before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 80px;
+                                    width: 100%;
+                                    display: block;
+                                    content: '';
+                                 
+                                }
+                                &.red {
+                                    &:before {
+                                        background: #E63312;
+                                    }
+                                }
+                                &.pink {
+                                    &:before {
+                                        background: #BA2C70;
+                                    }
+                                }
+                                &.purple {
+                                    &:before {
+                                        background: #650549;
+                                    }
+                                }
+                                &.blue {
+                                    &:before {
+                                        background: #01548A;
+                                    }
+                                }
+                                &.green {
+                                    &:before {
+                                        background: #007D58;
+                                    }
+                                }
+                                &.light-green {
+                                    &:before {
+                                        background: #95C11F;
+                                    }
+                                }
+                                &.orange {
+                                    &:before {
+                                        background: #F18700;
+                                    }
+                                }
+                                &.yellow {
+                                    &:before {
+                                        background: #FBBA00;
+                                    }
+                                }
+                            }
+                            &__photo {
+                                margin-bottom: 15px;
+                                border-radius: 50%;
+                                border: 6px solid #fff;
+                                z-index: 100;
+                                position: relative;
+                                overflow: hidden;
+                                img {
+                                    max-height: 80px;
+                                    display: block;
+                                }
+                            }
+                            &__info {
+                                text-align: center;
+                                margin-bottom: 15px;
+                                p {
+                                    color: #3C454E;
+                                    @include arial-regular;
+                                    &.name {
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        @include arial-bold;
+                                    }
+                                    &.text {
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                    }
+                                    &.date {
+                                        color: #7B7B7B;
+                                        font-size: 12px;
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+                            &__links {
+                                display: flex;
+                                .link-item {
+                                    margin-right: 7px;
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                         }
+                     }
+                     &-action {
+                         display: flex;
+                         justify-content: center;
+                     }
+                 }
+             }
+         }
+        }
+    }
+}

@@ -39,5 +39,266 @@
             }
             }
         }
+        .section {
+            &.info-section {
+                min-height: 840px;
+                background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+                .section {
+                    &__inner {
+                        padding-top: 57px;
+                        padding-bottom: 57px;
+                    }
+                    &__info {
+                        width: 50%;
+                        &-block {
+                            margin-bottom: 30px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            .block {
+                                &__title {
+                                    color: #003A78;
+                                    font-size: 35px;
+                                    line-height: 40px;
+                                    @include arial-bold;
+                                    margin-bottom: 22px;
+                                }
+                                &__text {
+                                    color: #3C454E;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    @include arial-regular;
+                                    display: flex;
+                                    align-items: center;
+                                    svg {
+                                        margin-right: 10px;
+                                    }
+                                }
+                                &__bottom {
+                                    margin-left: -10px;
+                                    margin-right: -10px;
+                                    display: flex;
+                                    .block__list {
+                                        padding-top: 20px;
+                                        padding-bottom: 20px;
+                                        .title {
+                                            color: #003A78;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            @include arial-bold;
+                                            margin-bottom: 15px;
+                                        }
+                                        .list-info {
+                                         &.work-list {
+                                            height: 100%;
+                                             p {
+                                                 margin-bottom: 10px;
+                                             }
+                                             b {
+                                                 @include arial-bold;
+
+                                             }
+                                             display: flex;
+                                             flex-direction: column;
+                                             justify-content: space-between;
+                                         }
+                                            .list-item {
+                                                color: #3C454E;
+                                                font-size: 18px;
+                                                line-height: 24px;
+                                                @include arial-regular;
+                                                margin-bottom: 10px;
+                                                &:last-child {
+                                                    margin-bottom: 0;
+                                                }
+                                            }
+                                           
+                                        }
+                                    }
+                                    
+                                    &-left {
+                                        width: 50%;
+                                        padding-left: 10px;
+                                        padding-right: 10px;
+                                      
+                                    }
+                                    &-right {
+                                        width: 50%;
+                                        padding-left: 10px;
+                                        padding-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.address-section {
+                .section {
+                    &__inner {
+                        padding-top: 66px;
+                        padding-bottom: 66px;
+                    }
+                    &__title {
+                        margin-bottom: 40px;
+                    }
+                    &__info {
+                        display: flex;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                        .block-list {
+                            .title {
+                                color: #003A78;
+                                font-size: 20px;
+                                line-height: 24px;
+                                @include arial-bold;
+                                margin-bottom: 20px;
+                            }
+                            .adress-list {
+                                .list-item {
+                                    margin-bottom: 25px;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                    &.map-accordion__item--active {
+                                        .list-item__top {
+                                            .arrow-down {
+                                                transition: 0.3s;
+                                                transform: rotate(180deg);
+                                            }
+                                            .check {
+                                                fill: #003A78;
+                                                transition: 0.3s;
+                                            }
+                                        }
+                                    }
+                                  
+                                    &__top {
+                                        font-size: 20px;
+                                        line-height: 24px;
+                                        color: #003A78;
+                                        @include arial-regular;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        border-bottom: 1px solid #C4C4C4;
+                                        padding-bottom: 5px;
+                                        .check {
+                                            fill: #FDC600;
+                                            transition: 0.3s;
+                                        }
+                                        .arrow-down {
+                                            transition: 0.3s;
+                                        }
+                                        .top__left {
+                                            display: flex;
+                                            align-items: center;
+                                            svg {
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                        .top__right {
+
+                                        }
+                                    }
+                                    &__bottom {
+                                        padding-top: 30px;
+                                        padding-bottom: 30px;
+                                        display: none;
+                                        &-inner {
+                                            margin-left: -15px;
+                                            margin-right: -15px;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            .bottom-left {
+                                                width: 60%;
+                                                padding-left: 15px;
+                                                padding-right: 15px;
+                                            }
+                                            .bottom-right {
+                                                width: 40%;
+                                                padding-left: 15px;
+                                                padding-right: 15px;
+                                            }
+
+                                            .block__list {
+                                                padding-top: 20px;
+                                                padding-bottom: 20px;
+                                                &.teachers {
+                                                    
+                                                .list-info {
+                                                    display: flex;
+                                                   
+                                                    .list-item {
+                                                        margin-right: 27px;
+                                                        &:last-child {
+                                                            margin-right: 0;
+                                                        }
+                                                        &__title {
+                                                            
+                                                        }
+                                                    }
+                                                    .list-link {
+                                                        color: #C4C4C4;
+                                                    }
+                                                }
+                                                 
+                                                }
+                                                .title {
+                                                    color: #3C454E;
+                                                    font-size: 18px;
+                                                    line-height: 24px;
+                                                    @include arial-bold;
+                                                    margin-bottom: 15px;
+                                                }
+                                                .list-info {
+                                                 &.work-list {
+                                                    height: 100%;
+                                                     p {
+                                                         margin-bottom: 10px;
+                                                     }
+                                                     b {
+                                                         @include arial-bold;
+        
+                                                     }
+                                                     display: flex;
+                                                     flex-direction: column;
+                                                     justify-content: space-between;
+                                                 }
+                                                    .list-item {
+                                                        color: #3C454E;
+                                                        font-size: 18px;
+                                                        line-height: 24px;
+                                                        @include arial-regular;
+                                                        margin-bottom: 10px;
+                                                        &:last-child {
+                                                            margin-bottom: 0;
+                                                        }
+                                                    }
+                                                   
+                                                }
+                                            }
+                                        }
+                                       
+                                    }
+                                }
+                            }
+                        }
+                        &-left {
+                            width: 50%;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
+                        &-right {
+                            width: 50%;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

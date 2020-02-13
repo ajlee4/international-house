@@ -58,5 +58,21 @@ border-radius: 10px;
 &:hover {
   background-color: #4286CF;
 }
+&.white  {
+  background-color: #fff;
+  color: #003A78;
+  border: 2px solid #003A78;
+
+border-radius: 10px;
+
+}
+&.close {
+  &:hover {
+    background-color: #e0283e;
+    color: #fff;
+    border-color: #e0283e;
+   
+  }
+}
   }
 }

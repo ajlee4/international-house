@@ -62,4 +62,15 @@ $(document).ready(function() {
       },
       $('.clients-list-slider').addClass('created')
       );
+
+
+      $('.gallery-slider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+      slidesToScroll: 1,
+      
+      },
+      $('.gallery-slider').addClass('created')
+      );
   });

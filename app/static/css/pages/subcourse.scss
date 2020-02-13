@@ -1,0 +1,437 @@
+.content {
+    &.subcourse-page {
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+        .subtext {
+            margin-bottom: 22px;
+            &__inner {
+                width: 60%;
+                font-size: 20px;
+                line-height: 24px;
+                color: #3C454E;
+                @include arial-bold;
+            }
+        }
+        .download-link {
+            .link {
+                color: #01548A;
+                font-size: 18px;
+                line-height: 24px;
+                @include arial-regular;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    color: lighten($color: #01548A, $amount: 50%);
+                }
+                &__left {
+                    margin-right: 32px;
+                }
+            }
+        }
+        .section {
+          &.course-info-section {
+              .section {
+                  &__title {
+                      margin-bottom: 50px;
+
+                  }
+                  &__subtitle {
+                      font-size: 35px;
+                      line-height: 40px;
+                      color: #3C454E;
+                      @include arial-bold;
+                      margin-bottom: 90px;
+                  }
+                  &__inner {
+                    padding-bottom: 55px;
+                  }
+                  &__info {
+                    .list-info {
+                        margin-bottom: 70px;
+                        .list-item {
+                             @include arial-bold;
+                             font-size: 20px;
+                             line-height: 24px;
+                             color: #7B7B7B;
+                             margin-bottom: 20px;
+                             display: flex;
+                             align-items: flex-start;
+                           
+                             &:before {
+                                 content: '';
+                                 @include sprite('Ellipse');
+                                 display: block;
+                                 margin-right: 10px;
+                                 margin-top: 5px;
+                             }
+                             &:last-child {
+                                 margin-bottom: 0;
+                             }
+                        }
+                    }
+                    .block-info {
+                        &.studies-info {
+                            margin-bottom: 45px;
+                            .studies-info {
+                                &__list {
+                                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+                                    border-radius: 10px;
+                                    width: 80%;
+                                    overflow: hidden;
+                                 
+                                    .list-item {
+                                        padding-left: 30px;
+                                        padding-right: 30px;
+                                        padding-top: 16px;
+                                        padding-bottom: 16px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        &.blue {
+                                            background: #F0F8FE;
+                                        }
+                                        &__left {
+                                         width: 50%;
+                                            padding-right: 10px;
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                            color: #003A78;
+                                            @include arial-bold;
+
+                                        }
+                                        &__right {
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            padding-left: 10px;
+                                            width: 50%;
+                                            color: #3C454E;
+                                            @include arial-regular;
+                                            font-size: 18px;
+                                            line-height: 24px;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                  }
+              }
+          }
+          &.course-subinfo-section {
+              .subtext {
+                  margin-bottom: 30px;
+                  .title {
+                    color: #3C454E;
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                  }
+                  .text {
+                    color: #7B7B7B;
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-regular;
+                    width: 60%;
+                  }
+              }
+              .list-info-accordion {
+                  .list-info {
+                      width: 60%;
+                      .list-item {
+                          margin-bottom: 30px;
+                          &:last-child {
+                              margin-bottom: 0;
+                          }
+                        &.open {
+                            .arrow-down {
+                                transform: rotate(180deg);
+                                transition: 0.3s;
+                            }
+                        }
+                          &__top {
+                            color: #003A78;
+                            font-size: 24px;
+                            line-height: 24px;
+                            @include arial-regular;
+                            border-bottom: 1px solid #E5E5E5;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .arrow-down {
+                              
+                                transition: 0.3s;
+                            }
+                         
+                          }
+                          &__bottom {
+                            padding-top: 18px;
+                            padding-bottom: 18px;
+                            font-size: 20px;
+                            line-height: 24px;
+                            color: #7B7B7B;
+                            @include arial-regular;
+                            display: none;
+                          }
+                      }
+                  }
+              }
+              .section {
+                  &__title {
+                    margin-bottom: 27px;
+                  }
+                  &__inner {
+                      padding-top: 64px;
+                      padding-bottom: 64px;
+
+                  }
+              }
+          }
+          &.table-section {
+              .section {
+                  &__inner {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                  }
+                  &__table {
+                    .table__wrapper {
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
+                        border-radius: 8px;
+                        overflow: hidden; 
+                        width: 65%;
+                    }
+                    .example-table {
+                        width: 100%;
+                      
+                    tr {
+                        border-bottom: 1px solid #CECECE;
+                        &:last-child {
+                            border-bottom:none;
+                        }
+                    }
+                       
+                        thead {
+                            tr {
+                                border-bottom: 1px solid #CECECE !important;
+                            }
+                            th {
+                                background: #F0F8FE;
+                                color: #003A78;
+                                font-size: 18px;
+                                line-height: 24px;
+                                @include arial-bold;
+                                min-height: 104px;   
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-right: 1px solid #CECECE;
+                            
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 8px;
+                                }
+                                &.red {
+                                    &:before {
+                                        background-color: #E63312;
+                                    }
+                                }
+                                &.purple {
+                                    &:before {
+                                        background: #650549;
+                                    }
+                                }
+                                &.pink {
+                                    &:before {
+                                        background: #BA2C70;
+                                    }
+                                }
+                                &.blue {
+                                    &:before {
+                                        background: #27348B;
+                                    }
+                                }
+                                &.green {
+                                    &:before {
+                                        background: #007D58;
+                                    }
+                                }
+                                &.light-green {
+                                    &:before {
+                                        background: #95C11F;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            td {
+                                padding: 26px 14px 32px 14px;
+                                text-align: center;
+                                border-right: 1px solid #CECECE;
+                                
+                                font-size: 14px;
+                                line-height: 24px;
+                                @include arial-regular;
+                                color: #3C454E;
+                                b {
+                                    @include arial-bold;
+                                    color: #003A78;
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                }
+                                .link {
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: #003A78;
+                                    @include arial-regular;
+                                }
+                             .text {
+                                color: #3C454E;
+                                font-size: 18px;
+                                line-height: 24px;
+                                @include arial-regular;
+                             }
+                             .list-info {
+                                 .list-item {
+                                     margin-bottom: 15px;
+                                     &:last-child {
+                                         margin-bottom: 0;
+                                     }
+                                     .title {
+                                        color: #3C454E;
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                        @include arial-bold;
+                                     }
+                                     .text {
+
+                                     }
+                                 }
+                                 
+                             }
+                            }
+                        }
+                    }
+                  }
+              }
+          }
+          &.gallery-section {
+              .section {
+                  &__title {
+                    margin-bottom: 35px;
+                  }
+                  &__inner {
+                      padding-top: 60px;
+                      padding-bottom: 60px;
+                  }
+              }
+          }
+          &.steps-info-section {
+              .section {
+                  &__inner {
+                      padding-top: 50px;
+                      padding-bottom: 50px;
+
+                  }
+                  &__title {
+                      margin-bottom: 30px;
+                  }
+                  &__info {
+                    .steps-list {
+                          
+                        display: flex;
+                        padding-bottom: 60px;
+                        .list-item {
+                            width: 20%;
+                            &__top {
+                              
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 42px;
+                                svg {
+                                   
+                                }
+                                .icon {
+                                    display: block;
+                                    width: 88px;
+                                    height: 88px;
+                                }
+                                &:before {
+                                    
+                                    width: 100%;
+                                    height: 8px;
+                                    content: '';
+                                    background: #003A78;
+                                }
+                                &:after {
+                                  display: block;
+                                    width: 100%;
+                                    height: 8px;
+                                    content: '';
+                                    background: #003A78;
+                                }
+                            }
+                            &__bottom {
+                                text-align: center;
+                                font-size: 16px;
+                                line-height: 24px;
+                                @include arial-regular;;
+                                color: #3C454E;
+                                .title {
+                                    @include arial-bold;
+                                    margin-bottom: 8px;   
+                                }
+                            }
+                        }
+                    }
+                  }
+              }
+          }
+        }
+    }
+}

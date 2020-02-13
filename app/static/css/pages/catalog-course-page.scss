@@ -61,10 +61,12 @@
                                             font-size: 20px;
                                             line-height: 24px;
                                             @include arial-bold;
+                                            color: #01548A;
                                         }
                                         font-size: 16px;
                                         line-height: 24px;
-                                        color: #01548A;
+                                     
+                                        color: #6A6A6A;
                                         @include arial-regular;
                                         &:hover {
                                             color:#B0B0B0;

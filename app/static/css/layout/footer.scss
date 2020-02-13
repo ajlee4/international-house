@@ -6,6 +6,7 @@
  &__left {
    width: 50%;
  }
+
  &__right {
    width: 50%;
    background: #73797C;
@@ -90,6 +91,7 @@
            }
           }
          }
+         
          &.tel {
           display: block;
       
@@ -209,5 +211,8 @@
      }
    }
  }
-
+ .map-footer {
+   height: 100% !important;
+   width: 100% !important;
+}
 }

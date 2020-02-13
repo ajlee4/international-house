@@ -147,3 +147,183 @@ color: #C4C4C4;
     }
   }
 }
+.reviews-form {
+  .form {
+    &__title {
+      color: #003A78;
+      font-size: 20px;
+      line-height: 24px;
+      @include arial-bold;
+      margin-bottom: 45px;
+    }
+    &__info {
+      margin-left: -15px;
+      margin-right: -15px;
+      display: flex;
+      &-left {
+        width: 40%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .form-input {
+          border: none;
+          border-bottom: 1px solid #AFAFAF;
+          padding-left: 0;
+          font-size: 20px;
+          line-height: 24px;
+          @include arial-regular;
+          border-radius: 0;
+          @include placeholder {
+            font-size: 20px;
+            line-height: 24px;
+            color:  #C4C4C4;;
+          }
+        }
+        .contact-block {
+         padding-top: 40px;
+         padding-bottom: 40px;
+
+          .title {
+            font-size: 20px;
+            line-height: 24px;
+            color: #3C454E;
+            @include arial-regular;
+            margin-bottom: 18px;
+          }
+          .contact-field {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .field-left {
+              margin-right: 12px;
+            svg {
+              display: block;
+            }
+            }
+            .field-right {
+
+            }
+          }
+          
+        }
+        .upload-block {
+         
+          .upload-input {
+           display: none;
+          }
+          .upload__field {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            width: 70%;
+            .field-left {
+              padding-right: 20px;
+              color: #3C454E;
+              font-size: 20px;
+              line-height: 24px;
+              @include arial-regular;
+            }
+            .field-right {
+              svg  {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      &-right {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 60%;
+        .title {
+          color: #3C454E;
+          font-size: 20px;
+          line-height: 24px;
+          @include arial-regular;
+          margin-bottom: 11px;
+        }
+        .reviews-field {
+          margin-bottom: 45px;
+          .form-area {
+            outline: none;
+            border: 1px solid #C4C4C4;
+            height: 276px;
+            width: 100%;
+            resize: none;
+            padding: 25px;
+            font-size: 20px;
+          line-height: 24px;
+          @include arial-regular;
+          
+            @include placeholder {
+              font-size: 20px;
+          line-height: 24px;
+          color:  #C4C4C4;;
+          @include arial-regular;
+            }
+          }
+        }
+        .form__action {
+          display: flex;
+          justify-content: flex-end;
+          button {
+           padding-top: 7px;
+           padding-bottom: 7px;
+           margin-right: 27px;
+           &:last-child {
+             margin-right: 0;
+           }
+          }
+        }
+      }
+    }
+  }
+}
+.signup-form {
+  .subtext {
+    color: #3C454E;
+    font-size: 14px;
+    line-height: 20px;
+    @include arial-regular;
+    margin-top: 20px;
+  }
+  .form {
+    &__title {
+      @include arial-bold;
+      font-size: 35px;
+      line-height: 40px;
+      color: #003A78;
+      margin-bottom: 50px;
+      padding-right: 30px;
+    }
+    &__inputs {
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-right: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .form {
+        &-field {
+          width: 50%;
+          padding-right: 10px;
+          padding-left: 10px;
+          margin-bottom: 53px;
+       
+        }
+        &-input {
+          border: none;
+          border-bottom: 1px solid #7B7B7B;
+          outline: none;
+          border-radius: 0px;
+          padding-left: 0;
+        }
+      }
+    }
+ 
+  }
+}

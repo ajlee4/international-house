@@ -442,4 +442,41 @@
         }
       }
   }
+  &.gallery-slider {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    .slider__item {
+      padding-left: 10px;
+      padding-right: 10px;
+      &-inner {
+        img {
+          border-radius: 10px;
+          width: 350px;
+          height: 240px;
+        }
+      }
+    }
+    .slick {
+      &-prev,
+      &-next {
+        position: absolute;
+        z-index: 1000;
+        bottom: 0;
+        right: 0;
+        font-size: 0;
+        @include sprite('left-arrow');
+        &:hover {
+          @include sprite('left-arrow-hover');
+        }
+      }
+      &-next {
+        transform: rotate(180deg);
+       
+      }
+      &-prev {
+        right: 70px;
+      }
+    }
+  }
 }

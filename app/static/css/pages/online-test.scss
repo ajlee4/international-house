@@ -1,0 +1,283 @@
+.content {
+    &.online-test-page {
+      
+         .page {
+            &__title {
+                .title {
+                    font-size: 45px;
+                line-height: 57px;
+                @include arial-bold;
+                margin-bottom: 47px;
+                color: #003A78;
+                width: 70%;
+                }
+            }
+            &__banner {
+                min-height: 423px;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-bottom: 65px;
+            .banner-info {
+                padding-top: 70px;
+                padding-bottom: 42px;
+                width: 40%;
+                &__title {
+                    font-size: 45px;
+                    line-height: 47px;
+                    color: #fff;
+                    @include arial-bold;
+                    margin-bottom: 10px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #DBDBDB;
+                    @include arial-regular;
+                    margin-bottom: 40px;
+                }
+            }
+            }
+        }
+        .section {
+        &.record-interview-section {
+            
+            .section {
+                &__inner {
+                    padding-bottom: 60px;
+                }
+                &__title {
+                    margin-bottom: 15px;
+                }
+                &__subtitle {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-bold;
+                    color:  #3C454E;
+                    margin-bottom: 35px;
+                }
+                &__info {
+                    .info-row {
+                        margin-bottom: 48px;
+                    }
+                    .info-col {
+                       display: flex;
+                        .col {
+                          &__inner {
+                           padding-top: 200px;
+                           width: 100%;
+                            &:hover {
+                              box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+                              transition: 0.3s;
+                              transform: scale(1.02);
+                            }
+                            transition: 0.3s;
+                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                            border-radius: 10px;
+                           
+                            position: relative;
+                            background: #fbfbfb;
+                            overflow: hidden;
+                            display: block;
+                          
+                         
+                            .card-elem {
+                              display: inline-block;
+                              height: 40px;
+                              position: absolute;
+                              right: 0;
+                              bottom: 0;
+                            }
+                        
+                          }
+                          &-img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            height: 230px;
+                            width: 100%;
+                            img {
+                              width: 100%;
+                             max-height: 230px;
+                             height: 100%;
+                             display: block;
+                            }
+                            &:before {
+                              position: absolute;
+                              content: '';
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              display: block;
+                              background: rgba(0, 58, 120, 0.2);
+                            }
+                          }
+                          &-info {
+                             
+                            backface-visibility: hidden;
+                           
+                            position: relative;
+                            width: 90%;
+                
+                          
+                            padding: 16px 19px 34px 18px;
+                            background: #fbfbfb;
+                            border-radius: 0px 10px 10px 0px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 100%;
+                            &__top {
+                                padding-bottom: 25px;
+                            }
+                            &__title {
+                              font-size: 20px;
+                              line-height: 24px;
+                              @include arial-bold;
+                              margin-bottom: 9px;
+                              color: #003a78;
+                             
+                            }
+                            &__text {
+                              font-size: 16px;
+                              line-height: 24px;
+                              color: #7b7b7b;
+                              @include arial-bold;
+                            
+                            }
+                            &__action {
+                                .secondary-btn {
+                                    padding-top: 3px;
+                                    padding-bottom: 3px;
+                                    &.yellow {
+                                        background: #FDC600;
+                                        &:hover {
+                                           background-color: #F9EE8F;
+                                           color: #003A78;
+                                        }
+                                    }
+                                }
+                            }
+                          }
+                        }
+                      }
+
+                      .subtext {
+                          .title {
+                              margin-bottom: 8px;
+                          }
+                          b {
+                              @include arial-bold;
+                          }
+                          p {
+                            color: #7B7B7B;
+                            font-size: 20px;
+                            line-height: 24px;
+                            @include arial-regular;
+                          }
+                      }
+                }
+            }
+        }
+        &.coming-courses-section {
+            .section {
+                &__inner {
+                    padding-top: 56px;
+                    padding-bottom: 65px;
+                }
+                &__title {
+                    margin-bottom: 32px;
+                }
+                &__info {
+                    .course-col {
+                        margin-bottom: 30px;
+                        .col {
+                          &__inner {
+                            background: #ffffff;
+                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                            border-radius: 10px;
+                            padding: 20px 40px 22px 22px;
+                            position: relative;
+                            transition: 0.3s;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            &:hover {
+                              box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
+                              transition: 0.3s;
+                             
+                              .elem-before {
+                                position: absolute;
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: 0.3s;
+                              }
+                              .elem-after {
+                                transition: 0.3s;
+                                position: static;
+                                opacity: 1;
+                                visibility: visible;
+                              }
+                            }
+                          }
+                          &__title {
+                            font-size: 18px;
+                            line-height: 24px;
+                            margin-bottom: 10px;
+                            color: #01548a;
+                            @include arial-bold;
+                            backface-visibility: hidden;
+                          }
+                          &__subtitle {
+                            font-size: 14px;
+                            line-height: 20px;
+                            @include arial-regular;
+                            color: #7b7b7b;
+                            margin-bottom: 15px;
+                          }
+                          &__details {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #fdc600;
+                            display: flex;
+                            align-items: center;
+                            svg {
+                              margin-left: 10px;
+                            }
+                          }
+                          &__elem {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 40px;
+                            .elem-before {
+                              transition: 0.3s;
+                              position: static;
+                              opacity: 1;
+                              visibility: visible;
+                            }
+                            .elem-after {
+                              position: absolute;
+                              opacity: 0;
+                              visibility: hidden;
+                            }
+                          }
+                        }
+                      }
+                      .subtext {
+                          font-size: 20px;
+                          line-height: 24px;
+                          color: #7B7B7B;
+                          @include arial-regular;
+                      }
+                }
+            }
+        }
+        }
+    }
+}

@@ -65,7 +65,7 @@
                     border-radius: 8px;
                     overflow: hidden; 
                     margin-bottom: 87px; 
-                    
+                
                     .price-table {
                         width: 100%;
                       
@@ -225,6 +225,9 @@
                             @include arial-regular;
                             display: flex;
                             align-items: center;
+                            &:hover {
+                                color: lighten($color: #01548A, $amount: 50%);
+                            }
                             &__left {
                                 margin-right: 32px;
                             }
