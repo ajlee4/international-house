@@ -40,7 +40,7 @@ function init() {
 
     footerMap.controls.add(fullscreenControl);
 
-    var imageHref = '../static/images/placemark.svg'
+    var imageHref = '../static/images/icons/placemark.svg'
     for (i = 0; i < points.length; i++) {
         var placemarks = new ymaps.Placemark(points[i].coordinate, {
             dataPlace: points[i].dataCenter,
@@ -70,7 +70,7 @@ function init() {
         }
 
         pointsCollection.each(function (geoObject) {
-            geoObject.options.set('iconImageHref', '../static/images/placemark.svg');
+            geoObject.options.set('iconImageHref', '../static/images/icons/placemark.svg');
 
             if (geoObject.properties.get('dataPlace') === dataPlace) {
                 activeObject = geoObject;
@@ -80,7 +80,7 @@ function init() {
         footerMap.panTo(activeObject.geometry.getCoordinates(), {delay: 0}).then(function () {
             footerMap.setZoom(14);
         });;
-        activeObject.options.set('iconImageHref', '../static/images/placemark-active.svg');
+        activeObject.options.set('iconImageHref', '../static/images/icons/placemark-active.svg');
         dataPlace2 = activeObject.properties.get('dataPlace');
 
        

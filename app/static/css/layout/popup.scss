@@ -1,3 +1,4 @@
+
 .popup {
   position: fixed;
   overflow-x: hidden;
@@ -12,7 +13,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
+  ::-webkit-scrollbar-track {
+    background-color: #EDEDED;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #FDC600;
+    width: 10px;
+  }
   &__box {
     max-width: 500px;
     padding: 20px;
@@ -22,6 +36,8 @@
     position: relative;
     max-height: 95%;
     overflow-y: auto;
+  
+  
     &.header-popup {
       max-width: 100%;
       width: 921px;
@@ -48,6 +64,83 @@ max-width: 100%;
   &__close {
     top: 30px;
     right: 26px;
+  }
+}
+    }
+    &.contract-popup {
+      width: 922px;
+height: 775px;
+border-radius: 10px;
+max-width: 100%;
+padding: 36px 42px 80px 96px;
+position: relative;
+overflow: hidden;
+.popup {
+  
+  &__title {
+    color: #003A78;
+    font-size: 35px;
+    line-height: 40px;
+    @include arial-bold;
+    margin-bottom: 28px;
+  }
+  &__subtitle {
+    text-align: right;
+    color: #7B7B7B;
+    font-size: 14px;
+    line-height: 20px;
+    @include arial-regular;
+    margin-bottom: 48px;
+  }
+  &__info {
+    height: 550px;
+    padding-right: 20px;
+    margin-bottom: 2em;
+    overflow-y: auto;
+ 
+    &-title {
+      color: #3C454E;
+      font-size: 20px;
+      line-height: 24px;
+      @include arial-bold;
+      text-align: center;
+      margin-bottom: 21px;
+    }
+    p {
+      color: #3C454E;
+      font-size: 14px;
+      line-height: 20px;
+      @include arial-regular;
+    }
+    b {
+      @include arial-bold;
+    }
+    .link {
+      color: #01548A;
+    }
+  }
+  &__action {
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.15);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #fff;
+   
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    .secondary-btn {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
   }
 }
     }

@@ -28,4 +28,11 @@
     position: relative;
    color: #fff;
     z-index: 2;
+    font-size: 18px;
+    line-height: 21px;
+    @include arial-regular;
+    @include mobile {
+      color: #003A78;
+      @include arial-bold;
+    }
   }

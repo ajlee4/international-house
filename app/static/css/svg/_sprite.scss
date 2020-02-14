@@ -1,5 +1,5 @@
 $icons: (
-        sprite: (width: 234px, height: 238px, pngPath: '../images/svg/sprite.png', svgPath: '../images/svg/sprite.svg'),
+        sprite: (width: 266px, height: 261px, pngPath: '../images/svg/sprite.png', svgPath: '../images/svg/sprite.svg'),
 Ellipse: (width: 10px, height: 10px, backgroundX: 0px, backgroundY: 0px),
 breadcrumbs-arrow: (width: 8px, height: 12px, backgroundX: -10px, backgroundY: -10px),
 btn-arrow: (width: 12px, height: 12px, backgroundX: -18px, backgroundY: -22px),
@@ -7,7 +7,9 @@ btn-arrow-d: (width: 12px, height: 12px, backgroundX: -30px, backgroundY: -34px)
 btn-user: (width: 12px, height: 12px, backgroundX: -42px, backgroundY: -46px),
 card-elem: (width: 78px, height: 77px, backgroundX: -54px, backgroundY: -58px),
 checked: (width: 16px, height: 16px, backgroundX: -132px, backgroundY: -135px),
-drop_down: (width: 16px, height: 17px, backgroundX: -148px, backgroundY: -151px),
-left-arrow: (width: 35px, height: 35px, backgroundX: -164px, backgroundY: -168px),
-left-arrow-hover: (width: 35px, height: 35px, backgroundX: -199px, backgroundY: -203px),
+close-mobile-menu: (width: 16px, height: 16px, backgroundX: -148px, backgroundY: -151px),
+drop_down: (width: 16px, height: 17px, backgroundX: -164px, backgroundY: -167px),
+drop_down-mobile: (width: 16px, height: 7px, backgroundX: -180px, backgroundY: -184px),
+left-arrow: (width: 35px, height: 35px, backgroundX: -196px, backgroundY: -191px),
+left-arrow-hover: (width: 35px, height: 35px, backgroundX: -231px, backgroundY: -226px),
 );
