@@ -64,6 +64,15 @@
   display: flex;
   align-items: center;
   .form-input {
+    @include mobile {
+      display: block;
+      border-radius: 10px;
+      width: 100%;
+      height: 40px;
+      position: static;
+      font-size: 16px;
+      padding-right: 40px;
+    }
     display: none;
     position: absolute;
     top: 100%;
@@ -80,9 +89,24 @@ font-size: 18px;
 line-height: 24px;
 @include arial-bold;
 color: #C4C4C4;
+@include mobile {
+  font-size: 16px;
+}
 }
   }
   .search {
+    @include mobile {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      margin-top: -9px;
+      svg {
+        width: 19px;
+        height: 19px;
+        padding: 1px;
+        display: block;
+      }
+    }
     .close-icon {
       display: none;
     }

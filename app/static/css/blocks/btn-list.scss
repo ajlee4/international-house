@@ -19,33 +19,39 @@
   &.header-btn {
     font-size: 16px;
     line-height: 16px;
-    color: #003A78;
+    color: #003a78;
     @include arial-bold;
-    background-color: #FDC600;
+    background-color: #fdc600;
     border-radius: 10px;
     padding-top: 7px;
     padding-bottom: 7px;
     &:hover {
-     background-color: #FEE58B;
+      background-color: #fee58b;
     }
   }
   &.primary-btn {
     font-size: 18px;
     line-height: 24px;
-    color: #003A78;
+    color: #003a78;
     @include arial-bold;
     padding: 12px 32px;
-    background: #FDC600;
-border-radius: 10px;
-&:hover {
-  background-color: #FEE58B;
-}
-&.white-color {
-  color: #fff;
-  &:hover {
-      color: #003A78;
-  }
-}
+    background: #fdc600;
+    border-radius: 10px;
+    &:hover {
+      background-color: #fee58b;
+    }
+    &.white-text {
+     &:hover {
+      background: #F9EE8F !important;
+      color: #003A78 !important;
+     }
+    }
+    &.white-color {
+      color: #fff;
+      &:hover {
+        color: #003a78;
+      }
+    }
   }
   &.secondary-btn {
     font-size: 18px;
@@ -53,26 +59,28 @@ border-radius: 10px;
     color: #fff;
     @include arial-bold;
     padding: 12px 32px;
-    background: #003A78;
-border-radius: 10px;
-&:hover {
-  background-color: #4286CF;
-}
-&.white  {
-  background-color: #fff;
-  color: #003A78;
-  border: 2px solid #003A78;
+    background: #003a78;
+    border-radius: 10px;
+    &:hover {
+      background-color: #4286cf;
+    }
+    &.white {
+      background-color: #fff;
+      color: #003a78;
+      border: 2px solid #003a78;
 
-border-radius: 10px;
-
-}
-&.close {
-  &:hover {
-    background-color: #e0283e;
-    color: #fff;
-    border-color: #e0283e;
-   
-  }
-}
+      border-radius: 10px;
+      &:hover {
+        background: #003a78 !important;
+        color: #fff !important;
+      }
+    }
+    &.close {
+      &:hover {
+        background-color: #e0283e;
+        color: #fff;
+        border-color: #e0283e;
+      }
+    }
   }
 }

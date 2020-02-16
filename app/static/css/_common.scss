@@ -27,6 +27,10 @@ body {
       height: 100%;
     }
   }
+  &.header-menu-opened {
+    overflow: hidden;
+    overflow-scrolling: touch;
+  }
 }
 
 input {

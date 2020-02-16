@@ -313,6 +313,16 @@
                             border: 2px solid #003A78;
 
 border-radius: 10px;
+svg {
+    fill: #003A78;
+}
+&:hover {
+    svg {
+        fill: #fff;
+    }
+    background: #003A78;
+    color: #fff;
+  }
                         }
                     }
                 }
@@ -401,9 +411,9 @@ border-radius: 10px;
                             &__text {
                               font-size: 16px;
                               line-height: 24px;
-                              color: #7b7b7b;
-                              @include arial-bold;
-                              margin-bottom: 24px;
+                              color: #3C454E;
+                              @include arial-regular
+                            
                             }
                             &__action {
                                 .yellow-text {

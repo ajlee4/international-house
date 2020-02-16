@@ -225,6 +225,7 @@
               color: #fdc600;
               display: flex;
               align-items: center;
+              @include arial-bold;
               svg {
                 margin-left: 10px;
               }
