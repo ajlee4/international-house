@@ -3,27 +3,51 @@
     font-size: 35px;
     line-height: 40px;
     color: #003a78;
-    @include arial-bold;
+    @include arial-black;
+    @include mobile {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
   &.card-section {
     .section {
       &__inner {
         padding-top: 60px;
         padding-bottom: 60px;
+        @include mobile {
+          padding-top: 34px;
+          padding-bottom: 32px;
+        }
       }
       &__title {
        
         width: 50%;
       
         margin-bottom: 42px;
+        @include mobile {
+          width: 90%;
+          margin-bottom: 35px;
+        }
       }
     }
     .card-field {
       .card-row {
+        @include mobile {
+         
+          justify-content: center;
+        }
       }
       .card-col {
         display: block;
-
+        @include mobile {
+          max-width: 328px;
+         
+          
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
         .col {
           &__inner {
             &:hover {
@@ -38,6 +62,10 @@
             position: relative;
             background: #fbfbfb;
             overflow: hidden;
+            @include mobile {
+              height: 100%;
+            
+            }
             .card-elem {
               display: inline-block;
               height: 77px;
@@ -87,7 +115,10 @@
             padding: 16px 19px 34px 18px;
             background: #fbfbfb;
             border-radius: 0px 10px 10px 0px;
-
+            @include mobile {
+              top: -25px;
+              padding-bottom: 10px;
+            }
             &__title {
               font-size: 20px;
               line-height: 24px;
@@ -114,6 +145,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+  
     &:before {
       position: absolute;
       top: 0;
@@ -129,6 +161,11 @@
         display: flex;
         align-items: center;
         height: 272px;
+        @include mobile {
+          height: 100%;
+          padding-top: 56px;
+          padding-bottom: 50px;
+        }
         .advantages {
           &-row {
             width: 100%;
@@ -162,18 +199,33 @@
       &__inner {
         padding-top: 62px;
         padding-bottom: 62px;
+        @include mobile {
+          padding-top: 26px;
+          padding-bottom: 32px;
+        }
       }
       &__title {
         font-size: 35px;
         line-height: 40px;
         color: #003a78;
 
-        @include arial-bold;
+        @include arial-black;
         margin-bottom: 42px;
+        @include mobile {
+          margin-bottom: 38px;
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
       &__card {
         .course-col {
           margin-bottom: 30px;
+          @include mobile {
+            margin-bottom: 24px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
           .col {
             &__inner {
               background: #ffffff;
@@ -258,15 +310,28 @@
       &__inner {
         padding-top: 62px;
         padding-bottom: 62px;
+        @include mobile {
+          padding-top: 25px;
+          padding-bottom: 56px;
+        }
       }
       &__title {
         font-size: 35px;
         line-height: 40px;
         color: #003a78;
 
-        @include arial-bold;
+        @include arial-black;
         margin-bottom: 10px;
         width: 50%;
+        @include mobile {
+          margin-bottom: 4px;
+          width: 80%;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        @include mobile-small {
+          width: 100%;
+        }
       }
       &__subtitle {
         color: #686868;
@@ -274,14 +339,36 @@
         line-height: 24px;
         @include arial-bold;
         margin-bottom: 45px;
+        @include mobile {
+          margin-bottom: 66px;
+          width: 75%;
+        }
+        @include mobile-small {
+          width: 100%;
+        }
       }
       &__stepbar {
           display: flex;
           margin-bottom: 45px;
+          @include mobile {
+            flex-direction: column;
+            margin-bottom: 0;
+          }
           .stepbar-elem {
+            @include mobile {
+              display: flex;
+              height: 80px;
+              margin-bottom: 70px;
+             &:last-child {
+               margin-bottom: 48px;
+             }
+            }
            &:last-child {
                position: relative;
                top: 25px;
+               @include mobile {
+                top: 0;
+               }
            }
               .elem {
                   &-title {
@@ -290,14 +377,35 @@
                     color: #565758;
                     margin-bottom: 12px;
                     @include arial-bold;
+                    @include mobile {
+                      margin-right: 10px;
+                    }
                   }
                   &-fragment {
+                    @include mobile {
+                      margin-right: 50px;
+                     position: relative;
+                     
+                    }
+                    .mobile-line {
+                     display: none; 
+                      @include mobile {
+                        display: block;
+                        position: absolute;
+                        top: 25px;
+                        left: 80%;
+                      }
+                    }
                       margin-bottom: 15px;
                       .line1 {
                         
                         position: relative;
                         top: -10px;
+                        @include mobile {
+                          display: none;
+                        }
                     }
+                 
                   }
                   &-desc {
                     font-size: 18px;
@@ -305,7 +413,9 @@
                     @include arial-regular;
                     color: #3C454E;
                     width: 150px;
-                   
+                   @include mobile {
+                     width: 60%;
+                   }
                   }
               }
           }
@@ -317,14 +427,22 @@
           &__inner {
               padding-top: 62px;
               padding-bottom: 62px;
+              @include mobile {
+                padding-top: 20px;
+                padding-bottom: 40px;
+              }
           }
           &__title {
             font-size: 35px;
             line-height: 40px;
             color: #003a78;
     
-            @include arial-bold;
-            margin-bottom: 14px;
+            @include arial-black;
+            margin-bottom: 5px;
+            @include mobile {
+              font-size: 24px;
+              line-height: 28px;
+            }
            
           }
           &__subtitle {
@@ -333,6 +451,10 @@
             color: #01548A;
             @include arial-regular;
             margin-bottom: 44px;
+            @include mobile {
+              font-size: 16px;
+              margin-bottom: 26px;
+            }
           }
       }
   }
@@ -341,9 +463,16 @@
       &__inner {
         padding-top: 62px;
         padding-bottom: 62px;
+        @include mobile {
+          padding-top: 25px;
+          padding-bottom: 48px;
+        }
       }
       &__title {
         margin-bottom: 42px;
+        @include mobile {
+          margin-bottom: 31px;
+        }
       }
     }
   }
@@ -355,10 +484,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include mobile {
+          padding-top: 26px;
+          padding-bottom: 37px;
+        }
       }
       &__title {
         text-align: center;
         margin-bottom: 16px;
+        @include mobile {
+          margin-bottom: 5px;
+        }
       }
       &__subtitle {
         @include arial-regular;
@@ -366,6 +502,9 @@
         line-height: 24px;
         color: #003A78;
         margin-bottom: 35px;
+        @include mobile {
+          margin-bottom: 18px;
+        }
       }
       
     }

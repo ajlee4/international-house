@@ -30,6 +30,7 @@ $(document).ready(function(){
         $('.header__mobile-bottom').fadeOut();
         $('#header-mobile-menu').removeClass('burger-close');
         $('#mobile-body-tel-list').fadeIn(300)   
+        $('body').removeClass('header-menu-opened');
         
     })
 

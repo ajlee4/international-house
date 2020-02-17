@@ -25,6 +25,12 @@
     border-radius: 10px;
     padding-top: 7px;
     padding-bottom: 7px;
+    @include mobile {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 20px;
+    }
     &:hover {
       background-color: #fee58b;
     }
@@ -37,6 +43,12 @@
     padding: 12px 32px;
     background: #fdc600;
     border-radius: 10px;
+    @include mobile {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 20px;
+    }
     &:hover {
       background-color: #fee58b;
     }
@@ -61,6 +73,12 @@
     padding: 12px 32px;
     background: #003a78;
     border-radius: 10px;
+    @include mobile {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 20px;
+    }
     &:hover {
       background-color: #4286cf;
     }

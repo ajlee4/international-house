@@ -63,6 +63,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+
   .form-input {
     @include mobile {
       display: block;
