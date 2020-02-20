@@ -31,7 +31,7 @@
     font-size: 18px;
     line-height: 21px;
     @include arial-regular;
-    @include mobile {
+    @include tablet-and-phone {
       color: #003A78;
       @include arial-bold;
     }

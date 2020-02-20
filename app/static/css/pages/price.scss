@@ -6,13 +6,26 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
                 color: #003A78;
-               
+                @include mobile {
+                    font-size: 24px;
+                    line-height: 28px;
+                    width: 80%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    br {
+                      display: none;
+                    }
+                }
                 }
                 .subtitle {
                     width: 70%;
+                    @include mobile {
+                        width: 100%;
+                    }
                     b {
                         @include arial-bold;
                     }
@@ -21,6 +34,10 @@
                         line-height: 24px;
                         color: #7B7B7B;
                         @include arial-regular;
+                        @include mobile {
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
 
                     }
                 }
@@ -59,15 +76,33 @@
                   &__inner {
                       padding-top: 30px;
                       padding-bottom: 70px;
+                      @include mobile {
+                          padding-top: 20px;
+                          padding-bottom: 35px;
+                      }
                   }
                   &__table {
                     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
                     border-radius: 8px;
                     overflow: hidden; 
                     margin-bottom: 87px; 
-                
+                    @include mobile {
+                        height: 500px;
+                        overflow-y: auto;
+                        overflow-x: auto;
+                        td {
+                            padding-top: 25px;
+                            padding-bottom: 25px;
+                        }
+                    }
                     .price-table {
                         width: 100%;
+                    
+                        @include mobile {
+                            width: 900px;
+                            border-radius: 8px;
+                            
+                        }
                       
                     tr {
                         border-bottom: 1px solid #CECECE;
@@ -77,8 +112,10 @@
                     }
                        
                         thead {
+                            
                             tr {
                                 border-bottom: 1px solid #CECECE !important;
+                          
                             }
                             th {
                                 background: #F0F8FE;
@@ -92,7 +129,10 @@
                                 justify-content: center;
                                 align-items: center;
                                 border-right: 1px solid #CECECE;
-                            
+                              
+                                @include mobile {
+                                    font-size: 16px;
+                                }
                                 &:before {
                                     content: '';
                                     position: absolute;
@@ -143,8 +183,18 @@
                                 line-height: 24px;
                                 @include arial-regular;
                                 color: #3C454E;
+                                @include mobile {
+                                    padding-left: 8px;
+                                    padding-right: 8px;
+                                }
                                 b {
                                     @include arial-bold;
+                                }
+                                p {
+                                    @include mobile {
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                    }
                                 }
                                 .link {
                                     font-size: 16px;
@@ -214,6 +264,9 @@
                     .desc-link {
                         .row {
                             margin-bottom: 30px;
+                            @include mobile {
+                                margin-bottom: 20px;
+                            }
                             &:last-child {
                                 margin-bottom: 0;
                             }
@@ -225,11 +278,30 @@
                             @include arial-regular;
                             display: flex;
                             align-items: center;
+                            @include mobile {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                            &-col {
+                                @include mobile {
+                                    margin-bottom: 20px;
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
                             &:hover {
                                 color: lighten($color: #01548A, $amount: 50%);
                             }
                             &__left {
                                 margin-right: 32px;
+                                @include mobile {
+                                    margin-right: 15px;
+                                    svg {
+                                        width: 30px;
+                                        height: 35px;
+                                    }
+                                }
                             }
                         }
                     }

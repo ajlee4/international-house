@@ -12,10 +12,6 @@ $(document).ready(function(){
 
 
 
-    $("a[data-close='close-popup']").on('click',(e)=> {
-        e.preventDefault()
-        Popups.hide()
-    })
 
     $("a[data-wrap='sublist-wrap']").on('click',(e)=> {
         const target = $( event.target );
@@ -37,6 +33,22 @@ $(document).ready(function(){
     $('#close-mobile-tel').on('click',(e)=> {
         e.preventDefault()
         $('#mobile-body-tel-list').fadeOut(300)  
+        
+    })
+
+
+    $('.show-text-toggle').on('click', function(e){
+
+        $(this).toggleClass('active')
+        const $this = $(this).siblings('.show-text');
+        const $text = $(this);
+        $this.slideToggle('fast', function () {
+            if ($(this).is(':visible')) {
+                $text.text('Скрыть');
+            } else {
+                $text.text('Читать далее');
+            }
+        });
         
     })
 })

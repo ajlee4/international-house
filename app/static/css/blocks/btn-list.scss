@@ -43,6 +43,14 @@
     padding: 12px 32px;
     background: #fdc600;
     border-radius: 10px;
+    @include tablet {
+  
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+   
+    }
     @include mobile {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -73,6 +81,14 @@
     padding: 12px 32px;
     background: #003a78;
     border-radius: 10px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 22px;
+      padding-right: 22px;
+    }
     @include mobile {
       padding-top: 8px;
       padding-bottom: 8px;

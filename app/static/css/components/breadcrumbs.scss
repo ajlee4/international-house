@@ -2,6 +2,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    @include mobile {
+        display: none;
+    }
     &__item {
         margin-right: 14px;
         &:last-child {

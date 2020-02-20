@@ -22,6 +22,9 @@
           flex-direction: column;
           justify-content: flex-end;
         }
+        @include tablet {
+      
+        }
         opacity: 0;
         &-info {
      
@@ -30,6 +33,11 @@
             z-index: 1000;
             padding-top: 70px;
             width: 40%;
+            @include tablet {
+              padding-top: 88px;
+              padding-bottom: 88px;
+              width: 55%;
+            }
             @include mobile {
               padding-top: 0;
               padding-bottom: 30px;
@@ -42,7 +50,13 @@
 
               color: #003a78;
               margin-bottom: 18px;
-              
+              @include tablet {
+                font-size: 35px;
+                line-height: 40px;
+                br {
+                  display: none;
+                }
+              }
               @include mobile {
                 font-size: 32px;
                 line-height: 38px;
@@ -61,6 +75,9 @@
             .btn {
               margin-bottom: 66px;
               color: #fff;
+              @include tablet {
+                margin-bottom: 0;
+              }
               @include mobile {
                 margin-bottom: 0;
               }
@@ -136,6 +153,9 @@
         }
         &-left {
           padding-right: 30px;
+          @include tablet {
+            width: 60%;
+          }
           @include mobile {
             padding-right: 0;
             margin-bottom: 33px;
@@ -143,6 +163,9 @@
           img {
             max-width: 443px;
             max-height: 296px;
+            @include tablet {
+              max-width: 100%;
+            }
             @include mobile {
               max-width: 100%;
              
@@ -156,6 +179,11 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+          @include tablet {
+            padding-top: 20px;
+            width: 50%;
+            padding-left: 0;
+          }
           @include mobile {
             padding-left: 0;
           }
@@ -167,13 +195,17 @@
               color: #3c454e;
               margin-bottom: 45px;
               position: relative;
+              @include tablet {
+                font-size: 16px;
+                line-height: 20px;
+              }
               .reviews-icon {
                 position: absolute;
                 top: 0;
                 left: 0;
                 margin-top: -30px;
                 margin-left: -35px;
-                @include mobile {
+                @include tablet-and-phone {
                  width: 37px;
                  margin-top: -35px;
                   margin-left: 0;
@@ -225,9 +257,10 @@
     position: relative;
     padding-left: 70px;
     padding-right: 70px;
-    @include mobile {
+    @include tablet-and-phone{
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 80px;
     }
     &.created {
       .slider__item {
@@ -246,7 +279,7 @@
         &-img {
           margin-bottom: 15px;
           img {
-            @include mobile {
+            @include tablet-and-phone{
               width: 100%;
             }
           }
@@ -272,12 +305,17 @@
         position: absolute;
         z-index: 1000;
         top: 30%;
-        @include mobile {
+        @include mobile{
           bottom: 0;
           top: unset;
           left: 0;
         }
-
+        @include tablet {
+          bottom: 0;
+          top: unset;
+          left: unset;
+          right: 0;
+        }
         font-size: 0;
         @include sprite('left-arrow');
         &:hover {
@@ -290,9 +328,16 @@
         @include mobile {
           left: 60px;
         }
+        @include tablet {
+          right: 0;
+        }
       }
       &-prev {
         left: 10px;
+        @include tablet {
+          right: 60px;
+          left: auto;
+        }
       }
     }
   }
@@ -310,7 +355,9 @@
         opacity: 0;
         padding: 25px 40px 40px 35px;
         position: relative;
-
+        @include mobile {
+          padding: 13px 16px 20px 16px;
+        }
         overflow: hidden;
         &-title {
           font-size: 35px;
@@ -319,6 +366,15 @@
           width: 60%;
           color: #003a78;
           margin-bottom: 17px;
+          @include mobile {
+            font-size: 18px;
+            line-height: 24px;
+            width: 80%;
+            margin-bottom: 13px;
+          }
+          @include mobile-small {
+            width: 100%;
+          }
         }
         &-text {
           font-size: 16px;
@@ -326,18 +382,35 @@
           @include arial-regular;
           color: #3c454e;
           margin-bottom: 25px;
+          @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 13px;
+          }
           &:last-child {
             margin-bottom: 0;
           }
         }
         &-list {
           margin-bottom: 21px;
+          @include mobile {
+            margin-bottom: 17px;
+          }
           .list-title {
             font-size: 18px;
             line-height: 24px;
             @include arial-bold;
             color: #3c454e;
             margin-bottom: 14px;
+            @include mobile {
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 5px;
+              width: 80%;
+            }
+            @include mobile-small {
+              width: 100%;
+            }
           }
           .list-info {
             list-style-type: disc;
@@ -348,6 +421,11 @@
               @include arial-regular;
               color: #3c454e;
               margin-bottom: 10px;
+              @include mobile {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 8px;
+              }
               &:last-child {
                 margin-bottom: 0;
               }
@@ -364,6 +442,9 @@
         top: 100%;
         margin-top: 50px;
         font-size: 0;
+        @include mobile {
+          margin-top: 30px;
+        }
         @include sprite('left-arrow');
         &:hover {
           @include sprite('left-arrow-hover');
@@ -395,24 +476,50 @@
         border-radius: 10px;
         position: relative;
         overflow: hidden;
+        @include mobile {
+          flex-direction: column;
+        }
         &-left {
           width: 40%;
+          @include mobile {
+            width: 100%;
+            padding: 16px;
+
+          }
 
           img {
-            height: 100% !important;
+            height: 100%;
+            width: 100%;
             border-radius: 10px;
+            @include mobile {
+              height: 330px;
+              width: 100%;
+            }
+            @include mobile-small {
+              height: 250px;
+            }
           }
         }
         &-right {
           padding: 39px 32px;
           width: 60%;
           position: relative;
+          @include mobile {
+            width: 100%;
+            padding: 16px;
+            position: static;
+          }
           .name {
             font-size: 35px;
             line-height: 40px;
             @include arial-bold;
             color: #003a78;
             margin-bottom: 13px;
+            @include mobile {
+              font-size: 24px;
+              line-height: 28px;
+              margin-bottom: 7px;
+            }
           }
           .position {
             color: #003a78;
@@ -420,21 +527,41 @@
             line-height: 28px;
             @include arial-regular;
             margin-bottom: 42px;
+            @include mobile {
+              font-size: 20px;
+              line-height: 24px;
+              margin-bottom: 10px;
+            }
           }
           .text {
             font-size: 18px;
             line-height: 24px;
             @include arial-regular;
             color: #3c454e;
+            @include mobile {
+              font-size: 14px;
+              line-height: 20px;
+            }
             &.black {
               @include arial-bold;
               margin-bottom: 15px;
+              @include mobile {
+                font-size: 16px;
+              }
             }
           }
           .slider__item-elem {
             position: absolute;
             top: 0;
             right: 0;
+            @include mobile {
+              svg {
+                width: 80px;
+                height: 80px;
+              }
+              top: 16px;
+              right: 16px;
+            }
           }
           .years {
             font-size: 18px;
@@ -446,9 +573,19 @@
             right: 10px;
             width: 80px;
             text-align: right;
+            @include mobile {
+              font-size: 14px;
+              line-height: 20px;
+              top: 20px;
+              right: 20px;
+            }
             .big {
               font-size: 26px;
               line-height: 36px;
+              @include mobile {
+                font-size: 20px;
+                line-height: 24px;
+              }
             }
           }
         }
@@ -462,6 +599,9 @@
         top: 100%;
         margin-top: 50px;
         font-size: 0;
+        @include mobile {
+          margin-top: 40px;
+        }
         @include sprite('left-arrow');
         &:hover {
           @include sprite('left-arrow-hover');
@@ -519,6 +659,9 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 80px;
+    @include mobile {
+      padding-bottom: 60px;
+    }
     .slider__item {
       padding-left: 10px;
       padding-right: 10px;
@@ -552,4 +695,61 @@
       }
     }
   }
+
+
+  //MOBILE SLIDER
+
+  &.level-info-slider {
+    .slick {
+      &-prev,
+      &-next {
+        display: none !important;
+        position: absolute;
+        z-index: 1000;
+        bottom: 32px;
+        font-size: 0;
+        @include sprite('left-arrow');
+        top: 50%;
+        margin-top: -18px;
+      }
+      &-next {
+        transform: rotate(180deg);
+        right: 30px;
+      }
+      &-prev {
+        left: 30px;
+      }
+      &-dots {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+
+        margin-top: 0px;
+
+        li {
+          width: 10px;
+          height: 10px;
+          background: rgba(12, 77, 162, 0.4);
+          border-radius: 50%;
+          margin-right: 14px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.slick-active {
+            background: #0c4da2;
+          }
+        }
+
+        button {
+          font-size: 0;
+        }
+      }
+    }
+  }
 }
+
+
+
+

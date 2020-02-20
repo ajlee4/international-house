@@ -5,10 +5,18 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include mobile {
+                    font-size: 24px;
+                    line-height: 28px;
+                    width: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                }
                 }
             }
             &__banner {
@@ -18,16 +26,36 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 margin-bottom: 65px;
+                @include mobile {
+                    background-image: url($images_dir+'/mobile/banner_course.png') !important;
+                    max-height: 550px;
+                    height: 550px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin-bottom: 0;
+                }
             .banner-info {
                 padding-top: 70px;
                 padding-bottom: 42px;
-                width: 40%;
+                width: 60%;
+                @include mobile {
+                    padding-bottom: 32px;
+                    padding-top: 0;
+                    width: 100%;
+                }
                 &__title {
                     font-size: 45px;
                     line-height: 47px;
                     color: #fff;
-                    @include arial-bold;
+                    @include arial-black;
                     margin-bottom: 10px;
+                    @include mobile {
+                        font-size: 32px;
+                        line-height: 38px;
+                        margin-bottom: 12px;
+                    }
                 }
                 &__subtitle {
                     font-size: 20px;
@@ -35,6 +63,11 @@
                     color: #DBDBDB;
                     @include arial-regular;
                     margin-bottom: 40px;
+                    @include mobile {
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin-bottom: 18px;
+                    }
                 }
             }
             }
@@ -44,9 +77,14 @@
              .section {
                  &__inner {
                      padding-bottom: 50px;
+                     @include mobile {
+                         padding-top: 26px;
+                         padding-bottom: 23px;
+                     }
                  }
                  &__title {
                     margin-bottom: 13px;
+                    @include arial-bold;
                  }
                  &__subtitle {
                     margin-bottom: 50px;
@@ -54,10 +92,24 @@
                     line-height: 24px;
                     color: #7B7B7B;
                     @include arial-bold;
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 32px;
+                    }
                  }
                  &__info {
                      padding-bottom: 78px;
+                     @include mobile {
+                         padding-bottom: 51px;
+                     }
                      .course-col {
+                         @include mobile {
+                             margin-bottom: 47px;
+                             &:last-child {
+                                 margin-bottom: 0;
+                             }
+                         }
                         .col__top {
                             margin-bottom: 17px;
                         }
@@ -74,6 +126,10 @@
                                         font-size: 20px;
                                         line-height: 24px;
                                         @include arial-bold;
+                                        @include mobile {
+                                            font-size: 18px;
+                                            line-height: 24px;
+                                        }
                                     }
                                     font-size: 16px;
                                     line-height: 24px;
@@ -94,38 +150,72 @@
                     padding: 42px 30px;
                     padding-bottom: 20px;
                     margin-bottom: 133px;
+                    @include mobile {
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        padding-top: 22px;
+                        padding-bottom: 20px;
+                        margin-left: -16px;
+                        margin-right: -16px;
+                        margin-bottom: 57px;
+                    }
                     &.margin {
                         margin-bottom: 0;
                     }
                     .card {
                         &__inner {
                             display: flex;
+                            @include mobile {
+                                flex-direction: column;
+                            }
                         }
                         &__left {
                             width: 25%;
                             padding-right: 40px;
+                            @include mobile {
+                                width: 90%;
+                                padding-right: 0;
+                                margin-bottom: 31px;
+                            }
+                            @include mobile-small {
+                                width: 100%;
+                            }
                             .card__text {
                                 font-size: 24px;
                                 line-height: 28px;
                                 @include arial-bold;
                                 color: #01548A;
+                               
                             }
                         }
                         &__right {
                             width: 75%;
-                           
+                           @include mobile {
+                               width: 100%;
+                           }
                             .card-col {
                                 margin-bottom: 32px;
                                
                                 .col {
                                     &__top {
                                         margin-bottom: 21px;
+                                        @include mobile {
+                                            margin-bottom: 9px;
+                                            svg {
+                                                width: 35px;
+                                                height: 35px;
+                                            }
+                                        }
                                     }
                                     &__bottom {
                                         font-size: 20px;
                                         line-height: 24px;
                                         @include arial-regular;
                                         color: #3C454E;
+                                        @include mobile {
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
                                     }
                                 }
                             }
@@ -136,6 +226,25 @@
                      &-elem {
                          display: flex;
                         margin-bottom: 16px;
+                        &.reverse {
+                            @include mobile {
+                                flex-direction: column-reverse;
+                                .elem {
+                                    &-right {
+                                        margin-bottom: 26px;
+                                    }
+                                    &-left {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                        @include mobile {
+                            flex-direction: column;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
                          .elem {
                              &__title {
                                 font-size: 35px;
@@ -143,12 +252,21 @@
                                 @include arial-bold;
                                 color: #3C454E;
                                 margin-bottom: 40px;
+                                @include mobile {
+                                    font-size: 24px;
+                                    line-height: 28px;
+                                    margin-bottom: 13px;
+                                }
                              }
                              &__text {
                                 font-size: 20px;
                                 line-height: 24px;
                                 color: #7B7B7B;
                                 @include arial-regular;
+                                @include mobile {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                }
                              }
                              &-right {
                                  padding-left: 30px;
@@ -156,8 +274,20 @@
                                 display: flex;
                                 flex-direction: column;
                                justify-content: center;
+                               @include mobile {
+                                   width: 100%;
+                                   padding-left: 0;
+                                   
+                               }
                              }
                              &-left {
+                                 @include mobile {
+                                     width: 100%;
+                                     margin-bottom: 18px;
+                                     img {
+                                         max-height: 200px;
+                                     }
+                                 }
                                 display: flex;
                                 flex-direction: column;
                                justify-content: center;
@@ -172,6 +302,10 @@
         .quote {
             padding-top: 60px;
             padding-bottom: 60px;
+            @include mobile {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
             &__inner {
                 display: flex;
                 justify-content: center;
@@ -185,6 +319,10 @@
                text-align: center;
                
                 color: #003A78;
+                @include mobile {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
                 .text {
                     position: relative;
                 }
@@ -193,6 +331,9 @@
                     left: 0;
                     top: -25px;
                     left: -10px;
+                    @include mobile {
+                        width: 32px;
+                    }
                 }
             }
         }

@@ -5,10 +5,21 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include mobile {
+                    font-size: 24px;
+                    line-height: 28px;
+                    width: 80%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    br {
+                      display: none;
+                    }
+                }
                 }
             }
             &__banner {
@@ -21,6 +32,7 @@
             .banner-info {
                 padding-top: 70px;
                 padding-bottom: 42px;
+              
                 width: 40%;
                 &__title {
                     font-size: 45px;
@@ -45,12 +57,21 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            @include mobile {
+                min-height: 168px;
+                height: 168px;
+                background-image: url($images_dir + '/mobile/banner_news-single.png') !important;
+            }
             &__inner {
                 display: flex;
                 flex-direction: column;
                 min-height: 385px;
                 justify-content: center;
                 height: 100%;
+                @include mobile {
+                    min-height: 168px;
+                    height: 168px;
+                }
             }
             &:before {
                 content: '';
@@ -61,7 +82,9 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-
+                @include mobile {
+                    display: none;
+                }
             }
             &__info {
                 font-size: 35px;
@@ -71,24 +94,52 @@
                 width: 45%;
                 position: relative;
                 z-index: 10;
+                @include mobile {
+                    font-size: 20px;
+                    line-height: 24px;
+                    width: 100%;
+                }
             }
         }
         .banner-secondary {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            background-image: url($images_dir + '/mobile/call_banner.png') !important;
+            @include mobile {
+                height: 312px;
+                min-height: 312px;
+            }
             .banner__inner {
-
+                height: 100%;
+                @include mobile {
+                    
+                    padding-top: 28px;
+                    padding-bottom: 40px;
+                }
             }
             .banner__info {
                 width: 55%;
+                @include mobile {
+                    width: 80%;
+                }
                 &-title {
                     margin-bottom: 20px;
+                    @include arial-black;
+                    @include mobile {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
                 }
                 &-subtitle {
                     font-size: 24px;
                     line-height: 28px;
                     margin-bottom: 20px;
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 35px;
+                    }
                 }
                 &-list {
                     .list-item {
@@ -98,6 +149,10 @@
                         align-items: center;
                         padding-left: 40px;
                         position: relative;
+                        @include mobile {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
                         svg {
                             position: absolute;
                             top: 0;
@@ -115,11 +170,19 @@
                   &__inner {
                       padding-top: 75px;
                       padding-bottom: 70px;
+                      @include mobile {
+                          padding-top: 30px;
+                      }
                   }
                   &__info {
+                   
                       margin-bottom: 60px;
+                      @include mobile {
+                          margin-bottom: 30px;
+                      }
                       &-block {
                         margin-bottom: 43px;
+                     
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -127,6 +190,9 @@
                             margin-bottom: 48px;
                             position: relative;
                             cursor: pointer;
+                            @include mobile {
+                                margin-bottom: 0;
+                            }
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -158,10 +224,21 @@
                                   margin-right: -15px;
                                 display: flex;
                                 margin-bottom: 50px;
+                                @include mobile {
+                                    flex-direction: column-reverse;
+                                    margin-left: 0;
+                                    margin-right: 0;
+                                    margin-bottom: 26px;
+                                }
                                   &-left {
                                       padding-left: 15px;
                                       padding-right: 15px;
                                       width: 50%;
+                                      @include mobile {
+                                          padding-left: 0;
+                                          padding-right: 0;
+                                          width: 100%;
+                                      }
                                       .block {
                                           &__img {
                                             img {
@@ -174,6 +251,11 @@
                                     width: 50%;
                                     padding-left: 15px;
                                     padding-right: 15px;
+                                    @include mobile {
+                                        padding-left: 0;
+                                        padding-right: 0;
+                                        width: 100%;
+                                    }
                                     .block {
                                         &__info {
                                             &-title {
@@ -182,12 +264,22 @@
                                                 color: #3C454E;
                                                 margin-bottom: 20px;
                                                 @include arial-bold;
+                                                @include mobile {
+                                                    font-size: 20px;
+                                                    line-height: 24px;
+                                                  
+                                                }
                                             }
                                             &-text {
                                                 color: #7B7B7B;
                                                 font-size: 20px;
                                                 line-height: 24px;
                                                 @include arial-regular;
+                                                @include mobile {
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                    margin-bottom: 27px;
+                                                }
                                             }
                                         }
                                     }
@@ -196,9 +288,25 @@
                               &__bottom {
                                   .block__info {
                                       width: 50%;
+                                      &.mobile-text {
+                                        p {
+                                            @include mobile {
+                                               display: flex;
+                                               justify-content: space-between;
+                                            }
+                                        }
+                                      }
+                                      @include mobile {
+                                          width: 100%;
+                                      
+                                      }
                                       &.secondary-block-info {
                                           margin-bottom: 70px;
                                           width: 70%;
+                                          @include mobile {
+                                              width: 100%;
+                                              margin-bottom: 35px;
+                                          }
                                           .list-info {
                                           
                                             .list-item {
@@ -214,15 +322,31 @@
                                                     @include arial-bold;
                                                     align-items: center;
                                                     margin-bottom: 20px;
+                                                    @include mobile {
+                                                        font-size: 16px;
+                                                        line-height: 24px;
+                                                        margin-bottom: 11px;
+                                                    }
                                                     .top-left {
                                                         margin-right: 18px;
                                                     }
                                                 }
                                                 &__bottom {
+                                                    @include mobile {
+                                                        padding-left: 25px;
+                                                    }
                                                     .sublist {
                                                         .list-item {
                                                             margin-bottom: 20px;
-                                                            
+                                                                @include mobile {
+                                                                    
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    margin-bottom: 10px;
+                                                                    &:last-child {
+                                                                        margin-bottom: 0;
+                                                                    }
+                                                                }
                                                             &:last-child {
                                                                 margin-bottom: 0;
                                                             }
@@ -230,17 +354,31 @@
                                                             line-height: 24px;
                                                             @include arial-regular;
                                                             display: flex;
+                                                            @include mobile {
+                                                                font-size: 14px;
+                                                                line-height: 20px;
+                                                            }
                                                             .link {
                                                                 color: #003A78;
+                                                                @include mobile {
+                                                                    display: inline-block;
+                                                                }
                                                             }
                                                             &__left {
                                                                 color: #003A78;
                                                                 margin-right: 15px;
                                                                 width: 15%;
+                                                                @include mobile {
+                                                                    width: 100%;
+                                                                    margin-right: 0;
+                                                                }
                                                             }
                                                             &__right {
                                                                 width: 85%;
                                                                 color: #7B7B7B;
+                                                                @include mobile {
+                                                                    width: 100%;
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -254,8 +392,12 @@
                                                 line-height: 40px;
                                                 @include arial-bold;
                                                 margin-bottom: 28px;
+                                                @include mobile {
+                                                    font-size: 20px;
+                                                    line-height: 24px;
+                                                }
                                               }
-                                             
+                                        
                                           }
                                       }
                                       &.description-block-info {
@@ -265,6 +407,10 @@
                                             line-height: 24px;
                                             @include arial-bold;
                                             margin-bottom: 15px;
+                                            @include mobile {
+                                                font-size: 14px;
+                                                line-height: 20px;
+                                            }
 
                                           }
                                           .tel-list {
@@ -273,7 +419,11 @@
                                                 color: #7B7B7B;
                                                 font-size: 20px;
                                                 line-height: 24px;
-                                                @include arial-regular
+                                                @include arial-regular;
+                                                @include mobile {
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                }
                                             }
                                           }
                                       }
@@ -282,10 +432,24 @@
                                         font-size: 20px;
                                         line-height: 24px;
                                         @include arial-regular;
+                                        
+                                        @include mobile {
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                          margin-bottom: 10px;
+                                            
+                                            .left {
+                                                width: 65%;
+                                            }
+                                            .right {
+                                                width: 35%;
+                                                text-align: right;
+                                            }
+                                        }
                                           b {
                                               @include arial-bold;
                                             
-
+                                         
                                           }
                                       }
                                   }
@@ -297,8 +461,15 @@
                     width: 100%;
                     display: flex;
                     justify-content: center;
+                    @include mobile {
+                        justify-content: space-between;
+                    }
                     .btn {
                         margin-right: 28px;
+                        @include mobile {
+                            margin-right: 0;
+
+                        }
                         &:last-child {
                             margin-right: 0;
                         }
@@ -307,6 +478,28 @@
                         height: 42px;
                         padding-top: 6px;
                         padding-bottom: 6px;
+                        @include mobile {
+                            height: 32px;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            svg {
+                             
+                               width: 12px;
+                               height: 11px;
+                            }
+                            .arrow-left {
+                                margin-right: 10px;
+                            }
+                            .arrow-right {
+                                margin-left: 10px;
+                            }
+                        }
+                        @include mobile-small {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
                         &.white {
                             background-color: #fff;
                             color: #003A78;
@@ -332,13 +525,20 @@ svg {
               .section {
                   &__inner {
                     padding-bottom: 60px;
+                    @include mobile {
+                        padding-bottom: 40px;
+                    }
                   }
                   &__info {
                       margin-bottom: 30px;
-
+                    @include mobile {
+                        margin-bottom: 15px;
+                    }
                     .news-col {
                         display: block;
-                
+                        @include mobile {
+
+                        }
                         .col {
                           &__inner {
                             &:hover {
@@ -350,6 +550,12 @@ svg {
                             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                             border-radius: 10px;
                             height: calc(100% - 50px);
+                            @include mobile {
+                                height: calc(100% - 25px); 
+                                &:hover {
+                                    transform: scale(1);
+                                } 
+                            }
                             position: relative;
                             background: #fbfbfb;
                             overflow: hidden;
@@ -392,6 +598,9 @@ svg {
                             padding: 16px 19px 34px 18px;
                             background: #fbfbfb;
                             border-radius: 0px 10px 10px 0px;
+                            @include mobile {
+                                top: -25px;
+                            }
                             &__date {
                                 margin-bottom: 10px;
                                 font-size: 12px;
@@ -407,13 +616,19 @@ svg {
                               margin-bottom: 9px;
                               color: #003a78;
                               text-transform: uppercase;
+                              @include mobile {
+                                  font-size: 16px;
+                              }
                             }
                             &__text {
                               font-size: 16px;
                               line-height: 24px;
                               color: #3C454E;
                               @include arial-regular
-                            
+                            @include mobile {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
                             }
                             &__action {
                                 .yellow-text {

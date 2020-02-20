@@ -8,10 +8,22 @@ overflow: hidden;
             &__header {
                 display: flex;
                 justify-content: space-between;
+                @include mobile {
+                    flex-wrap: wrap;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24);
+                }
                 .tab {
                     padding: 18px 18px 27px 18px;
                     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                     cursor: pointer;
+                    @include mobile {
+                        width: 50%;
+                        padding: 10px;
+                        padding-bottom: 15px;
+                        box-shadow: none;
+                     
+                     
+                    }
                     &.active {
                         box-shadow: none;
                         .tab__bottom {
@@ -25,6 +37,9 @@ overflow: hidden;
                     }
                     &__top {
                         margin-bottom: 16px;
+                        @include mobile {
+                            margin-bottom: 8px;
+                        }
                         svg {
                             fill: #ADADAD ;
                         }
@@ -34,7 +49,14 @@ overflow: hidden;
                         line-height: 24px;
                         @include arial-bold;
                         color: #ADADAD;
-                     
+                        @include mobile {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        @include mobile-small {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
                     }
                 }
             }
@@ -58,6 +80,7 @@ overflow: hidden;
                 padding-bottom: 18px;
                 background: #EFEFEF;
                 position: relative;
+              
                 &:after {
                     position: absolute;
                     top: 0;
@@ -67,8 +90,11 @@ overflow: hidden;
                     width: 100%;
                     height: 100%;
                     content: '';
+                    @include mobile {
+                        display: none;
+                    }
                 }
-                &::before {
+                &:before {
                     right: 100%;
                     position: absolute;
                     top: 0;
@@ -78,6 +104,19 @@ overflow: hidden;
                     width: 100%;
                     height: 100%;
                     content: '';
+                    @include mobile {
+                       
+                    }
+                }
+                @include mobile {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    margin-left: -16px;
+                    margin-right: -16px;
+                    padding-left: 16px;
+                
+                    
+                    overflow-x: auto;
                 }
                 .tab {
                     margin-right: 35px;
@@ -86,11 +125,19 @@ overflow: hidden;
                     color: #919191;
                     cursor: pointer;
                     @include arial-bold;
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 24px;
+                        white-space: nowrap;
+                    }
                     &.active {
                         color: #003A78;
                     }
                     &:last-child {
                         margin-right: 0;
+                        @include mobile {
+                            padding-right: 16px;
+                        }
 
                     }
                 }
@@ -100,6 +147,9 @@ overflow: hidden;
         .tab {
             &-content {
                 padding-top: 38px;
+                @include mobile {
+                    padding-top: 24px;
+                }
                 display: none;
                 &.active {
                     display: block;

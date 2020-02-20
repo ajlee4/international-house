@@ -5,10 +5,21 @@
         .title {
           font-size: 45px;
           line-height: 57px;
-          @include arial-bold;
+          @include arial-black;
           margin-bottom: 47px;
           color: #003a78;
           width: 70%;
+          @include mobile {
+            font-size: 24px;
+            line-height: 28px;
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 13px;
+            margin-bottom: 0;
+        }
+        @include mobile-small {
+          width: 100%;
+        }
         }
         .subtitle {
           font-size: 20px;
@@ -16,6 +27,11 @@
           color: #3c454e;
           @include arial-bold;
           margin-bottom: 100px;
+          @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 26px;
+          }
         }
       }
     }
@@ -24,13 +40,31 @@
         .section {
           &__title {
             margin-bottom: 25px;
+          @include mobile {
+            @include arial-bold;
+            margin-bottom: 15px;
+          }
           }
           &__inner {
               padding-bottom: 60px;
+              @include mobile {
+                padding-bottom: 30px;
+              }
           }
           &__info {
             .row {
               margin-bottom: 20px;
+            &.reverse {
+              @include mobile {
+                flex-direction: row-reverse;
+                .col__text {
+                  margin-bottom: 20px;
+                }
+                .col__img {
+                  margin-bottom: 0;
+                }
+              }
+            }
               &:last-child {
                 margin-bottom: 0;
               }
@@ -49,8 +83,19 @@
                   flex-direction: column;
                   justify-content: center;
                   height: 100%;
+                  @include mobile {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
+                  p {
+                    @include mobile {
+                      font-size: 14px;
+                      line-height: 20px;
+                    }
+                  }
                 }
                 &__img {
+                  margin-bottom: 20px;
                   img {
                     border-radius: 10px;
                   }
@@ -65,6 +110,10 @@
           &__inner {
             padding-top: 72px;
             padding-bottom: 64px;
+            @include mobile {
+              padding-top: 16px;
+              padding-bottom: 32px;
+            }
           }
           &__info {
             .advantage-block {
@@ -73,12 +122,22 @@
               background: #fffef3;
               box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
               border-radius: 20px;
+              @include mobile {
+                padding: 20px 25px 40px 25px;
+                margin-left: -16px;
+                margin-right: -16px;
+              }
               &__title {
                 font-size: 35px;
                 line-height: 40px;
                 color: #003a78;
                 margin-bottom: 42px;
                 @include arial-bold;
+                @include mobile {
+                  font-size: 20px;
+                  line-height: 24px;
+                  width: 50%;
+                }
               }
               &__list {
                 margin-left: -10px;
@@ -96,6 +155,10 @@
                   padding-left: 10px;
                   padding-right: 10px;
                   margin-bottom: 44px;
+                  @include mobile {
+                    width: 100%;
+                    margin-bottom: 30px;
+                  }
 
                   &__left {
                     svg {
@@ -112,6 +175,9 @@
                     color: #3c454e;
                     @include arial-regular;
                     width: 60%;
+                    @include mobile {
+                      font-size: 18px;
+                    }
                   }
                 }
               }
@@ -123,9 +189,18 @@
         .section {
           &__inner {
             padding-bottom: 65px;
+            @include mobile {
+              padding-top: 20px;
+              padding-bottom: 30px;
+            }
           }
           &__title {
             margin-bottom: 13px;
+            @include mobile {
+              font-size: 20px;
+              line-height: 24px;
+              @include arial-bold;
+            }
           }
           &__subtitle {
             font-size: 20px;
@@ -133,16 +208,35 @@
             @include arial-bold;
             margin-bottom: 34px;
             color: #3c454e;
+            @include mobile {
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 18px;
+              
+            }
             &.gray {
               color: #7b7b7b;
               @include arial-regular;
+              @include mobile {
+                @include arial-bold;
+                margin-bottom: 8px;
+              }
             }
           }
           &__info {
             .row {
               margin-bottom: 30px;
+              @include mobile {
+                margin-bottom: 20px;
+              }
+             &.reverse {
+              @include mobile {
+               flex-direction: column-reverse; 
+              }
+             }
               &:last-child {
                 margin-bottom: 54px;
+                
               }
             }
             .teachers-info-col {
@@ -154,6 +248,9 @@
                   height: 100%;
                 }
                 &__img {
+                  @include mobile {
+                    margin-bottom: 20px;
+                  }
                   img {
                     border-radius: 10px;
                   }
@@ -163,17 +260,63 @@
                   line-height: 24px;
                   @include arial-regular;
                   color: #7b7b7b;
+                  @include mobile {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
                 }
               }
             }
+            .show-text-toggle {
+              display: none;
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                @include mobile {
+                 
+                    &.active {
+                        &:after {
+                            transform: rotate(180deg);
+                            transition: 0.3s;
+                        }
+                    }
+                    &:after {
+                        @include sprite('text-arrow-down');
+                        content: '';
+                        display: inline-block;
+                        margin-left: 5px;
+                        transition: 0.3s;
+                    }
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #01548A;
+                    cursor: pointer;
+                    text-align: center;
+                    padding-top: 5px;
+                    display: inline-flex;
+                    align-items: center; 
+                    padding-bottom: 5px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
             .text {
+              &.show-text {
+                display: none;
+                margin-bottom: 10px;
+              }
               font-size: 20px;
               line-height: 24px;
               color: #7b7b7b;
               @include arial-regular;
               margin-bottom: 30px;
+              @include mobile {
+                font-size: 14px;
+                line-height: 20px;
+              }
               &.black {
                 color: #3c454e;
+                @include mobile {
+                  margin-top: 10px;
+                }
               }
             }
           }
@@ -187,9 +330,16 @@
           &__inner {
             padding-top: 66px;
             padding-bottom: 60px;
+            @include mobile {
+              padding-top: 30px;
+              padding-bottom: 18px;
+            }
           }
           &__title {
             margin-bottom: 12px;
+            @include mobile {
+              @include arial-bold;
+            }
           }
           &__subtitle {
             font-size: 20px;
@@ -197,8 +347,15 @@
             margin-bottom: 40px;
             color: #3c454e;
             @include arial-regular;
+            @include mobile {
+              margin-bottom: 25px;
+            }
             p {
               margin-bottom: 0;
+              @include mobile {
+                font-size: 16px;
+                line-height: 24px;
+              }
             }
           }
           &__card {
@@ -208,35 +365,77 @@
             padding: 42px 30px;
             padding-bottom: 20px;
             margin-bottom: 70px;
+            @include mobile {
+              padding: 22px 16px;
+              margin-left: -16px;
+              margin-right: -16px;
+              margin-bottom: 30px;
+            }
             .card {
               &__inner {
                 display: flex;
+                @include mobile {
+                  flex-direction: column;
+                }
               }
               &__left {
                 width: 25%;
+                @include mobile {
+                  width: 100%;
+                  padding-right: 0;
+                  margin-bottom: 33px;
+                }
                 padding-right: 40px;
                 .card__text {
                   font-size: 24px;
                   line-height: 28px;
                   @include arial-bold;
                   color: #01548a;
+                  @include mobile {
+                    font-size: 20px;
+                    line-height: 24px;
+                    width: 85%;
+                    
+                  }
+
+                  @include mobile-small {
+                    width: 100%;
+                  }
                 }
               }
               &__right {
                 width: 75%;
-
+                @include mobile {
+                  width: 100%;
+                }
                 .card-col {
                   margin-bottom: 32px;
-
+                  @include mobile {
+                    margin-bottom: 25px;
+                    &:nth-last-child(-n+2){
+                      margin-bottom: 0;
+                    }
+                  }
                   .col {
                     &__top {
                       margin-bottom: 21px;
+                      @include mobile {
+                        margin-bottom: 0px;
+                        svg {
+                          width: 35px;
+                          height: 35px;
+                        }
+                      }
                     }
                     &__bottom {
                       font-size: 20px;
                       line-height: 24px;
                       @include arial-regular;
                       color: #3c454e;
+                      @include mobile {
+                        font-size: 14px !important;
+                        line-height: 20px !important;
+                      }
                     }
                   }
                 }
@@ -249,6 +448,10 @@
                 @include arial-regular;
                 font-size: 20px;
                 line-height: 24px;
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
               }
               .link {
                   display: flex;
@@ -256,6 +459,10 @@
                   font-size: 20px;
                   line-height: 24px;
                   color: #7B7B7B;
+                  @include mobile {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
                   svg {
                       margin-right: 10px;
                   }
@@ -266,6 +473,7 @@
                   .list-item {
                       display: inline-block;
                       margin-bottom: 20px;
+                      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
                       &.open {
                            
                         .title {
@@ -277,11 +485,17 @@
                     }
                       &:last-child {
                           margin-bottom: 0;
+                          @include mobile {
+                            margin-bottom: 20px;
+                          }
                       }
                       &__top {
                           margin-bottom: 40px;
                           display: inline-block;
-                    
+                        @include mobile {
+                          width: 100%;
+                          margin-bottom: 0px;
+                        }
                          .title {
                             font-size: 24px;
                             line-height: 24px;
@@ -289,11 +503,21 @@
                             @include arial-bold;
                             border-bottom: 1px solid #C4C4C4;
                             padding-bottom: 3px;
+                            @include mobile {
+                              font-size: 16px;
+                              line-height: 24px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: space-between;
+                            }
                             cursor: pointer;
                             svg {
                                 transition: 0.3s;
                                 transform: rotate(-180deg);
                                 margin-left: 100px;
+                                @include mobile {
+                                  margin-left: 0;
+                                }
                             }
                          }
                       }
@@ -306,6 +530,12 @@
                                 margin-left: -10px;
                                 margin-right: -10px;
                                 margin-bottom: 60px;
+                                @include mobile {
+                                  flex-direction: column;
+                                  margin-left: 0;
+                                  margin-right: 0;
+                                  margin-bottom: 0px;
+                                }
                               }
                               &-left {
                                 width: 30%;
@@ -314,19 +544,33 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: flex-end;
+                                @include mobile {
+                                  width: 100%;
+                                  align-items: flex-start;
+                                }
                                 p {
                                     font-size: 20px;
                                     line-height: 24px;
                                     @include arial-bold;
                                     color: #3C454E;
+                                    @include mobile {
+                                      font-size: 14px;
+                                      margin-bottom: 20px;
+                                    }
                                 }
                               }
                               &-right {
                                 width: 70%;
                                 padding-left: 10px;
                                 padding-right: 10px;
+                                @include mobile {
+                                  width: 100%;
+                                }
                                 .requirement-list {
                                     margin-bottom: 44px;
+                                    @include mobile {
+                                      margin-bottom: 16px;
+                                    }
                                     .list-item {
                                         font-size: 20px;
                                         line-height: 24px;
@@ -334,6 +578,10 @@
                                         color: #7B7B7B;
                                         margin-bottom: 15px;
                                       display: flex;
+                                      @include mobile {
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                      }
                                         &__left {
                                             margin-right: 25px;
                                         }
@@ -353,8 +601,21 @@
                                     @include arial-regular;
                                     font-size: 20px;
                                     line-height: 24px;
+                                    @include mobile {
+                                      font-size: 14px;
+                                      line-height: 20px;
+                                      width: 90%;
+                                    }
+                                    @include mobile-small {
+                                      width: 100%;
+                                    }
                                     .link {
                                         color: #01548A;
+                                        @include mobile {
+                                          font-size: 14px;
+                                          line-height: 20px;
+                                          display: inline-block;
+                                        }
                                     }
                                 }
                               }
@@ -370,10 +631,17 @@
               &__inner {
                   padding-top: 65px;
                   padding-bottom: 65px;
+                  @include mobile {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  }
               }
               &__title {
                 margin-bottom: 14px;
-
+                @include mobile {
+                  @include arial-bold;
+                  margin-bottom: 8px;
+                }
               }
               &__subtitle{
                 font-size: 20px;
@@ -381,6 +649,11 @@
                 color: #3C454E;
                 margin-bottom: 25px;
                 @include arial-bold;
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 24px;
+                  margin-bottom: 10px;
+                }
               }
               &__info {
                 color: #7B7B7B;
@@ -388,6 +661,11 @@
                 line-height: 24px;
                 @include arial-regular;
                 margin-bottom: 75px;
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 20px;
+                  margin-bottom: 20px;
+                }
               }
               &__slider {
                   
@@ -398,6 +676,10 @@
     .quote {
       padding-top: 60px;
       padding-bottom: 60px;
+      @include mobile {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
       background: linear-gradient(
         90deg,
         rgba(255, 253, 235, 0.5) 7.64%,
@@ -416,7 +698,10 @@
         line-height: 40px;
         @include arial-bold;
         text-align: center;
-
+        @include mobile{
+          font-size: 18px;
+          line-height: 24px;
+        }
         color: #003a78;
         .text {
           position: relative;
@@ -426,6 +711,9 @@
           left: 0;
           top: -25px;
           left: -10px;
+          @include mobile {
+            width: 32px;
+          }
         }
       }
     }

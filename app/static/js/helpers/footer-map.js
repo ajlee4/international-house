@@ -41,7 +41,7 @@ function init() {
     footerMap.controls.add(fullscreenControl);
 
     var imageHref = '../static/images/icons/placemark.svg'
-    for (i = 0; i < points.length; i++) {
+    for (var i = 0; i < points.length; i++) {
         var placemarks = new ymaps.Placemark(points[i].coordinate, {
             dataPlace: points[i].dataCenter,
             hintContent: points[i].placeName

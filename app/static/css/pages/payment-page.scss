@@ -4,19 +4,36 @@
          .page {
             &__title {
                 margin-bottom: 65px;
+                @include mobile {
+                  margin-bottom: 25px;
+                }
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 44px;
                 color: #003A78;
                 width: 70%;
+                @include mobile {
+                  font-size: 24px;
+                  line-height: 28px;
+                  width: 80%;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  margin-bottom: 0;
+                  br {
+                    display: none;
+                  }
+              }
                 }
                 .subtitle {
                     color: #7B7B7B;
                     @include arial-bold;
                     font-size: 20px;
                     line-height: 24px;
+                    @include mobile {
+                      font-size: 16px;
+                    }
 
                 }
             }
@@ -27,11 +44,19 @@
                 .section {
                   &__inner {
                     padding-bottom: 100px;
+                    @include mobile {
+                      padding-bottom: 35px;
+                    }
                   }
                     &__list {
                         margin-bottom: 47px;
                         .course-col {
                             margin-bottom: 30px;
+                            &:last-child {
+                              @include mobile {
+                                margin-bottom: 0;
+                              }
+                            }
                             .col {
                               &__inner {
                                 background: #ffffff;
@@ -127,9 +152,27 @@
                         .blue-text {
                             color: #003A78;
                             @include arial-bold;
+                            @include mobile {
+                              font-size: 20px;
+                              line-height: 24px;
+                            }
+                          
                         }
                         .black-text {
-                            color: #3C454E;;
+                            color: #3C454E;
+                            @include mobile {
+                              font-size: 16px;
+                              line-height: 24px;
+                              br {
+                                display: none;
+                              }
+                            }
+                        }
+                        p {
+                          @include mobile {
+                            font-size: 14px;
+                            line-height: 20px;
+                          }
                         }
                         .link {
                             color: #003A78;
@@ -155,9 +198,18 @@
                             line-height: 24px;
                             margin-bottom: 24px;
                             @include arial-bold;
+                            @include mobile {
+                              font-size: 16px;
+                            }
                           }
                          &:first-child {
                           margin-top: 53px;
+                          @include mobile {
+                            margin-top: 35px;
+                          }
+                         }
+                         @include mobile {
+                           margin-bottom: 35px;
                          }
                          margin-bottom: 53px;
                          &:last-child {
@@ -171,13 +223,52 @@
                           display: inline-flex;
                           align-items: center;
                           margin-bottom: 40px;
+                          @include mobile {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-bottom: 20px;
+                          }
                           &:hover {
                               color: lighten($color: #01548A, $amount: 50%);
                           }
                           .link__left {
                               margin-right: 32px;
+                              @include mobile {
+                                margin-right: 15px;
+                                svg {
+                                  width: 40px;
+                                  height: 40px;
+                                }
+                              }
                           }
                       }
+                        }
+                        .slick-dots {
+                          display: flex !important;
+                          width: 100%;
+                          justify-content: center;
+                  
+                          margin-top: 10px;
+                  
+                          li {
+                            width: 10px;
+                            height: 10px;
+                            background: rgba(12, 77, 162, 0.4);
+                            border-radius: 50%;
+                            margin-right: 14px;
+                  
+                            &:last-child {
+                              margin-right: 0;
+                            }
+                  
+                            &.slick-active {
+                              background: #0c4da2;
+                            }
+                          }
+                  
+                          button {
+                            font-size: 0;
+                          }
                         }
                     }
                 }

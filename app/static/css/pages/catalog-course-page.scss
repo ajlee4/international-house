@@ -5,10 +5,21 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include mobile {
+                    font-size: 24px;
+                    line-height: 28px;
+                    width: 80%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    br {
+                      display: none;
+                    }
+                }
                 }
             }
             &__banner {
@@ -47,7 +58,12 @@
                     }
                     &__tabs {
                         .course-col {
-                           
+                           @include mobile {
+                               margin-bottom: 20px;
+                               &:last-child {
+                                   margin-bottom: 0;
+                               }
+                           }
                             .col__bottom {
                                 .col-list {
                                     &__item {
@@ -62,10 +78,16 @@
                                             line-height: 24px;
                                             @include arial-bold;
                                             color: #01548A;
+                                            @include mobile {
+                                                font-size: 16px;
+                                            }
                                         }
                                         font-size: 16px;
                                         line-height: 24px;
-                                     
+                                        @include mobile {
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
                                         color: #6A6A6A;
                                         @include arial-regular;
                                         &:hover {

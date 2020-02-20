@@ -14,7 +14,9 @@ body {
   min-width: 320px;
   @include regular;
   font-size: 14px;
-
+  @include tablet-and-phone{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
   &.popup-opened {
     overflow: hidden;
     overflow-scrolling: touch;
@@ -85,5 +87,16 @@ main {
   @include mobile {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+a {
+  @include mobile {
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+button {
+  @include mobile {
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }

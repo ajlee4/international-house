@@ -6,10 +6,24 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include mobile {
+                  font-size: 24px;
+                  line-height: 28px;
+                  width: 90%;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  margin-bottom: 0;
+                  br {
+                    display: none;
+                  }
+              }
+              @include mobile-small {
+                width: 100%;
+              }
                 }
             }
             &__banner {
@@ -46,9 +60,16 @@
             .section {
                 &__inner {
                     padding-bottom: 60px;
+                    @include mobile {
+                      padding-bottom: 24px;
+                    }
                 }
                 &__title {
                     margin-bottom: 15px;
+                    @include mobile {
+                      @include arial-bold;
+                      margin-bottom: 10px;
+                    }
                 }
                 &__subtitle {
                     font-size: 20px;
@@ -56,17 +77,39 @@
                     @include arial-bold;
                     color:  #3C454E;
                     margin-bottom: 35px;
+                    @include mobile {
+                      font-size: 16px;
+                      line-height: 24px;
+                      margin-bottom: 25px;
+                    }
                 }
                 &__info {
                     .info-row {
                         margin-bottom: 48px;
+                        @include mobile {
+                          margin-bottom: 34px;
+                        }
                     }
                     .info-col {
                        display: flex;
+                       @include mobile {
+                         margin-bottom: 24px;
+                         &:last-child {
+                           margin-bottom: 0;
+                         }
+                       }
                         .col {
                           &__inner {
                            padding-top: 200px;
                            width: 100%;
+                           @include mobile {
+                             padding-top: 0;
+                            display: flex;
+                            height: 160px;
+                           }
+                           @include mobile-small {
+                             height: 144px;
+                           }
                             &:hover {
                               box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
                               transition: 0.3s;
@@ -88,6 +131,10 @@
                               position: absolute;
                               right: 0;
                               bottom: 0;
+                              @include mobile-small {
+                                width: 30px;
+                                height: 30px;
+                              }
                             }
                         
                           }
@@ -99,6 +146,10 @@
                             overflow: hidden;
                             height: 230px;
                             width: 100%;
+                            @include mobile {
+                              height: 100%;
+                              position: static;
+                            }
                             img {
                               width: 100%;
                              max-height: 230px;
@@ -131,8 +182,17 @@
                             flex-direction: column;
                             justify-content: space-between;
                             height: 100%;
+                            @include mobile {
+                              padding-left: 16px;
+                              padding-bottom: 16px;
+                              padding-top: 10px;
+                              width: 100%;
+                            }
                             &__top {
                                 padding-bottom: 25px;
+                                @include mobile {
+                                  padding-bottom: 15px;
+                                }
                             }
                             &__title {
                               font-size: 20px;
@@ -140,6 +200,17 @@
                               @include arial-bold;
                               margin-bottom: 9px;
                               color: #003a78;
+                              @include mobile {
+                                font-size: 16px;
+                                line-height: 20px;
+                                margin-bottom: 6px;
+                                &.margin {
+                                  margin-bottom: 0;
+                                }
+                                br {
+                                  display: none;
+                                }
+                              }
                              
                             }
                             &__text {
@@ -147,12 +218,19 @@
                               line-height: 24px;
                               color: #7b7b7b;
                               @include arial-bold;
-                            
+                              @include mobile {
+                                font-size: 14px;
+                                line-height: 20px;
+                              }
                             }
                             &__action {
                                 .secondary-btn {
                                     padding-top: 3px;
                                     padding-bottom: 3px;
+                                    @include mobile {
+                                      padding-left: 10px;
+                                      padding-right: 10px;
+                                    }
                                     &.yellow {
                                         background: #FDC600;
                                         &:hover {
@@ -178,6 +256,10 @@
                             font-size: 20px;
                             line-height: 24px;
                             @include arial-regular;
+                            @include mobile {
+                              font-size: 16px;
+                              line-height: 24px;
+                            }
                           }
                       }
                 }
@@ -188,9 +270,17 @@
                 &__inner {
                     padding-top: 56px;
                     padding-bottom: 65px;
+                    @include mobile {
+                      padding-top: 20px;
+                      padding-bottom: 40px;
+                    }
                 }
                 &__title {
                     margin-bottom: 32px;
+                    @include mobile {
+                      @include arial-bold;
+                      margin-bottom: 20px;
+                    }
                 }
                 &__info {
                     .course-col {
@@ -207,6 +297,7 @@
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+                          
                             &:hover {
                               box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.16);
                               transition: 0.3s;
@@ -232,6 +323,10 @@
                             color: #01548a;
                             @include arial-bold;
                             backface-visibility: hidden;
+                            @include mobile {
+                              font-size: 16px;
+                              line-height: 24px;
+                            }
                           }
                           &__subtitle {
                             font-size: 14px;
@@ -246,6 +341,7 @@
                             color: #fdc600;
                             display: flex;
                             align-items: center;
+                            @include arial-bold;
                             svg {
                               margin-left: 10px;
                             }
@@ -274,6 +370,12 @@
                           line-height: 24px;
                           color: #7B7B7B;
                           @include arial-regular;
+                          p {
+                            @include mobile {
+                              font-size: 14px;
+                              line-height: 20px;
+                            }
+                          }
                       }
                 }
             }

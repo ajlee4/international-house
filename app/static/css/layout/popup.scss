@@ -13,10 +13,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   ::-webkit-scrollbar {
     width: 8px;
   }
-
+  
   ::-webkit-scrollbar-track {
     background-color: #EDEDED;
     border-radius: 10px;
@@ -36,7 +40,7 @@
     position: relative;
     max-height: 95%;
     overflow-y: auto;
-  
+ 
   
     &.header-popup {
       max-width: 100%;
@@ -45,10 +49,22 @@
       box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       padding: 37px 41px 57px 96px;
+      @include mobile {
+        padding: 20px 22px 40px 22px;
+      }
       .popup {
         &__close {
           top: 30px;
           right: 26px;
+          @include mobile {
+            top: 10px;
+            right: 15px;
+            padding: 10px;
+            svg {
+              width: 18px;
+            height: 18px;
+            }
+          }
         }
       }
     
@@ -60,10 +76,22 @@ border-radius: 20px;
 padding: 37px 41px 57px 96px;
 background: #ffffff;
 max-width: 100%;
+@include mobile {
+  padding: 20px 22px 40px 22px;
+}
 .popup {
   &__close {
     top: 30px;
     right: 26px;
+    @include mobile {
+      top: 10px;
+      right: 15px;
+      padding: 10px;
+      svg {
+        width: 18px;
+      height: 18px;
+      }
+    }
   }
 }
     }
@@ -75,6 +103,10 @@ max-width: 100%;
 padding: 36px 42px 80px 96px;
 position: relative;
 overflow: hidden;
+@include mobile {
+  padding: 20px 22px 40px 22px;
+  height: auto;
+}
 .popup {
   
   &__title {
@@ -83,6 +115,10 @@ overflow: hidden;
     line-height: 40px;
     @include arial-bold;
     margin-bottom: 28px;
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   &__subtitle {
     text-align: right;
@@ -91,13 +127,24 @@ overflow: hidden;
     line-height: 20px;
     @include arial-regular;
     margin-bottom: 48px;
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+      padding-left: 30%;
+      margin-bottom: 27px;
+      br {
+        display: none;
+      }
+    }
   }
   &__info {
     height: 550px;
     padding-right: 20px;
     margin-bottom: 2em;
     overflow-y: auto;
- 
+    @include mobile {
+     margin-bottom: 50px;
+    }
     &-title {
       color: #3C454E;
       font-size: 20px;
@@ -105,6 +152,9 @@ overflow: hidden;
       @include arial-bold;
       text-align: center;
       margin-bottom: 21px;
+      @include mobile {
+        font-size: 18px;
+      }
     }
     p {
       color: #3C454E;
@@ -134,9 +184,27 @@ overflow: hidden;
     bottom: 0;
     width: 100%;
     background-color: #fff;
+    
+    @include mobile {
+     
+      padding-right: 16px;
+      padding-left: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      justify-content: space-between;
+    }
     .secondary-btn {
       padding-top: 2px;
       padding-bottom: 2px;
+      display: flex;
+        align-items: center;
+      @include mobile {
+        height: 32px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      
+      }
       &:first-child {
         margin-right: 16px;
       }
@@ -159,5 +227,14 @@ overflow: hidden;
     top: 5px;
     right: 5px;
     z-index: 1;
+    @include mobile {
+      top: 10px;
+      right: 15px;
+      padding: 10px;
+      svg {
+        width: 18px;
+      height: 18px;
+      }
+    }
   }
 }
