@@ -49,7 +49,7 @@ overflow: hidden;
                         line-height: 24px;
                         @include arial-bold;
                         color: #ADADAD;
-                        @include mobile {
+                        @include tablet-and-phone {
                             font-size: 16px;
                             line-height: 24px;
                         }
@@ -125,6 +125,12 @@ overflow: hidden;
                     color: #919191;
                     cursor: pointer;
                     @include arial-bold;
+                    
+                    @include tablet {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-right: 20px;
+                    }
                     @include mobile {
                         font-size: 16px;
                         line-height: 24px;

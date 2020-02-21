@@ -63,9 +63,11 @@
   height: 100%;
   display: flex;
   align-items: center;
-
+  @include tablet {
+    width: 40%;
+  }
   .form-input {
-    @include mobile {
+    @include tablet-and-phone {
       display: block;
       border-radius: 10px;
       width: 100%;
@@ -74,6 +76,7 @@
       font-size: 16px;
       padding-right: 40px;
     }
+   
     display: none;
     position: absolute;
     top: 100%;
@@ -90,13 +93,13 @@ font-size: 18px;
 line-height: 24px;
 @include arial-bold;
 color: #C4C4C4;
-@include mobile {
+@include tablet-and-phone {
   font-size: 16px;
 }
 }
   }
   .search {
-    @include mobile {
+    @include tablet-and-phone {
       position: absolute;
       right: 15px;
       top: 50%;
@@ -205,6 +208,10 @@ color: #C4C4C4;
       line-height: 24px;
       @include arial-bold;
       margin-bottom: 45px;
+      @include tablet {
+        font-size: 24px;
+        line-height: 28px;
+      }
       @include mobile {
         margin-bottom: 26px;
       }
@@ -222,6 +229,9 @@ color: #C4C4C4;
         width: 40%;
         padding-left: 15px;
         padding-right: 15px;
+        @include tablet {
+          width: 50%;
+        }
         @include mobile {
           width: 100%;
           padding-left: 0;
@@ -262,6 +272,10 @@ color: #C4C4C4;
             color: #3C454E;
             @include arial-regular;
             margin-bottom: 18px;
+            @include tablet {
+              font-size: 18px;
+              line-height: 24px;
+            }
             @include mobile {
               font-size: 16px;
               margin-bottom: 10px;
@@ -301,6 +315,11 @@ color: #C4C4C4;
             align-items: center;
             cursor: pointer;
             width: 70%;
+            @include tablet {
+              font-size: 18px;
+              line-height: 24px;
+              width: 100%;
+            }
             @include mobile {
               width: 100%;
               font-size: 16px;
@@ -331,6 +350,9 @@ color: #C4C4C4;
         padding-left: 15px;
         padding-right: 15px;
         width: 60%;
+        @include tablet {
+          width: 50%;
+        }
         @include mobile {
           width: 100%;
           padding-left: 0;
@@ -342,6 +364,10 @@ color: #C4C4C4;
           line-height: 24px;
           @include arial-regular;
           margin-bottom: 11px;
+          @include tablet {
+            font-size: 18px;
+            line-height: 24px;
+          }
           @include mobile {
             font-size: 16px;
           }
@@ -361,6 +387,10 @@ color: #C4C4C4;
             font-size: 20px;
           line-height: 24px;
           @include arial-regular;
+          @include tablet {
+            font-size: 18px;
+            line-height: 24px;
+          }
           @include mobile {
             font-size: 16px;
             padding: 15px;
@@ -371,6 +401,10 @@ color: #C4C4C4;
           line-height: 24px;
           color:  #C4C4C4;;
           @include arial-regular;
+          @include tablet {
+            font-size: 18px;
+            line-height: 24px;
+          }
           @include mobile {
             font-size: 16px;
           }
@@ -403,6 +437,7 @@ color: #C4C4C4;
     line-height: 20px;
     @include arial-regular;
     margin-top: 20px;
+    
     @include mobile {
       font-size: 12px;
       line-height: 16px;

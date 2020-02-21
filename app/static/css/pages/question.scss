@@ -5,10 +5,21 @@
                 .title {
                     font-size: 45px;
                 line-height: 57px;
-                @include arial-bold;
+                @include arial-black;
                 margin-bottom: 47px;
-                color: #003A78;
+                color: #003a78;
                 width: 70%;
+                @include tablet {
+                    font-size: 35px;
+                    line-height: 40px;
+                    padding-top: 35px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    width: 100%;
+                    br {
+                      display: none;
+                    }
+                  }
                 @include mobile {
                     font-size: 24px;
                     line-height: 28px;
@@ -53,6 +64,9 @@
                     &__inner {
                         padding-bottom: 64px;
                         padding-top: 0;
+                        @include tablet {
+                            padding-bottom: 55px;
+                        }
                         @include mobile {
                             padding-bottom: 40px;
                         }
@@ -60,7 +74,7 @@
                     &__tabs {
                         width: 100%;
                         margin-bottom: 46px;
-                        @include mobile {
+                        @include tablet-and-phone {
                             margin-bottom: 30px;
                         }
                         .question-list {
@@ -72,7 +86,7 @@
                                 border-radius: 10px;
                                 width: 732px;
                                 margin-bottom: 24px;
-                                @include mobile {
+                                @include tablet-and-phone {
                                     width: 100%;
                                 }
                                 &:last-child {
@@ -97,7 +111,7 @@
                                     align-items: center;
                                     padding-top: 20px;
                                     padding-bottom: 20px;
-                                    @include mobile {
+                                    @include mobile{
                                         padding-top: 10px;
                                         padding-bottom: 10px;
                                     }
@@ -108,7 +122,7 @@
                                         font-size: 18px;
                                         line-height: 24px;
                                         @include arial-bold;
-                                        @include mobile {
+                                        @include tablet-and-phone{
                                             font-size: 16px;
                                             width: 80%;
                                         }
@@ -126,7 +140,7 @@
                                    font-size: 16px;
                                    line-height: 24px;
                                    color: #7B7B7B;
-                                   @include mobile {
+                                   @include tablet-and-phone {
                                        font-size: 14px;
                                        line-height: 20px;
                                    }
@@ -136,6 +150,10 @@
                     }
                     &__actions {
                         width: 100%;
+                        @include tablet {
+                            display: flex;
+                            justify-content: center;
+                        }
                         @include mobile {
                             display: flex;
                             justify-content: space-between;
@@ -150,6 +168,13 @@
                             height: 42px;
                             padding-top: 6px;
                             padding-bottom: 6px;
+                            @include tablet {
+                                display: flex;
+                                align-items: center;
+                                height: 32px;
+                                padding-top: 4px;
+                                padding-bottom: 4px;
+                            }
                             @include mobile {
                                 padding-top: 0;
                                 padding-bottom: 0;

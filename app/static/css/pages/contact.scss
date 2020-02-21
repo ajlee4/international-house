@@ -9,6 +9,16 @@
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include tablet {
+                    font-size: 35px;
+                    line-height: 40px;
+                    padding-top: 35px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    br {
+                      display: none;
+                    }
+                  }
                 @include mobile {
                     font-size: 24px;
                     line-height: 28px;
@@ -54,13 +64,21 @@
                 background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            @include mobile {
+         
+            @include mobile{
                 background: #FBFBFB !important;
+            }
+            @include tablet {
+              min-height: 700px;
             }
                 .section {
                     &__inner {
                         padding-top: 57px;
                         padding-bottom: 57px;
+                        @include tablet {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                        }
                         @include mobile {
                             padding-top: 0;
                             padding-bottom: 30px;
@@ -68,7 +86,10 @@
                     }
                     &__info {
                         width: 50%;
-                        @include mobile {
+                        @include tablet {
+                            width: 65%;
+                        }
+                        @include mobile{
                             width: 100%;
                         }
                         &-block {
@@ -83,12 +104,14 @@
                                         display: block;
                                         margin-left: -16px;
                                         margin-right: -16px;
-                                        img {
+                                        .mobile-img {
+
                                             width: 100%;
                                             height: 100%;
                                             max-height: 207px;
                                         }
                                     }
+                                 
                                 }
                                 &__title {
                                     color: #003A78;
@@ -96,7 +119,7 @@
                                     line-height: 40px;
                                     @include arial-bold;
                                     margin-bottom: 22px;
-                                    @include mobile {
+                                    @include tablet-and-phone{
                                         font-size: 20px;
                                         line-height: 24px;
                                         margin-bottom: 16px;
@@ -109,7 +132,7 @@
                                     @include arial-regular;
                                     display: flex;
                                     align-items: center;
-                                    @include mobile {
+                                    @include tablet-and-phone {
                                         font-size: 16px;
                                         width: 60%;
                                     }
@@ -118,7 +141,7 @@
                                     }
                                     svg {
                                         margin-right: 10px;
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                            display: block;
                                            width: 20%;
                                         }
@@ -131,7 +154,7 @@
                                     .block__list {
                                         padding-top: 20px;
                                         padding-bottom: 20px;
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                             padding-top: 10px;
                                             padding-bottom: 10px;
                                         }
@@ -141,7 +164,7 @@
                                             line-height: 24px;
                                             @include arial-bold;
                                             margin-bottom: 15px;
-                                            @include mobile {
+                                            @include tablet-and-phone {
                                                 font-size: 16px;
                                                 margin-bottom: 8px;
                                             }
@@ -151,7 +174,7 @@
                                             height: 100%;
                                              p {
                                                  margin-bottom: 10px;
-                                                 @include mobile {
+                                                 @include tablet-and-phone {
                                                      font-size: 16px;
                                                      line-height: 24px;
                                                      margin-bottom: 5px;
@@ -171,7 +194,7 @@
                                                 line-height: 24px;
                                                 @include arial-regular;
                                                 margin-bottom: 10px;
-                                                @include mobile {
+                                                @include tablet-and-phone {
                                                     font-size: 16px;
                                                     margin-bottom: 5px;
                                                 }
@@ -205,6 +228,10 @@
                     &__inner {
                         padding-top: 66px;
                         padding-bottom: 66px;
+                        @include tablet {
+                            padding-top: 48px;
+                            padding-bottom: 30px;
+                        }
                         @include mobile {
                             padding-top: 20px;
                             padding-bottom: 30px;
@@ -240,7 +267,7 @@
                                 line-height: 24px;
                                 @include arial-bold;
                                 margin-bottom: 20px;
-                                @include mobile {
+                                @include tablet-and-phone{
                                     font-size: 18px;
                                 }
                             }
@@ -276,7 +303,7 @@
                                         align-items: center;
                                         border-bottom: 1px solid #C4C4C4;
                                         padding-bottom: 5px;
-                                        @include mobile {
+                                        @include tablet-and-phone{
                                             font-size: 16px;
                                         }
                                         .check {
@@ -300,7 +327,7 @@
                                     &__bottom {
                                         padding-top: 30px;
                                         padding-bottom: 30px;
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                             padding-top: 10px;
                                             padding-bottom: 10px;
                                         }
@@ -314,7 +341,7 @@
                                                 width: 60%;
                                                 padding-left: 15px;
                                                 padding-right: 15px;
-                                                @include mobile {
+                                                @include tablet-and-phone {
                                                     width: 50%;
                                                 }
                                             }
@@ -322,7 +349,7 @@
                                                 width: 40%;
                                                 padding-left: 15px;
                                                 padding-right: 15px;
-                                                @include mobile {
+                                                @include tablet-and-phone {
                                                     width: 50%;
                                                 }
                                             }
@@ -330,7 +357,7 @@
                                             .block__list {
                                                 padding-top: 20px;
                                                 padding-bottom: 20px;
-                                                @include mobile {
+                                                @include tablet-and-phone {
                                                     padding-top: 10px;
                                                     padding-bottom: 10px;
                                                 }
@@ -360,7 +387,7 @@
                                                     line-height: 24px;
                                                     @include arial-bold;
                                                     margin-bottom: 15px;
-                                                    @include mobile {
+                                                    @include tablet-and-phone{
                                                         font-size: 14px;
                                                         line-height: 20px;
                                                         margin-bottom: 5px;
@@ -371,7 +398,7 @@
                                                     height: 100%;
                                                      p {
                                                          margin-bottom: 10px;
-                                                         @include mobile {
+                                                         @include tablet-and-phone {
                                                             font-size: 14px;
                                                             line-height: 20px;
                                                         }
@@ -390,7 +417,7 @@
                                                         line-height: 24px;
                                                         @include arial-regular;
                                                         margin-bottom: 10px;
-                                                        @include mobile {
+                                                        @include tablet-and-phone {
                                                             font-size: 14px;
                                                             line-height: 20px;
                                                             margin-bottom: 5px;
@@ -412,8 +439,10 @@
                             @include mobile {
                                 height: 257px !important;
                                 width: 100% !important;
-                              
-                              
+                            
+                            }
+                            @include tablet {
+                                width: 320px !important; 
                             }
                         }
                         &-left {

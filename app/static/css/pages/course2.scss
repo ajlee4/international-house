@@ -7,6 +7,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        @include tablet {
+            min-height: 230px;
+        }
         @include mobile {
             margin-top: 8px;
             background-image: url($images_dir+'/mobile/banner_course2.png') !important;
@@ -27,7 +30,8 @@
                 margin-bottom: 20px;
                 color: #fff;
                 @include arial-bold;
-                @include mobile {
+               
+                @include tablet-and-phone {
                     font-size: 24px;
                     line-height: 28px;
                     margin-bottom: 9px;
@@ -38,6 +42,10 @@
                 line-height: 28px;
                 @include arial-regular;
                 color: #fff;
+                @include tablet {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
                 @include mobile {
                     font-size: 16px;
                     line-height: 24px;
@@ -48,6 +56,10 @@
                     margin-bottom: 17px;
                     @include arial-bold;
                     color: #FFE483;
+                    @include tablet {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
                     @include mobile {
                         font-size: 18px;
                         line-height: 24px;
@@ -63,14 +75,14 @@
                 &__inner {
                     padding-top: 64px;
                     padding-bottom: 20px;
-                    @include mobile {
+                    @include tablet-and-phone{
                         padding-top: 31px;
                       padding-bottom: 0;
                     }
                 }
                 &__title {
                     margin-bottom: 13px;
-                    @include mobile {
+                    @include tablet-and-phone {
                         @include arial-bold;
                     }
                 }
@@ -80,7 +92,7 @@
                     color: #7B7B7B;
                     margin-bottom: 43px;
                     width: 40%;
-                    @include mobile {
+                    @include tablet-and-phone {
                         font-size: 16px;
                         line-height: 24px;
                         width: 100%;
@@ -89,13 +101,28 @@
                 }
                 &__info {
                     .select-course-col {
-                     
+                     @include tablet {
+                         margin-bottom: 50px;
+                         &:last-child {
+                             margin-bottom: 66px;
+                         }
+                     }
                         .col {
+                            &__inner {
+                                @include tablet {
+                                    display: flex;
+                                   
+                                }
+                            }
                             &__img {
                                 position: relative;
                                 border-radius: 10px;
                                 overflow: hidden;
                                 height: 230px;
+                                @include tablet {
+                                    width: 50%;
+                                 
+                                }
                                 img {
                                   width: 100%;
                                   height: 100%;
@@ -109,6 +136,9 @@
                                   height: 100%;
                                   display: block;
                                   background: rgba(0, 58, 120, 0.2);
+                                  @include tablet {
+                                  
+                                  }
                                 }
                                 &.yellow-bg {
                                     &:before {
@@ -127,6 +157,11 @@
                                 background: #fbfbfb;
                                 border-radius: 0px 10px 10px 10px;
                                 transition: 0.3s; 
+                                @include tablet {
+                                    width: 50%;
+                                   
+                                    top: 0;
+                                }
                                 @include mobile {
                                     top: -32px;
                                 }
@@ -174,6 +209,11 @@
                     padding-top: 67px;
                     padding-bottom: 64px;
                     display: flex;
+                    @include tablet {
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        flex-direction: column;
+                    }
                     @include mobile {
                         padding-top: 24px;
                         padding-bottom: 31px;
@@ -184,11 +224,14 @@
                 &__left {
                     width: 50%;
                     padding-right: 30px;
-                    @include mobile {
+                    @include tablet-and-phone{
                         padding-right: 0;
                         width: 100%;
                         margin-bottom: 21px;
                         img {
+                            @include tablet {
+                                max-height: 100%;
+                            }
                             max-height: 250px;
                             width: 100%;
                         }
@@ -196,14 +239,26 @@
                 }
                 &__right {
                     width: 50%;
-                    @include mobile {
+                    @include tablet-and-phone {
                         width: 100%;
                     }
                     .list-info {
                         padding-bottom: 33px;
+                        @include tablet {
+                            display: flex;
+                            margin-left: -10px;
+                            margin-right: -10px;
+                            padding-bottom: 20px;
+                        }
                         .list-item {
                             margin-bottom: 40px;
                             display: flex;
+                            @include tablet {
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                width: 50%;
+                                margin-bottom: 0;
+                            }
                           @include mobile {
                               margin-bottom: 30px;
                           }
@@ -212,7 +267,7 @@
                             }
                             &__left {
                                 margin-right: 30px;
-                                @include mobile {
+                                @include tablet-and-phone{
                                     margin-right: 14px;
                                 }
                             }
@@ -222,7 +277,7 @@
                                 line-height: 24px;
                                 @include arial-regular;
                                 color: #003A78;
-                                @include mobile {
+                                @include tablet-and-phone{
                                     font-size: 16px;
                                     line-height: 24px;
                                 }
@@ -244,6 +299,10 @@
                             line-height: 24px;
                             @include arial-regular;
                             color: #7B7B7B;
+                            @include tablet {
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
                             @include mobile {
                                 font-size: 14px;
                                 line-height: 20px;

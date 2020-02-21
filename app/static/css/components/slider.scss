@@ -13,6 +13,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        @include tablet {
+          background-image: url($images_dir+'/tablet/home__banner.png') !important;
+        }
         @include mobile {
           background-image: url($images_dir+'/mobile/banner_home.png') !important;
           max-height: 550px;
@@ -355,8 +358,11 @@
         opacity: 0;
         padding: 25px 40px 40px 35px;
         position: relative;
-        @include mobile {
+        @include mobile{
           padding: 13px 16px 20px 16px;
+        }
+        @include tablet {
+          padding-left: 26px;
         }
         overflow: hidden;
         &-title {
@@ -366,7 +372,7 @@
           width: 60%;
           color: #003a78;
           margin-bottom: 17px;
-          @include mobile {
+          @include tablet-and-phone {
             font-size: 18px;
             line-height: 24px;
             width: 80%;
@@ -382,7 +388,7 @@
           @include arial-regular;
           color: #3c454e;
           margin-bottom: 25px;
-          @include mobile {
+          @include tablet-and-phone {
             font-size: 14px;
             line-height: 20px;
             margin-bottom: 13px;
@@ -393,7 +399,7 @@
         }
         &-list {
           margin-bottom: 21px;
-          @include mobile {
+          @include tablet-and-phone {
             margin-bottom: 17px;
           }
           .list-title {
@@ -402,7 +408,7 @@
             @include arial-bold;
             color: #3c454e;
             margin-bottom: 14px;
-            @include mobile {
+            @include tablet-and-phone {
               font-size: 14px;
               line-height: 20px;
               margin-bottom: 5px;
@@ -421,7 +427,7 @@
               @include arial-regular;
               color: #3c454e;
               margin-bottom: 10px;
-              @include mobile {
+              @include tablet-and-phone {
                 font-size: 14px;
                 line-height: 20px;
                 margin-bottom: 8px;
@@ -442,7 +448,7 @@
         top: 100%;
         margin-top: 50px;
         font-size: 0;
-        @include mobile {
+        @include tablet-and-phone {
           margin-top: 30px;
         }
         @include sprite('left-arrow');
@@ -481,6 +487,10 @@
         }
         &-left {
           width: 40%;
+          @include tablet {
+            padding: 39px 15px;
+            padding-right: 0;
+          }
           @include mobile {
             width: 100%;
             padding: 16px;
@@ -515,7 +525,7 @@
             @include arial-bold;
             color: #003a78;
             margin-bottom: 13px;
-            @include mobile {
+            @include tablet-and-phone {
               font-size: 24px;
               line-height: 28px;
               margin-bottom: 7px;
@@ -527,7 +537,7 @@
             line-height: 28px;
             @include arial-regular;
             margin-bottom: 42px;
-            @include mobile {
+            @include tablet-and-phone {
               font-size: 20px;
               line-height: 24px;
               margin-bottom: 10px;
@@ -538,14 +548,14 @@
             line-height: 24px;
             @include arial-regular;
             color: #3c454e;
-            @include mobile {
+            @include tablet-and-phone {
               font-size: 14px;
               line-height: 20px;
             }
             &.black {
               @include arial-bold;
               margin-bottom: 15px;
-              @include mobile {
+              @include tablet-and-phone {
                 font-size: 16px;
               }
             }
@@ -562,6 +572,12 @@
               top: 16px;
               right: 16px;
             }
+            @include tablet {
+              svg {
+                width: 80px;
+                height: 80px;
+              }
+            }
           }
           .years {
             font-size: 18px;
@@ -573,6 +589,10 @@
             right: 10px;
             width: 80px;
             text-align: right;
+            @include tablet {
+              font-size: 14px;
+              line-height: 20px;
+            }
             @include mobile {
               font-size: 14px;
               line-height: 20px;
@@ -582,7 +602,7 @@
             .big {
               font-size: 26px;
               line-height: 36px;
-              @include mobile {
+              @include tablet-and-phone {
                 font-size: 20px;
                 line-height: 24px;
               }
@@ -599,7 +619,7 @@
         top: 100%;
         margin-top: 50px;
         font-size: 0;
-        @include mobile {
+        @include tablet-and-phone {
           margin-top: 40px;
         }
         @include sprite('left-arrow');

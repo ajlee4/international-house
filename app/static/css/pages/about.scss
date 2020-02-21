@@ -9,6 +9,17 @@
           margin-bottom: 47px;
           color: #003a78;
           width: 70%;
+          @include tablet {
+            font-size: 35px;
+            line-height: 40px;
+            padding-top: 35px;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            width: 100%;
+            br {
+              display: none;
+            }
+          }
           @include mobile {
             font-size: 24px;
             line-height: 28px;
@@ -27,7 +38,7 @@
           color: #3c454e;
           @include arial-bold;
           margin-bottom: 100px;
-          @include mobile {
+          @include tablet-and-phone {
             font-size: 14px;
             line-height: 20px;
             margin-bottom: 26px;
@@ -40,14 +51,14 @@
         .section {
           &__title {
             margin-bottom: 25px;
-          @include mobile {
+          @include tablet-and-phone{
             @include arial-bold;
             margin-bottom: 15px;
           }
           }
           &__inner {
               padding-bottom: 60px;
-              @include mobile {
+              @include tablet-and-phone {
                 padding-bottom: 30px;
               }
           }
@@ -55,13 +66,13 @@
             .row {
               margin-bottom: 20px;
             &.reverse {
-              @include mobile {
-                flex-direction: row-reverse;
+              @include tablet-and-phone {
+               flex-direction: column-reverse;
                 .col__text {
-                  margin-bottom: 20px;
+                margin-bottom: 0;
                 }
                 .col__img {
-                  margin-bottom: 0;
+                  margin-bottom: 20px;
                 }
               }
             }
@@ -83,12 +94,12 @@
                   flex-direction: column;
                   justify-content: center;
                   height: 100%;
-                  @include mobile {
+                  @include tablet-and-phone {
                     font-size: 14px;
                     line-height: 20px;
                   }
                   p {
-                    @include mobile {
+                    @include tablet-and-phone {
                       font-size: 14px;
                       line-height: 20px;
                     }
@@ -110,6 +121,10 @@
           &__inner {
             padding-top: 72px;
             padding-bottom: 64px;
+            @include tablet {
+              padding-top: 40px;
+              padding-bottom: 40px;
+            }
             @include mobile {
               padding-top: 16px;
               padding-bottom: 32px;
@@ -127,12 +142,19 @@
                 margin-left: -16px;
                 margin-right: -16px;
               }
+              @include tablet {
+                padding: 20px 25px 20px 25px;
+              }
               &__title {
                 font-size: 35px;
                 line-height: 40px;
                 color: #003a78;
                 margin-bottom: 42px;
                 @include arial-bold;
+                @include tablet {
+                  font-size: 20px;
+                  line-height: 24px;
+                }
                 @include mobile {
                   font-size: 20px;
                   line-height: 24px;
@@ -175,6 +197,9 @@
                     color: #3c454e;
                     @include arial-regular;
                     width: 60%;
+                    @include tablet {
+                      font-size: 16px;
+                    }
                     @include mobile {
                       font-size: 18px;
                     }
@@ -189,13 +214,19 @@
         .section {
           &__inner {
             padding-bottom: 65px;
-            @include mobile {
+
+            @include tablet-and-phone {
               padding-top: 20px;
               padding-bottom: 30px;
             }
           }
           &__title {
             margin-bottom: 13px;
+            @include tablet {
+              @include arial-bold;
+              font-size: 24px;
+              line-height: 24px;
+            }
             @include mobile {
               font-size: 20px;
               line-height: 24px;
@@ -208,6 +239,12 @@
             @include arial-bold;
             margin-bottom: 34px;
             color: #3c454e;
+            @include tablet {
+             font-size: 14px;
+             line-height: 20px;
+             width: 80%;
+             margin-bottom: 10px;
+            }
             @include mobile {
               font-size: 14px;
               line-height: 20px;
@@ -217,6 +254,10 @@
             &.gray {
               color: #7b7b7b;
               @include arial-regular;
+              @include tablet {
+                font-size: 18px;
+                margin-bottom: 10px;
+              }
               @include mobile {
                 @include arial-bold;
                 margin-bottom: 8px;
@@ -226,11 +267,11 @@
           &__info {
             .row {
               margin-bottom: 30px;
-              @include mobile {
+              @include tablet-and-phone {
                 margin-bottom: 20px;
               }
              &.reverse {
-              @include mobile {
+              @include tablet-and-phone{
                flex-direction: column-reverse; 
               }
              }
@@ -248,7 +289,7 @@
                   height: 100%;
                 }
                 &__img {
-                  @include mobile {
+                  @include tablet-and-phone {
                     margin-bottom: 20px;
                   }
                   img {
@@ -260,7 +301,7 @@
                   line-height: 24px;
                   @include arial-regular;
                   color: #7b7b7b;
-                  @include mobile {
+                  @include tablet-and-phone {
                     font-size: 14px;
                     line-height: 20px;
                   }
@@ -270,7 +311,7 @@
             .show-text-toggle {
               display: none;
               -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                @include mobile {
+                @include tablet-and-phone {
                  
                     &.active {
                         &:after {
@@ -308,13 +349,13 @@
               color: #7b7b7b;
               @include arial-regular;
               margin-bottom: 30px;
-              @include mobile {
+              @include tablet-and-phone {
                 font-size: 14px;
                 line-height: 20px;
               }
               &.black {
                 color: #3c454e;
-                @include mobile {
+                @include tablet-and-phone {
                   margin-top: 10px;
                 }
               }
@@ -330,6 +371,10 @@
           &__inner {
             padding-top: 66px;
             padding-bottom: 60px;
+            @include tablet {
+              padding-top: 37px;
+              padding-bottom: 30px;
+            }
             @include mobile {
               padding-top: 30px;
               padding-bottom: 18px;
@@ -337,7 +382,7 @@
           }
           &__title {
             margin-bottom: 12px;
-            @include mobile {
+            @include tablet-and-phone{
               @include arial-bold;
             }
           }
@@ -347,12 +392,15 @@
             margin-bottom: 40px;
             color: #3c454e;
             @include arial-regular;
+            @include tablet {
+              width: 60%;
+            }
             @include mobile {
               margin-bottom: 25px;
             }
             p {
               margin-bottom: 0;
-              @include mobile {
+              @include tablet-and-phone{
                 font-size: 16px;
                 line-height: 24px;
               }
@@ -371,26 +419,36 @@
               margin-right: -16px;
               margin-bottom: 30px;
             }
+            @include tablet {
+              padding: 30px 25px 35px 25px;
+              margin-bottom: 50px;
+            }
             .card {
               &__inner {
                 display: flex;
-                @include mobile {
+                @include tablet-and-phone{
                   flex-direction: column;
                 }
               }
               &__left {
                 width: 25%;
-                @include mobile {
+                @include tablet-and-phone{
                   width: 100%;
                   padding-right: 0;
                   margin-bottom: 33px;
                 }
+                
                 padding-right: 40px;
                 .card__text {
                   font-size: 24px;
                   line-height: 28px;
                   @include arial-bold;
                   color: #01548a;
+                  @include tablet {
+                    font-size: 20px;
+                    line-height: 24px;
+                    width: 50%;
+                  }
                   @include mobile {
                     font-size: 20px;
                     line-height: 24px;
@@ -405,11 +463,14 @@
               }
               &__right {
                 width: 75%;
-                @include mobile {
+                @include tablet-and-phone{
                   width: 100%;
                 }
                 .card-col {
                   margin-bottom: 32px;
+                  @include tablet {
+                    margin-bottom: 25px;
+                  }
                   @include mobile {
                     margin-bottom: 25px;
                     &:nth-last-child(-n+2){
@@ -419,7 +480,7 @@
                   .col {
                     &__top {
                       margin-bottom: 21px;
-                      @include mobile {
+                      @include tablet-and-phone {
                         margin-bottom: 0px;
                         svg {
                           width: 35px;
@@ -432,7 +493,7 @@
                       line-height: 24px;
                       @include arial-regular;
                       color: #3c454e;
-                      @include mobile {
+                      @include tablet-and-phone  {
                         font-size: 14px !important;
                         line-height: 20px !important;
                       }
@@ -448,9 +509,10 @@
                 @include arial-regular;
                 font-size: 20px;
                 line-height: 24px;
-                @include mobile {
+                @include tablet-and-phone {
                   font-size: 14px;
                   line-height: 20px;
+                  width: 70%;
                 }
               }
               .link {
@@ -459,7 +521,7 @@
                   font-size: 20px;
                   line-height: 24px;
                   color: #7B7B7B;
-                  @include mobile {
+                  @include tablet-and-phone {
                     font-size: 14px;
                     line-height: 20px;
                   }
@@ -485,13 +547,18 @@
                     }
                       &:last-child {
                           margin-bottom: 0;
-                          @include mobile {
+                          @include tablet-and-phone {
                             margin-bottom: 20px;
                           }
                       }
                       &__top {
                           margin-bottom: 40px;
                           display: inline-block;
+                          width: 50%;
+                          @include tablet {
+                            width: 60%;
+                            margin-bottom: 10px;
+                          }
                         @include mobile {
                           width: 100%;
                           margin-bottom: 0px;
@@ -503,20 +570,29 @@
                             @include arial-bold;
                             border-bottom: 1px solid #C4C4C4;
                             padding-bottom: 3px;
-                            @include mobile {
+                            display:flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .text {
+                              padding-right: 15px;
+                            }
+                            @include tablet-and-phone {
                               font-size: 16px;
                               line-height: 24px;
                               display: flex;
                               align-items: center;
                               justify-content: space-between;
+                             
                             }
                             cursor: pointer;
                             svg {
                                 transition: 0.3s;
                                 transform: rotate(-180deg);
-                                margin-left: 100px;
-                                @include mobile {
-                                  margin-left: 0;
+                              
+                                @include tablet-and-phone {
+                                margin-left: 0;
+                             
+                             
                                 }
                             }
                          }
@@ -530,7 +606,7 @@
                                 margin-left: -10px;
                                 margin-right: -10px;
                                 margin-bottom: 60px;
-                                @include mobile {
+                                @include tablet-and-phone {
                                   flex-direction: column;
                                   margin-left: 0;
                                   margin-right: 0;
@@ -544,7 +620,7 @@
                                 display: flex;
                                 flex-direction: column;
                                 align-items: flex-end;
-                                @include mobile {
+                                @include tablet-and-phone {
                                   width: 100%;
                                   align-items: flex-start;
                                 }
@@ -553,22 +629,23 @@
                                     line-height: 24px;
                                     @include arial-bold;
                                     color: #3C454E;
-                                    @include mobile {
+                                    @include tablet-and-phone {
                                       font-size: 14px;
                                       margin-bottom: 20px;
                                     }
+                                    
                                 }
                               }
                               &-right {
                                 width: 70%;
                                 padding-left: 10px;
                                 padding-right: 10px;
-                                @include mobile {
+                                @include tablet-and-phone {
                                   width: 100%;
                                 }
                                 .requirement-list {
                                     margin-bottom: 44px;
-                                    @include mobile {
+                                    @include tablet-and-phone {
                                       margin-bottom: 16px;
                                     }
                                     .list-item {
@@ -578,7 +655,7 @@
                                         color: #7B7B7B;
                                         margin-bottom: 15px;
                                       display: flex;
-                                      @include mobile {
+                                      @include tablet-and-phone {
                                         font-size: 14px;
                                         line-height: 20px;
                                       }
@@ -601,17 +678,20 @@
                                     @include arial-regular;
                                     font-size: 20px;
                                     line-height: 24px;
-                                    @include mobile {
+                                    
+                                    @include tablet-and-phone {
                                       font-size: 14px;
                                       line-height: 20px;
                                       width: 90%;
                                     }
+
+                                 
                                     @include mobile-small {
                                       width: 100%;
                                     }
                                     .link {
                                         color: #01548A;
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                           font-size: 14px;
                                           line-height: 20px;
                                           display: inline-block;
@@ -631,14 +711,14 @@
               &__inner {
                   padding-top: 65px;
                   padding-bottom: 65px;
-                  @include mobile {
+                  @include tablet-and-phone{
                     padding-top: 20px;
                     padding-bottom: 20px;
                   }
               }
               &__title {
                 margin-bottom: 14px;
-                @include mobile {
+                @include tablet-and-phone{
                   @include arial-bold;
                   margin-bottom: 8px;
                 }
@@ -649,7 +729,7 @@
                 color: #3C454E;
                 margin-bottom: 25px;
                 @include arial-bold;
-                @include mobile {
+                @include tablet-and-phone{
                   font-size: 14px;
                   line-height: 24px;
                   margin-bottom: 10px;
@@ -661,7 +741,7 @@
                 line-height: 24px;
                 @include arial-regular;
                 margin-bottom: 75px;
-                @include mobile {
+                @include tablet-and-phone{
                   font-size: 14px;
                   line-height: 20px;
                   margin-bottom: 20px;
@@ -676,9 +756,9 @@
     .quote {
       padding-top: 60px;
       padding-bottom: 60px;
-      @include mobile {
-        padding-top: 30px;
-        padding-bottom: 30px;
+      @include tablet-and-phone {
+        padding-top: 32px;
+        padding-bottom: 24px;
       }
       background: linear-gradient(
         90deg,
@@ -698,7 +778,7 @@
         line-height: 40px;
         @include arial-bold;
         text-align: center;
-        @include mobile{
+        @include tablet-and-phone{
           font-size: 18px;
           line-height: 24px;
         }
@@ -711,7 +791,7 @@
           left: 0;
           top: -25px;
           left: -10px;
-          @include mobile {
+          @include tablet-and-phone {
             width: 32px;
           }
         }

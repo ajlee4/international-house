@@ -59,7 +59,7 @@ $(document).ready(function() {
       $('.level-education-slider').addClass('created')
       );
 
-      if (document.body.clientWidth < 500) {
+      if (document.body.clientWidth < 1025) {
         $('.level-info-slider').slick({
           dots: true,
           infinite: true,
@@ -111,6 +111,13 @@ $(document).ready(function() {
             slidesToScroll: 1,
           },
         },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
       ],
       },
       $('.clients-list-slider').addClass('created')
@@ -127,6 +134,13 @@ $(document).ready(function() {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
             slidesToScroll: 1,
           },
         },

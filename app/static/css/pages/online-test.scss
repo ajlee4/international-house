@@ -10,6 +10,17 @@
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include tablet {
+                  font-size: 35px;
+                  line-height: 40px;
+                  padding-top: 35px;
+                  padding-bottom: 20px;
+                  margin-bottom: 0;
+                  width: 100%;
+                  br {
+                    display: none;
+                  }
+                }
                 @include mobile {
                   font-size: 24px;
                   line-height: 28px;
@@ -60,12 +71,18 @@
             .section {
                 &__inner {
                     padding-bottom: 60px;
-                    @include mobile {
+                    @include tablet-and-phone {
                       padding-bottom: 24px;
                     }
                 }
                 &__title {
                     margin-bottom: 15px;
+                    @include tablet {
+                      font-size: 20px;
+                      line-height: 24px;
+                      @include arial-bold;
+                      margin-bottom: 10px;
+                    }
                     @include mobile {
                       @include arial-bold;
                       margin-bottom: 10px;
@@ -77,7 +94,8 @@
                     @include arial-bold;
                     color:  #3C454E;
                     margin-bottom: 35px;
-                    @include mobile {
+                    
+                    @include tablet-and-phone {
                       font-size: 16px;
                       line-height: 24px;
                       margin-bottom: 25px;
@@ -86,13 +104,13 @@
                 &__info {
                     .info-row {
                         margin-bottom: 48px;
-                        @include mobile {
+                        @include tablet-and-phone {
                           margin-bottom: 34px;
                         }
                     }
                     .info-col {
                        display: flex;
-                       @include mobile {
+                       @include tablet-and-phone {
                          margin-bottom: 24px;
                          &:last-child {
                            margin-bottom: 0;
@@ -102,7 +120,7 @@
                           &__inner {
                            padding-top: 200px;
                            width: 100%;
-                           @include mobile {
+                           @include tablet-and-phone {
                              padding-top: 0;
                             display: flex;
                             height: 160px;
@@ -146,7 +164,7 @@
                             overflow: hidden;
                             height: 230px;
                             width: 100%;
-                            @include mobile {
+                            @include tablet-and-phone {
                               height: 100%;
                               position: static;
                             }
@@ -182,7 +200,7 @@
                             flex-direction: column;
                             justify-content: space-between;
                             height: 100%;
-                            @include mobile {
+                            @include tablet-and-phone {
                               padding-left: 16px;
                               padding-bottom: 16px;
                               padding-top: 10px;
@@ -190,7 +208,7 @@
                             }
                             &__top {
                                 padding-bottom: 25px;
-                                @include mobile {
+                                @include tablet-and-phone {
                                   padding-bottom: 15px;
                                 }
                             }
@@ -200,7 +218,7 @@
                               @include arial-bold;
                               margin-bottom: 9px;
                               color: #003a78;
-                              @include mobile {
+                              @include tablet-and-phone {
                                 font-size: 16px;
                                 line-height: 20px;
                                 margin-bottom: 6px;
@@ -218,7 +236,7 @@
                               line-height: 24px;
                               color: #7b7b7b;
                               @include arial-bold;
-                              @include mobile {
+                              @include tablet-and-phone {
                                 font-size: 14px;
                                 line-height: 20px;
                               }
@@ -227,7 +245,7 @@
                                 .secondary-btn {
                                     padding-top: 3px;
                                     padding-bottom: 3px;
-                                    @include mobile {
+                                    @include tablet-and-phone {
                                       padding-left: 10px;
                                       padding-right: 10px;
                                     }
@@ -256,7 +274,7 @@
                             font-size: 20px;
                             line-height: 24px;
                             @include arial-regular;
-                            @include mobile {
+                            @include tablet-and-phone {
                               font-size: 16px;
                               line-height: 24px;
                             }
@@ -270,14 +288,14 @@
                 &__inner {
                     padding-top: 56px;
                     padding-bottom: 65px;
-                    @include mobile {
+                    @include tablet-and-phone {
                       padding-top: 20px;
                       padding-bottom: 40px;
                     }
                 }
                 &__title {
                     margin-bottom: 32px;
-                    @include mobile {
+                    @include tablet-and-phone {
                       @include arial-bold;
                       margin-bottom: 20px;
                     }
@@ -323,7 +341,7 @@
                             color: #01548a;
                             @include arial-bold;
                             backface-visibility: hidden;
-                            @include mobile {
+                            @include tablet-and-phone {
                               font-size: 16px;
                               line-height: 24px;
                             }
@@ -371,7 +389,7 @@
                           color: #7B7B7B;
                           @include arial-regular;
                           p {
-                            @include mobile {
+                            @include tablet-and-phone {
                               font-size: 14px;
                               line-height: 20px;
                             }

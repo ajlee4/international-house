@@ -9,6 +9,17 @@
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include tablet {
+                    font-size: 35px;
+                    line-height: 40px;
+                    padding-top: 35px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    width: 60%;
+                    br {
+                      display: none;
+                    }
+                  }
                 @include mobile {
                     font-size: 24px;
                     line-height: 28px;
@@ -58,6 +69,11 @@
                 line-height: 24px;
                 color: #3C454E;
                 @include arial-bold;
+                @include tablet {
+                    width: 90%;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
                 @include mobile {
                     width: 100%;
                     font-size: 14px;
@@ -73,7 +89,7 @@
                 @include arial-regular;
                 display: flex;
                 align-items: center;
-                @include mobile {
+                @include tablet-and-phone {
                     font-size: 14px;
                     line-height: 20px;
                 }
@@ -82,7 +98,7 @@
                 }
                 &__left {
                     margin-right: 32px;
-                    @include mobile {
+                    @include tablet-and-phone {
                         margin-right: 15px;
                         svg {
                             width: 30px;
@@ -97,6 +113,10 @@
               .section {
                   &__title {
                       margin-bottom: 50px;
+                      @include tablet {
+                          margin-bottom: 25px;
+                         
+                      }
                       @include mobile {
                           margin-bottom: 16px;
                           @include arial-black;
@@ -112,6 +132,11 @@
                       color: #3C454E;
                       @include arial-bold;
                       margin-bottom: 90px;
+                      @include tablet {
+                          font-size: 18px;
+                          line-height: 40px;
+                          margin-bottom: 13px;
+                      }
                       @include mobile {
                           font-size: 18px;
                           line-height: 40px;
@@ -120,10 +145,16 @@
                   }
                   &__inner {
                     padding-bottom: 55px;
+                    @include tablet {
+                        padding-bottom: 25px;
+                    }
                   }
                   &__info {
                     .list-info {
                         margin-bottom: 70px;
+                        @include tablet {
+                            margin-bottom: 40px;
+                        }
                         @include mobile {
                             margin-bottom: 25px;
                         }
@@ -135,9 +166,12 @@
                              margin-bottom: 20px;
                              display: flex;
                              align-items: flex-start;
-                            @include mobile {
+                            @include tablet-and-phone{
                                 font-size: 14px;
                                 line-height: 20px;
+                                br {
+                                    display: none;
+                                }
                             }
                              &:before {
                                  content: '';
@@ -154,7 +188,7 @@
                     .block-info {
                         &.studies-info {
                             margin-bottom: 45px;
-                            @include mobile {
+                            @include tablet-and-phone{
                                 margin-bottom: 0;
                             }
                             .studies-info {
@@ -164,6 +198,9 @@
                                     border-radius: 10px;
                                     width: 80%;
                                     overflow: hidden;
+                                    @include tablet {
+                                        width: 100%;
+                                    }
                                  @include mobile {
                                     width: 100%;
                                     overflow-x: auto;
@@ -189,7 +226,7 @@
                                             line-height: 24px;
                                             color: #003A78;
                                             @include arial-bold;
-                                            @include mobile {
+                                            @include tablet-and-phone {
                                                 font-size: 16px;
                                             }
                                         }
@@ -202,7 +239,7 @@
                                             @include arial-regular;
                                             font-size: 18px;
                                             line-height: 24px;
-                                            @include mobile {
+                                            @include tablet-and-phone {
                                                 font-size: 16px;
                                             }
                                         }
@@ -223,6 +260,9 @@
                     line-height: 24px;
                     @include arial-bold;
                     margin-bottom: 10px;
+                    @include tablet {
+                        font-size: 18px;
+                    }
                     @include mobile {
                         font-size: 16px;
                     }
@@ -233,7 +273,7 @@
                     line-height: 24px;
                     @include arial-regular;
                     width: 60%;
-                    @include mobile {
+                    @include tablet-and-phone{
                         width: 100%;
                         line-height: 20px;
                         font-size: 14px;
@@ -248,6 +288,9 @@
                       }
                       .list-item {
                           margin-bottom: 30px;
+                          @include tablet {
+                              margin-bottom: 15px;
+                          }
                           &:last-child {
                               margin-bottom: 0;
                           }
@@ -267,7 +310,7 @@
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            @include mobile {
+                            @include tablet-and-phone{
                                 font-size: 16px;
                             }
                             .arrow-down {
@@ -284,7 +327,7 @@
                             color: #7B7B7B;
                             @include arial-regular;
                             display: none;
-                            @include mobile {
+                            @include tablet-and-phone{
                                 font-size: 14px;
                                 line-height: 20px;
                             }
@@ -295,6 +338,9 @@
               .section {
                   &__title {
                     margin-bottom: 27px;
+                    @include tablet {
+                        margin-bottom: 15px;
+                    }
                     @include mobile {
                         margin-bottom: 10px;
                     }
@@ -302,6 +348,10 @@
                   &__inner {
                       padding-top: 64px;
                       padding-bottom: 64px;
+                      @include tablet {
+                          padding-top: 25px;
+                          padding-bottom: 40px;
+                      }
                       @include mobile {
                           padding-top: 0;
                           padding-bottom: 40px;
@@ -322,6 +372,9 @@
                         border-radius: 8px;
                         overflow: hidden; 
                         width: 65%;
+                        @include tablet {
+                            width: 100%;   
+                        }
                         @include mobile {
                             width: 100%;
                             overflow-x: auto;
@@ -355,7 +408,7 @@
                                 justify-content: center;
                                 align-items: center;
                                 border-right: 1px solid #CECECE;
-                                @include mobile {
+                                @include tablet-and-phone {
                                     font-size: 16px !important;
                                     min-height: 90px;
                                 }
@@ -414,7 +467,7 @@
                                     color: #003A78;
                                     font-size: 18px;
                                     line-height: 24px;
-                                    @include mobile {
+                                    @include tablet-and-phone {
                                         font-size: 16px;
                                     }
                                 }
@@ -429,7 +482,7 @@
                                 font-size: 18px;
                                 line-height: 24px;
                                 @include arial-regular;
-                                @include mobile {
+                                @include tablet-and-phone {
                                     font-size: 16px;
                                 }
                              }
@@ -444,12 +497,12 @@
                                         font-size: 18px;
                                         line-height: 24px;
                                         @include arial-bold;
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                             font-size: 16px;
                                         }
                                      }
                                      .text {
-                                        @include mobile {
+                                        @include tablet-and-phone {
                                             font-size: 16px;
                                         }
                                      }
@@ -466,10 +519,16 @@
               .section {
                   &__title {
                     margin-bottom: 35px;
+                    @include tablet {
+                        @include arial-bold;
+                    }
                   }
                   &__inner {
                       padding-top: 60px;
                       padding-bottom: 60px;
+                      @include tablet {
+                          padding-top: 30px;
+                      }
                       @include mobile {
                           padding-top: 20px;
                           padding-bottom: 20px;
@@ -478,10 +537,12 @@
               }
           }
           &.steps-info-section {
+            background: #F9F9F9;
               .section {
                   &__inner {
                       padding-top: 50px;
                       padding-bottom: 50px;
+                    
                     @include mobile {
                         padding-top: 30px;
                         padding-bottom: 0px;
@@ -489,12 +550,18 @@
                   }
                   &__title {
                       margin-bottom: 30px;
+                      @include tablet {
+                          @include arial-bold;
+                      }
                   }
                   &__info {
                     .steps-list {
                           
                         display: flex;
                         padding-bottom: 60px;
+                        @include tablet {
+                            padding-bottom: 0;
+                        }
                         @include mobile {
                             flex-direction: column;
                             padding-bottom: 40px;
@@ -513,6 +580,9 @@
                                 align-items: center;
                                 justify-content: center;
                                 margin-bottom: 42px;
+                                @include tablet {
+                                    margin-bottom: 15px;
+                                }
                                 @include mobile {
                                     margin-right: 30px;
                                     position: relative;
@@ -525,7 +595,7 @@
                                     width: 88px;
                                     height: 88px;
                                  
-                                    @include mobile {
+                                    @include tablet-and-phone{
                                         width: 56px;
                                         height: 56px;
                                         svg {
@@ -572,6 +642,10 @@
                                 color: #3C454E;
                                 @include mobile {
                                     text-align: left;
+                                }
+                                @include tablet {
+                                    font-size: 14px; 
+                                    line-height: 20px;
                                 }
                                 .title {
                                     @include arial-bold;

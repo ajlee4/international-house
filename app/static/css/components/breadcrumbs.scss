@@ -2,7 +2,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
-    @include mobile {
+    @include tablet-and-phone {
         display: none;
     }
     &__item {

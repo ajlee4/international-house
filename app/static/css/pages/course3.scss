@@ -1,684 +1,770 @@
 .content {
-    &.course-three-page {
-        .page {
-            &__title {
-                .title {
-                    font-size: 45px;
-                line-height: 57px;
-                @include arial-black;
-                margin-bottom: 47px;
-                color: #003A78;
-                width: 70%;
-                @include mobile {
-                    font-size: 24px;
-                    line-height: 28px;
-                    width: 100%;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    margin-bottom: 0;
-                }
-                }
+  &.course-three-page {
+    .page {
+      &__title {
+        .title {
+          font-size: 45px;
+          line-height: 57px;
+          @include arial-black;
+          margin-bottom: 47px;
+          color: #003a78;
+          width: 70%;
+          @include tablet {
+            font-size: 35px;
+            line-height: 40px;
+            padding-top: 35px;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            br {
+              display: none;
             }
-            &__banner {
-                min-height: 423px;
-                width: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                margin-bottom: 65px;
-                @include mobile {
-                    background-image: url($images_dir+'/mobile/banner_course.png') !important;
-                    max-height: 550px;
-                    height: 550px;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    margin-bottom: 15px;
-                }
-            .banner-info {
-                padding-top: 70px;
-                padding-bottom: 42px;
-                width: 60%;
-                @include mobile {
-                    padding-bottom: 32px;
-                    padding-top: 0;
-                    width: 100%;
-                }
-                &__title {
-                    font-size: 45px;
-                    line-height: 47px;
-                    color: #fff;
-                    @include arial-black;
-                    margin-bottom: 10px;
-                    @include mobile {
-                        font-size: 32px;
-                        line-height: 38px;
-                        margin-bottom: 12px;
-                    }
-                }
-                &__subtitle {
-                    font-size: 20px;
-                    line-height: 28px;
-                    color: #DBDBDB;
-                    @include arial-regular;
-                    margin-bottom: 40px;
-                    @include mobile {
-                        font-size: 18px;
-                        line-height: 24px;
-                        margin-bottom: 18px;
-                        width: 100%;
-                    }
-                }
-            }
-            }
+          }
+          @include mobile {
+            font-size: 24px;
+            line-height: 28px;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+          }
         }
-        .section {
-            &.purpose-course-section {
-                .section {
-                    &__inner {
-                        display: flex;
-                        padding-bottom: 64px;
-                        @include mobile {
-                            flex-direction: column;
-                            padding-bottom: 17px;
-                        }
-                    }
-                    &__left {
-                        width: 50%;
-                        padding-right: 30px;
-                        @include mobile {
-                            width: 100%;
-                            padding-right: 0;
-                            margin-bottom: 30px;
-                            img {
-                                width: 100%;
-                                max-height: 300px;
-                            }
-                        }
-                    }
-                    &__right {
-                        width: 50%;
-                        @include mobile {
-                            width: 100%;
-                        }
-                        .section {
-                            &__title {
-                                margin-bottom: 12px;
-                            }
-                            &__subtitle {
-                                font-size: 20px;
-                                line-height: 24px;
-                                color: #003A78;
-                                @include arial-regular;
-                                margin-bottom: 13px;
-                                width: 70%;
-                                @include mobile {
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    margin-bottom: 10px;
-                                }
-                            }
-                            &__text {
-                                font-size: 20px;
-                                line-height: 24px;
-                                color: #7B7B7B;
-                                @include arial-regular;
-                                p {
-                                    @include mobile {
-                                        font-size: 14px;
-                                        line-height: 20px;
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-            &.level-education-section {
-                .section {
-                    &__inner {
-                        padding-top: 68px;
-                        padding-bottom: 55px;
-                        @include mobile {
-                            padding-top: 24px;
-                            padding-bottom: 30px;
-                        }
-                    }
-                   &__top {
-                       width: 40%;
-                       margin-bottom: 43px;
-                       @include mobile {
-                           width: 100%;
-                       }
-                    .yellow-text {
-                        font-size: 20px;
-                        line-height: 24px;
-                        @include arial-bold;
-                        color: #FDC600;
-                       
-                        width: 40%;
-                        @include mobile {
-                            width: 100%;
-                            margin-bottom: 10px;
-                        }
-                    }
-                       .section {
-                           &__title {
-                            margin-bottom: 14px;
-                            @include mobile {
-                                font-size: 20px;
-                                line-height: 24px;
-                            }
-                           }
-                           &__subtitle {
-                            font-size: 20px;
-                            line-height: 24px;
-                            color: #7B7B7B;
-                            @include arial-regular;
-                            @include mobile {
-                                font-size: 14px;
-                                line-height: 20px;
-                            }
-                           }
-                       
-                       }
-                   }
-                   &__bottom {
-                       .level-education {
-                           &-block {
-                            background: #FBFDFF;
-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
-border-radius: 20px;
-padding: 37px 34px 35px 34px;
-margin-bottom: 44px;
-@include mobile {
-    padding: 20px 16px;   
-}
-                           }
-                           &__col {
-                               margin-bottom: 48px;
-                                @include mobile {
-                                    margin-bottom: 20px;
-                                }
-                               .col {
-                                   &__title {
-                                    font-size: 20px;
-                                    line-height: 24px;
-                                    @include arial-bold;
-                                    color: #003A78;
-                                    margin-bottom: 12px;
-
-                                   }
-                                   &__level {
-                                    margin-bottom: 11px;
-                                    @include mobile-small {
-                                        svg {
-                                            width: 100% !important;
-                                        }
-                                    }
-                                   }
-                                   &__text {
-                                       width: 90%;
-                                       font-size: 14px;
-                                       line-height: 20px;
-                                       color: #3C454E;
-                                       @include arial-regular;
-                                     p {
-                                         margin-bottom: 5px;
-                                     }
-                                       .gray-text {
-                                        color: #7B7B7B;
-                                       }
-
-                                   }
-                               }
-                           }
-                       }
-                       .subtext {
-                           width: 50%;
-                           font-size: 18px;
-                           line-height: 24px;
-                           @include arial-regular;
-                           color: #7B7B7B;
-                           @include mobile {
-                               p {
-                                font-size: 16px;
-                                line-height: 24px;
-                                margin-bottom: 8px;
-                               }
-                               width: 100%;
-                           }
-                           .yellow-link {
-                               font-size: 16px;
-                               line-height: 28px;
-                               color: #FDC600;
-                               display: flex;
-                               align-items: center;
-                               @include arial-bold;
-                               @include mobile {
-                                   font-size: 14px;
-                                   line-height: 20px;
-                               }
-                               svg {
-                                   margin-left: 7px;
-                               }
-                           }
-                       }
-                   }
-                }
-            }
-            &.course-description-section {
-                .section {
-                    &__inner {
-                        padding-top: 64px;
-                        padding-bottom: 64px;
-                        @include mobile {
-                            padding-top: 24px;
-                            padding-bottom: 10px;
-                        }
-                    }
-                    &__title {
-                        width: 40%;
-                        margin-bottom: 37px;
-                        @include mobile {
-                            width: 100%;
-                            font-size: 20px;
-                            line-height: 24px;
-                            @include arial-bold;
-                        }
-                    }
-                    &__block {
-                        &.block-info {
-                            margin-bottom: 64px;
-                            @include mobile {
-                                margin-bottom: 24px;
-                            }
-                            .block-info__elem {
-                                display: flex;
-                                margin-left: -15px;
-                                margin-right: -15px;
-                                margin-bottom: 54px;
-                            &.reverse {
-                              @include mobile {
-                                flex-direction: column-reverse;
-                                margin-left: 0;
-                                margin-right: 0;
-                              }
-                            }
-
-                            @include mobile {
-                                flex-direction: column;
-                                margin-left: 0;
-                                margin-right: 0;
-                                margin-bottom: 30px;
-                              }
-                               
-                                &:last-child {
-                                    margin-bottom: 0;
-                                }
-                                .text {
-                                    font-size: 20px;
-                                    line-height: 24px;
-                                    @include arial-regular;
-                                    color: #7B7B7B;
-
-                                    .show-text {
-                                        @include mobile {
-                                            display: none;
-                                        }
-                                    }
-                                  
-                                    .show-text-toggle {
-                                      display: none;
-                                        @include mobile {
-                                            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                                            &.active {
-                                                &:after {
-                                                    transform: rotate(180deg);
-                                                    transition: 0.3s;
-                                                }
-                                            }
-                                            &:after {
-                                                @include sprite('text-arrow-down');
-                                                content: '';
-                                                display: inline-block;
-                                                margin-left: 5px;
-                                                transition: 0.3s;
-                                            }
-                                            font-size: 14px;
-                                            line-height: 20px;
-                                            color: #01548A;
-                                            cursor: pointer;
-                                            text-align: center;
-                                            padding-top: 5px;
-                                            display: inline-flex;
-                                            align-items: center; 
-                                            padding-bottom: 5px;
-                                            margin-left: auto;
-                                            margin-right: auto;
-                                        }
-                                    }
-                                    @include mobile {
-                                        p {
-                                            font-size: 14px;
-                                            line-height: 20px;
-                                            margin-bottom: 8px;
-                                        }
-                                    }
-                                    .title {
-                                        @include arial-bold;
-                                        color: #7B7B7B;
-                                        @include mobile {
-                                            font-size: 16px;
-                                            line-height: 24px;
-                                        }
-                                    }
-                                }
-                                .img {
-                                    @include mobile {
-                                        margin-bottom: 21px;
-                                    }
-                                }
-                                .elem {
-                                    &-left {
-                                        @include mobile {
-                                            width: 100%;
-                                            padding-left: 0;
-                                            padding-right: 0;
-                                        }
-                                        width: 50%;
-                                        padding-left: 15px;
-                                        padding-right: 15px;
-
-                                    }
-                                    &-right {
-                                        @include mobile {
-                                            width: 100%;
-                                            padding-left: 0;
-                                            padding-right: 0;
-                                        }
-                                        width: 50%;
-                                        padding-left: 15px;
-                                        padding-right: 15px;
-                                    }
-                                }
-                            }
-                        }
-                        &.set-course-block {
-                            .section__title {
-                                width: 50%;
-                                @include mobile {
-                                    width: 100%;
-                                    margin-bottom: 10px;
-                                }
-                            }
-                            .block-info {
-                                &.set {
-                                    margin-bottom: 30px;
-                                    @include mobile {
-                                        margin-bottom: 16px;
-                                    }
-                                    p {
-                                        font-size: 20px;
-                                        line-height: 24px;
-                                        @include arial-regular;
-                                        color: #565758;
-                                        margin-bottom: 7px;
-                                        @include mobile {
-                                            font-size: 14px;
-                                            line-height: 20px;
-                                        }
-                                    }
-                                }
-                                &.classes-info {
-                                    margin-bottom: 42px;
-                                    @include mobile {
-                                        margin-bottom: 27px;
-                                    }
-                                    .title {
-                                        font-size: 20px;
-                                        line-height: 24px;
-                                        @include arial-bold;
-                                        color: #003A78;
-                                        margin-bottom: 17px;
-                                        @include mobile {
-                                            font-size: 16px;
-                                            margin-bottom: 10px;
-                                        }
-                                    }
-                                    .classes-info__list {
-                                        padding-left: 20px;
-                                        list-style-type: disc;
-                                        .list-item {
-                                            font-size: 20px;
-                                            line-height: 24px;
-                                            color: #7B7B7B;
-                                            @include arial-regular;
-                                            margin-bottom: 5px;
-                                            @include mobile {
-                                                font-size: 16px;
-                                                line-height: 24px;
-                                            }
-                                            &:last-child {
-                                                margin-bottom: 0;
-                                            }
-                                        }
-                                    }
-                                }
-                                &.studies-info {
-                                    margin-bottom: 45px;
-                                    @include mobile {
-                                        margin-bottom: 22px;
-                                    }
-                                    .studies-info {
-                                        &__list {
-                                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-                                            border-radius: 10px;
-                                            width: 80%;
-                                            overflow: hidden;
-                                            @include mobile {
-                                                width: 100%;
-                                            }
-                                            .list-item {
-                                                padding-left: 30px;
-                                                padding-right: 30px;
-                                                padding-top: 16px;
-                                                padding-bottom: 16px;
-                                                display: flex;
-                                                justify-content: space-between;
-                                                align-items: center;
-                                                @include mobile {
-                                                    padding: 10px 14px;
-                                                }
-                                                &.blue {
-                                                    background: #F0F8FE;
-                                                }
-                                                &__left {
-                                                 width: 50%;
-                                                    padding-right: 10px;
-                                                    font-size: 18px;
-                                                    line-height: 24px;
-                                                    color: #003A78;
-                                                    @include arial-bold;
-                                                    @include mobile {
-                                                        font-size: 14px;
-                                                        line-height: 20px;
-                                                        width: 60%;
-                                                    }
-
-                                                }
-                                                &__right {
-                                                    display: flex;
-                                                    justify-content: flex-end;
-                                                    padding-left: 10px;
-                                                    width: 50%;
-                                                    color: #3C454E;
-                                                    @include arial-regular;
-                                                    font-size: 18px;
-                                                    line-height: 24px;
-                                                    @include mobile {
-                                                        width: 40%;
-                                                        font-size: 14px;
-                                                        line-height: 24px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                &.sales-info {
-                                    margin-bottom: 130px;
-                                    @include mobile {
-                                        margin-bottom: 51px;
-                                    }
-                                    .sales-info__inner {
-                                        width: 80%;
-                                        @include mobile {
-                                            width: 100%;
-                                        }
-                                    }
-                                    .title {
-                                        font-size: 20px;
-                                        line-height: 24px;
-                                        @include arial-bold;
-                                        color: #3C454E;
-                                        margin-bottom: 10px;
-                                        @include mobile {
-                                            font-size: 16px;
-                                            margin-bottom: 5px;
-                                        }
-                                    }
-                                    .text {
-                                        font-size: 16px;
-                                        line-height: 24px;
-                                        @include arial-regular;
-                                        color: #3C454E;
-                                        margin-bottom: 13px;
-                                        @include mobile {
-                                            font-size: 14px;
-                                            line-height: 20px;
-                                            margin-bottom: 11px;
-                                        }
-                                    }
-                                    .link {
-                                        display: flex;
-                                        align-items: center;
-                                        color: #FDC600;
-                                        font-size: 16px;
-                                        line-height: 28px;
-                                        @include arial-bold;
-                                        @include mobile {
-                                            font-size: 14px;
-                                            line-height: 20px;
-                                        }
-                                        svg {
-                                            margin-left: 7px;
-                                        }
-                                    }
-                                }
-                            }
-                          
-                        }
-                      
-                    }
-                    &__slider {
-                        padding-bottom: 85px;
-                    }
-                }
-            }
+      }
+      &__banner {
+        min-height: 432px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 65px;
+        @include tablet {
+          background-image: url($images_dir+'/tablet/course-tablet__banner.png') !important;
+          margin-bottom: 50px;
         }
-        .banner {
-            min-height: 248px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        @include mobile {
+          background-image: url($images_dir+'/mobile/banner_course.png') !important;
+          max-height: 550px;
+          height: 550px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-bottom: 0;
+        }
+        .banner-info {
+          padding-top: 70px;
+          padding-bottom: 42px;
+          width: 60%;
+          @include tablet {
+            padding-top: 90px;
+            padding-bottom: 90px;
+          }
+          @include mobile {
+            padding-bottom: 32px;
+            padding-top: 0;
+            width: 100%;
+          }
+          &__title {
+            font-size: 45px;
+            line-height: 47px;
+            color: #fff;
+            @include arial-black;
+            margin-bottom: 10px;
+            @include tablet {
+              font-size: 35px;
+              line-height: 40px;
+              margin-bottom: 16px;
+            }
             @include mobile {
-                background-image: url($images_dir+'/mobile/banner_course3.png') !important;
-                min-height: 230px;
-                height: 230px;
+              font-size: 32px;
+              line-height: 38px;
+              margin-bottom: 12px;
             }
-            &-info {
-                padding-top: 67px;
-                padding-bottom: 65px;
+          }
+          &__subtitle {
+            font-size: 20px;
+            line-height: 28px;
+            color: #dbdbdb;
+            @include arial-regular;
+            margin-bottom: 40px;
+            @include tablet {
+              font-size: 20px;
+              line-height: 24px;
+              margin-bottom: 30px;
+            }
+            @include mobile {
+              font-size: 18px;
+              line-height: 24px;
+              margin-bottom: 18px;
+            }
+          }
+        }
+      }
+    }
+    .section {
+      &.purpose-course-section {
+        .section {
+          &__inner {
+            display: flex;
+            padding-bottom: 64px;
+            @include tablet {
+              padding-bottom: 43px;
+            }
+            @include mobile {
+              flex-direction: column;
+              padding-bottom: 17px;
+            }
+          }
+          &__left {
+            width: 50%;
+            padding-right: 30px;
+
+            @include mobile {
+              width: 100%;
+              padding-right: 0;
+              margin-bottom: 30px;
+              img {
+                width: 100%;
+                max-height: 300px;
+              }
+            }
+          }
+          &__right {
+            width: 50%;
+
+            @include mobile {
+              width: 100%;
+            }
+            .section {
+              &__title {
+                margin-bottom: 12px;
+              }
+              &__subtitle {
+                font-size: 20px;
+                line-height: 24px;
+                color: #003a78;
+                @include arial-regular;
+                margin-bottom: 13px;
+                width: 70%;
+                @include tablet-and-phone {
+                  font-size: 16px;
+                  line-height: 24px;
+                  margin-bottom: 10px;
+                }
+              }
+              &__text {
+                font-size: 20px;
+                line-height: 24px;
+                color: #7b7b7b;
+                @include arial-regular;
+                p {
+                  @include tablet-and-phone {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.level-education-section {
+        .section {
+          &__inner {
+            padding-top: 68px;
+            padding-bottom: 55px;
+            @include tablet {
+              padding-top: 24px;
+              padding-bottom: 40px;
+            }
+            @include mobile {
+              padding-top: 24px;
+              padding-bottom: 30px;
+            }
+          }
+          &__top {
+            width: 40%;
+            margin-bottom: 43px;
+            @include tablet {
+              width: 50%;
+            }
+            @include mobile {
+              width: 100%;
+            }
+            .yellow-text {
+              font-size: 20px;
+              line-height: 24px;
+              @include arial-bold;
+              color: #fdc600;
+
+              width: 40%;
+              @include tablet {
+                font-size: 16px;
+                width: 100%;
+              }
+              @include mobile {
+                width: 100%;
+                margin-bottom: 10px;
+              }
+            }
+            .section {
+              &__title {
+                margin-bottom: 14px;
+                @include tablet {
+                  font-size: 24px;
+                  line-height: 24px;
+                }
                 @include mobile {
-                    padding-top: 34px;
-                    padding-bottom: 34px;
+                  font-size: 20px;
+                  line-height: 24px;
                 }
-                @include mobile-small {
-                    padding-top: 24px;
+              }
+              &__subtitle {
+                font-size: 20px;
+                line-height: 24px;
+                color: #7b7b7b;
+                @include arial-regular;
+                @include tablet-and-phone {
+                  font-size: 14px;
+                  line-height: 20px;
                 }
-                &__title {
-                    font-size: 35px;
-                    line-height: 40px;
-                    color: #fff;
-                    @include arial-bold;
-                    margin-bottom: 20px;
-                    @include mobile {
-                        font-size: 24px;
-                        line-height: 28px;
-                        margin-bottom: 10px;
+              }
+            }
+          }
+          &__bottom {
+            .level-education {
+              &-block {
+                background: #fbfdff;
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+                border-radius: 20px;
+                padding: 37px 34px 35px 34px;
+                margin-bottom: 44px;
+                @include tablet-and-phone{
+                  padding: 20px 16px;
+                }
+              }
+              &__col {
+                margin-bottom: 48px;
+            
+                @include tablet-and-phone{
+                  margin-bottom: 20px;
+                }
+                .col {
+                    &__inner {
+                        @include tablet {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
                     }
-                }
-                &__subtitle {
-                    font-size: 24px;
-                    line-height: 28px;
-                    color: #fff;
+                  &__title {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-bold;
+                    color: #003a78;
+                    margin-bottom: 12px;
+                  }
+                  &__level {
+                    margin-bottom: 11px;
+                    @include mobile-small {
+                      svg {
+                        width: 100% !important;
+                      }
+                    }
+                  }
+                  &__text {
+                    width: 90%;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #3c454e;
                     @include arial-regular;
-                    width: 40%;
-                    @include mobile {
+                    @include tablet {
+                        text-align: center;
+                    }
+                    p {
+                      margin-bottom: 5px;
+                    }
+                    .gray-text {
+                      color: #7b7b7b;
+                    }
+                  }
+                }
+              }
+            }
+            .subtext {
+              width: 50%;
+              font-size: 18px;
+              line-height: 24px;
+              @include arial-regular;
+              color: #7b7b7b;
+              @include tablet {
+                  width: 80%;
+                  p {
+                      font-size: 16px;
+                      line-height: 24px;
+                      margin-bottom: 10px;
+
+                  }
+              }
+              @include mobile {
+                p {
+                  font-size: 16px;
+                  line-height: 24px;
+                  margin-bottom: 8px;
+                }
+                width: 100%;
+              }
+              .yellow-link {
+                font-size: 16px;
+                line-height: 28px;
+                color: #fdc600;
+                display: flex;
+                align-items: center;
+                @include arial-bold;
+                @include tablet {
+                    line-height: 20px;
+                }
+                @include mobile {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+                svg {
+                  margin-left: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.course-description-section {
+        .section {
+          &__inner {
+            padding-top: 64px;
+            padding-bottom: 64px;
+            @include tablet-and-phone{
+              padding-top: 24px;
+              padding-bottom: 10px;
+            }
+            @include tablet {
+                padding-bottom: 40px;
+            }
+          }
+          &__title {
+            width: 40%;
+            margin-bottom: 37px;
+            @include tablet {
+                br {
+                    display: none;
+                }
+            }
+            @include tablet-and-phone {
+              width: 100%;
+              font-size: 20px;
+              line-height: 24px;
+              @include arial-bold;
+            }
+          }
+          &__block {
+            &.block-info {
+              margin-bottom: 64px;
+              @include tablet-and-phone {
+                margin-bottom: 24px;
+              }
+              .block-info__elem {
+                display: flex;
+                margin-left: -15px;
+                margin-right: -15px;
+                margin-bottom: 54px;
+                &.reverse {
+                  @include tablet-and-phone {
+                    flex-direction: column-reverse;
+                    margin-left: 0;
+                    margin-right: 0;
+                  }
+                }
+
+                @include tablet-and-phone {
+                  flex-direction: column;
+                  margin-left: 0;
+                  margin-right: 0;
+                  margin-bottom: 30px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                .text {
+                  font-size: 20px;
+                  line-height: 24px;
+                  @include arial-regular;
+                  color: #7b7b7b;
+
+                  .show-text {
+                    @include tablet-and-phone {
+                      display: none;
+                    }
+                  }
+
+                  .show-text-toggle {
+                    display: none;
+                    @include tablet-and-phone {
+                      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                      &.active {
+                        &:after {
+                          transform: rotate(180deg);
+                          transition: 0.3s;
+                        }
+                      }
+                      &:after {
+                        @include sprite('text-arrow-down');
+                        content: '';
+                        display: inline-block;
+                        margin-left: 5px;
+                        transition: 0.3s;
+                      }
+                      font-size: 14px;
+                      line-height: 20px;
+                      color: #01548a;
+                      cursor: pointer;
+                      text-align: center;
+                      padding-top: 5px;
+                      display: inline-flex;
+                      align-items: center;
+                      padding-bottom: 5px;
+                      margin-left: auto;
+                      margin-right: auto;
+                    }
+                  }
+                  @include tablet-and-phone {
+                    p {
+                      font-size: 14px;
+                      line-height: 20px;
+                      margin-bottom: 8px;
+                    }
+                  }
+                  .title {
+                    @include arial-bold;
+                    color: #7b7b7b;
+                    @include tablet-and-phone {
+                      font-size: 16px;
+                      line-height: 24px;
+                    }
+                  }
+                }
+                .img {
+                  @include tablet-and-phone {
+                    margin-bottom: 21px;
+                  }
+                }
+                .elem {
+                  &-left {
+                    @include tablet-and-phone {
+                      width: 100%;
+                      padding-left: 0;
+                      padding-right: 0;
+                    }
+                    width: 50%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                  }
+                  &-right {
+                    @include tablet-and-phone {
+                      width: 100%;
+                      padding-left: 0;
+                      padding-right: 0;
+                    }
+                    width: 50%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                  }
+                }
+              }
+            }
+            &.set-course-block {
+              .section__title {
+                width: 50%;
+                @include tablet-and-phone {
+                  width: 100%;
+                  margin-bottom: 10px;
+                }
+              }
+              .block-info {
+                &.set {
+                  margin-bottom: 30px;
+                  @include tablet-and-phone {
+                    margin-bottom: 16px;
+                  }
+                  p {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-regular;
+                    color: #565758;
+                    margin-bottom: 7px;
+                    @include tablet-and-phone {
+                      font-size: 14px;
+                      line-height: 20px;
+                    }
+                  }
+                }
+                &.classes-info {
+                  margin-bottom: 42px;
+                  @include tablet-and-phone {
+                    margin-bottom: 27px;
+                  }
+                  .title {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-bold;
+                    color: #003a78;
+                    margin-bottom: 17px;
+                    @include tablet-and-phone {
+                      font-size: 16px;
+                      margin-bottom: 10px;
+                    }
+                  }
+                  .classes-info__list {
+                    padding-left: 20px;
+                    list-style-type: disc;
+                    .list-item {
+                      font-size: 20px;
+                      line-height: 24px;
+                      color: #7b7b7b;
+                      @include arial-regular;
+                      margin-bottom: 5px;
+                      @include mobile {
                         font-size: 16px;
                         line-height: 24px;
-                        width: 65%;
+                      }
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
                     }
-                    @include mobile-small {
-                        width: 80%;
-                    }
-                    .yellow-text {
-                        color: #FFE279;
-                    }
+                  }
                 }
+                &.studies-info {
+                  margin-bottom: 45px;
+                  @include mobile {
+                    margin-bottom: 22px;
+                  }
+                  .studies-info {
+                    &__list {
+                      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+                      border-radius: 10px;
+                      width: 80%;
+                      overflow: hidden;
+                      
+                      @include tablet-and-phone {
+                        width: 100%;
+                      }
+                      @include tablet {
+                          width: 70%;
+                      }
+                      .list-item {
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include tablet-and-phone {
+                          padding: 10px 14px;
+                        }
+                        &.blue {
+                          background: #f0f8fe;
+                        }
+                        &__left {
+                          width: 50%;
+                          padding-right: 10px;
+                          font-size: 18px;
+                          line-height: 24px;
+                          color: #003a78;
+                          @include arial-bold;
+                          @include tablet-and-phone {
+                            font-size: 14px;
+                            line-height: 20px;
+                            width: 60%;
+                          }
+                        }
+                        &__right {
+                          display: flex;
+                          justify-content: flex-end;
+                          padding-left: 10px;
+                          width: 50%;
+                          color: #3c454e;
+                          @include arial-regular;
+                          font-size: 18px;
+                          line-height: 24px;
+                          @include tablet-and-phone {
+                            width: 40%;
+                            font-size: 14px;
+                            line-height: 24px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                &.sales-info {
+                  margin-bottom: 130px;
+                  @include tablet-and-phone {
+                    margin-bottom: 51px;
+                  }
+                  .sales-info__inner {
+                    width: 80%;
+                    @include tablet-and-phone {
+                      width: 100%;
+                    }
+                  }
+                  .title {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include arial-bold;
+                    color: #3c454e;
+                    margin-bottom: 10px;
+                    @include tablet-and-phone {
+                      font-size: 16px;
+                      margin-bottom: 5px;
+                    }
+                  }
+                  .text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    @include arial-regular;
+                    color: #3c454e;
+                    margin-bottom: 13px;
+                    @include tablet-and-phone {
+                      font-size: 14px;
+                      line-height: 20px;
+                      margin-bottom: 11px;
+                    }
+                  }
+                  .link {
+                    display: flex;
+                    align-items: center;
+                    color: #fdc600;
+                    font-size: 16px;
+                    line-height: 28px;
+                    @include arial-bold;
+                    @include tablet-and-phone {
+                      font-size: 14px;
+                      line-height: 20px;
+                    }
+                    svg {
+                      margin-left: 7px;
+                    }
+                  }
+                }
+              }
             }
-
+          }
+          &__slider {
+            padding-bottom: 85px;
+          }
         }
-        .quote {
-            padding-top: 60px;
-            padding-bottom: 60px;
-            @include mobile {
-                padding-top: 32px;
-                padding-bottom: 24px;
-            }
-            background: linear-gradient(90deg, rgba(255, 253, 235, 0.5) 7.64%, rgba(232, 243, 251, 0.5) 29.79%, rgba(232, 243, 251, 0.5) 50.56%, rgba(232, 243, 251, 0.5) 72.71%, rgba(255, 253, 235, 0.5) 96.25%);
-            &__inner {
-                display: flex;
-                justify-content: center;
-            }
-            &__field {
-               
-               display: inline-block;
-                font-size: 35px;
-                line-height: 40px;
-                @include arial-bold;
-               text-align: center;
-               @include mobile {
-                   font-size: 18px;
-                   line-height: 24px;
-               }
-                color: #003A78;
-                .text {
-                    position: relative;
-                }
-                .element {
-                    position: absolute;
-                    left: 0;
-                    top: -25px;
-                    left: -10px;
-                    @include mobile {
-                        width: 32px;
-                    }
-                }
-            }
-        }
+      }
     }
+    .banner {
+      min-height: 248px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include tablet {
+        min-height: 160px;
+        height: 160px;
+      }
+      @include mobile {
+        background-image: url($images_dir+'/mobile/banner_course3.png') !important;
+        min-height: 230px;
+        height: 230px;
+      }
+      &-info {
+        padding-top: 67px;
+        padding-bottom: 65px;
+        @include tablet-and-phone {
+          padding-top: 34px;
+          padding-bottom: 34px;
+        }
+        @include mobile-small {
+          padding-top: 24px;
+        }
+        &__title {
+          font-size: 35px;
+          line-height: 40px;
+          color: #fff;
+          @include arial-bold;
+          margin-bottom: 20px;
+          @include tablet-and-phone {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 10px;
+          }
+        }
+        &__subtitle {
+          font-size: 24px;
+          line-height: 28px;
+          color: #fff;
+          @include arial-regular;
+          width: 40%;
+          @include tablet-and-phone {
+            font-size: 16px;
+            line-height: 24px;
+            width: 65%;
+          }
+          @include tablet {
+            width: 55%;
+          }
+          @include mobile-small {
+            width: 80%;
+          }
+          .yellow-text {
+            color: #ffe279;
+          }
+        }
+      }
+    }
+    .quote {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      @include tablet-and-phone {
+        padding-top: 32px;
+        padding-bottom: 24px;
+      }
+      background: linear-gradient(
+        90deg,
+        rgba(255, 253, 235, 0.5) 7.64%,
+        rgba(232, 243, 251, 0.5) 29.79%,
+        rgba(232, 243, 251, 0.5) 50.56%,
+        rgba(232, 243, 251, 0.5) 72.71%,
+        rgba(255, 253, 235, 0.5) 96.25%
+      );
+      &__inner {
+        display: flex;
+        justify-content: center;
+      }
+      &__field {
+        display: inline-block;
+        font-size: 35px;
+        line-height: 40px;
+        @include arial-bold;
+        text-align: center;
+        @include tablet-and-phone{
+          font-size: 18px;
+          line-height: 24px;
+        }
+        color: #003a78;
+        .text {
+          position: relative;
+        }
+        .element {
+          position: absolute;
+          left: 0;
+          top: -25px;
+          left: -10px;
+          @include tablet-and-phone {
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
 }

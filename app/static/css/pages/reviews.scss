@@ -9,6 +9,17 @@
                 margin-bottom: 47px;
                 color: #003A78;
                 width: 70%;
+                @include tablet {
+                    font-size: 35px;
+                    line-height: 40px;
+                    padding-top: 35px;
+                    padding-bottom: 20px;
+                    margin-bottom: 0;
+                    width: 60%;
+                    br {
+                      display: none;
+                    }
+                  }
                 @include mobile {
                     font-size: 24px;
                     line-height: 28px;
@@ -35,6 +46,9 @@
                  }
                  &__info {
                      margin-bottom: 70px;
+                     @include tablet {
+                         margin-bottom: 40px;
+                     }
                      @include mobile {
                          margin-bottom: 50px;
                      }
@@ -52,6 +66,10 @@
                             padding-left: 15px;
                             padding-right: 15px;
                             width: 25%;
+                            @include tablet {
+                                width: 50%;
+                               
+                            }
                             @include mobile {
                                 width: 100%;
                                 &:last-child {
