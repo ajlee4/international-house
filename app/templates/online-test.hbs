@@ -404,17 +404,17 @@
           </svg>
 
         </button>
-        <form action="" class="signup-form" id="signup-form">
+        <form action="" class="form signup-form" id="signup-form">
           <div class="form__title">Контактная форма</div>
       
           <div class="form__inputs">
-            {{> ui/input type='text' name='name' placeholder='Телефон*'}}
+            {{> ui/input type='number' name='phone' placeholder='Телефон*'}}
             {{> ui/input type='email' name='email' placeholder='Email'}}
-             {{> ui/input type='text' name='name' placeholder='IELTS PEFERENCE NO*'}}
-               {{> ui/input type='text' name='name' placeholder='Номер паспорта*'}}
-               {{> ui/input type='text' name='name' placeholder='Дата экзамена*'}}
+             {{> ui/input type='text' name='ielts' placeholder='IELTS PEFERENCE NO*'}}
+               {{> ui/input type='text' name='passport_id' placeholder='Номер паспорта*'}}
+               {{> ui/input type='text' name='date' placeholder='Дата экзамена*'}}
           </div>
-          <a href="#" class="btn primary-btn" >Отправить</a>
+          <button  class="btn primary-btn" type="submit" >Отправить</button>
           <div class="subtext">
               *Номер регистрации вам присылают на почту при заполнении анкеты на сайте British Council
           </div>

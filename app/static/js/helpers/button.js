@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     if (document.body.clientWidth > 1024) {
         $('#search-button').on('click',(e)=> {
-            console.log($(this))
+         
             e.preventDefault()
             $('#search-input').slideToggle()
             $('#search-button .close-icon').toggle()
